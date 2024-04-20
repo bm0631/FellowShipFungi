@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!-- Botón Atrás -->
+
+    <item
+
+        android:id="@+id/opcBack"
+
+        android:icon="@android:drawable/ic_media_previous"
+
+        android:title="@string/textBackRecognition"
+
+        app:showAsAction="always" />
+
+
+    <!-- Botón Stop -->
+
+    <item
+
+        android:id="@+id/opcStop"
+
+        android:icon="@android:drawable/ic_media_pause"
+
+        android:title="@string/textStopRecognition"
+
+        app:showAsAction="always" />
+
+
+    <!-- Texto manipulable -->
+
+    <item
+
+        android:id="@+id/countAsks"
+
+        android:title="@string/textRecognitionStepCount"
+
+        app:showAsAction="always" />
+
+
+</menu>

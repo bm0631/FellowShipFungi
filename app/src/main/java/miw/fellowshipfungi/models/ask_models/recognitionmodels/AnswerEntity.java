@@ -9,19 +9,32 @@ public class AnswerEntity {
 
     public AnswerEntity(Map<String, Object> dataMap) {
         this.id = (String) dataMap.get("idNode");
-        this.nextNode = (String) dataMap.get("nextNode");
+        this.nextNode = (String) dataMap.get("nextNodes");
         this.text = (String) dataMap.get("textNode");
     }
 
-    public String getNextNode() {
-        return nextNode;
+    public static NodeTypes typeNode(String node) {
+        return node.contains("Ask_") ? NodeTypes.Ask : NodeTypes.Specie;
     }
 
-    public NodeTypes typeNextNode() {
-        return this.nextNode.contentEquals("Ask_") ? NodeTypes.Ask : NodeTypes.Specie;
+    public String getNextNode() {
+        return this.nextNode;
     }
 
     public String getText() {
-        return text;
+        return this.text;
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
+    @Override
+    public String toString() {
+        return "AnswerEntity{" +
+                "id='" + id + '\'' +
+                ", nextNode='" + nextNode + '\'' +
+                ", text='" + text + '\'' +
+                '}';
     }
 }

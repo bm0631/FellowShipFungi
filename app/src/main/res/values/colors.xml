@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <!-- Colors -->
+    <color name="light_primary">#BA68C8</color> <!-- Morado claro -->
+    <color name="dark_primary">#9C27B0</color> <!-- Morado oscuro -->
+    <color name="accent_color">#FFFFFF</color> <!-- Blanco -->
 </resources>
