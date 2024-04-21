@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i(LOG_TAG, "Se pulsa Nuevo Recognition Musshrom: ");
         Intent intent = new Intent(this, RecognitionActivity.class);
-        intent.putExtra("Ask_id", "Ask_001");
+        intent.putExtra("Current", "Ask_001");
         intent.putExtra("countAsks", 1);
         startActivity(intent);
     }

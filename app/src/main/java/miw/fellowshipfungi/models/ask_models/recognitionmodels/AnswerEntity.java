@@ -13,9 +13,6 @@ public class AnswerEntity {
         this.text = (String) dataMap.get("textNode");
     }
 
-    public static NodeTypes typeNode(String node) {
-        return node.contains("Ask_") ? NodeTypes.Ask : NodeTypes.Specie;
-    }
 
     public String getNextNode() {
         return this.nextNode;

@@ -7,164 +7,141 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
+import com.squareup.picasso.Picasso;
 
 import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.adapters.AnswerAdapter;
-import miw.fellowshipfungi.models.ask_models.recognitionmodels.AnswerEntity;
+import miw.fellowshipfungi.controllers.util.RecognitionService;
 import miw.fellowshipfungi.models.ask_models.recognitionmodels.NodeTypes;
 import miw.fellowshipfungi.models.ask_models.recognitionmodels.RecognitionEntity;
 
 public class RecognitionActivity extends AppCompatActivity {
 
     final static String LOG_TAG = "MiW Recognition";
-    private static final String COLLECTION_NAME = "RecognitonMushroom";
-    private static final String ASK_DOCUMENT = "Asks";
-    private static final String ANSWER_DOCUMENT = "Answers";
-    private static final String SPECIES_DOCUMENT = "Species";
-
 
     private RecognitionEntity recognitionEntity;
-    private FirebaseFirestore db;
 
     private String currentNode;
-
+    private String previusNode;
     private int countAsks;
+    private RecognitionService recognitionService;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.db = FirebaseFirestore.getInstance();
+        this.recognitionService = new RecognitionService();
 
-        //TODO recoger el numero anterior para agarantizar la vuelta atras
         this.recognitionEntity = new RecognitionEntity();
-        this.currentNode = getIntent().getStringExtra("Ask_id");
+
+        this.previusNode = getIntent().getStringExtra("Previus");
+        this.currentNode = getIntent().getStringExtra("Current");
         this.countAsks = getIntent().getIntExtra("countAsks", 0);
-        if (this.currentNode == null) {
-            this.currentNode = getIntent().getStringExtra("Species_id");
-            Log.w(LOG_TAG, "CurrentNode: " + this.currentNode);
+
+        Log.w(LOG_TAG, "CurrentNode: " + this.currentNode);
+
+        if (RecognitionEntity.typeNode(this.currentNode) == NodeTypes.Specie) {
             this.createViewMusshroom();
         } else {
-            Log.w(LOG_TAG, "CurrentNode: " + this.currentNode);
             this.createViewAsk();
         }
 
-        invalidateOptionsMenu();
+
     }
 
     private void createViewMusshroom() {
+        Log.w(LOG_TAG, "It's Musshrom " + this.currentNode);
+        this.setContentView(R.layout.activity_mushroom);
+        this.loadSpecie();
     }
 
     private void createViewAsk() {
         Log.w(LOG_TAG, "It's ASK " + this.currentNode);
         this.setContentView(R.layout.activity_recognition);
-        this.loadAsk_And_Answers();
-
-
+        this.loadAskAndAnswers();
     }
 
 
-    private void loadAsk_And_Answers() {
-        DocumentReference docRef = db.collection(COLLECTION_NAME).document(ASK_DOCUMENT);
+    private void loadAskAndAnswers() {
 
-        docRef.get().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                DocumentSnapshot result = task.getResult();
+        this.recognitionService.loadAskAndAnswers(this.currentNode, new RecognitionService.RecognitionServiceCallback() {
+            @Override
+            public void onSuccess(RecognitionEntity recognitionEntity) {
+                RecognitionActivity.this.recognitionEntity = recognitionEntity;
+                RecognitionActivity.this.printAsk();
+            }
 
-                Log.w(LOG_TAG, "DATOS ASK: " + result.get(this.currentNode));
-                Map<String, Object> currentNodeData = (Map<String, Object>) result.get(this.currentNode);
-                this.recognitionEntity.setAskEntity(currentNodeData);
-
-
-                List<String> nextNodes = (List<String>) currentNodeData.get("nextNodes");
-                int totalAnswers = nextNodes.size();
-                AtomicInteger loadedAnswers = new AtomicInteger(0);
-
-                for (String answerNode : nextNodes) {
-
-                    this.loadAnswer(answerNode, loadedAnswers, totalAnswers);
-                }
-            } else {
-                Log.w(LOG_TAG, "Error getting documents.", task.getException());
+            @Override
+            public void onFailure(Exception e) {
+                Log.w(LOG_TAG, "Error loading specie: ", e);
             }
         });
     }
 
-    private void loadAnswer(String answerId, AtomicInteger loadedAnswers, int totalAnswers) {
-        DocumentReference docRef = db.collection(COLLECTION_NAME).document(ANSWER_DOCUMENT);
 
-        docRef.get().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                DocumentSnapshot result = task.getResult();
-
-                Map<String, Object> currentNodeData = (Map<String, Object>) result.get(answerId);
-                this.recognitionEntity.addAnswer(currentNodeData);
-
-                int loadedCount = loadedAnswers.incrementAndGet();
-                if (loadedCount == totalAnswers) {
-                    // Todas las respuestas han sido cargadas
-                    Log.w(LOG_TAG, "ResultDeCARGA: " + this.recognitionEntity.toString());
-                    this.printDataAsk();
-                }
-            } else {
-                Log.w(LOG_TAG, "Error getting documents.", task.getException());
-            }
-        });
-    }
-
-    private void printDataAsk() {
-        // Configurar la pregunta en el TextView
+    private void printAsk() {
+        // La pregunta en el TextView
         TextView questionTextView = findViewById(R.id.askTestView);
         questionTextView.setText(this.recognitionEntity.getAskText());
 
-        // Configurar las respuestas en el RecyclerView
+        // Las respuestas en el RecyclerView
         RecyclerView answersRecyclerView = findViewById(R.id.answersRecyclerView);
         AnswerAdapter answerAdapter = new AnswerAdapter(this.recognitionEntity.getAnswerEntities());
         answersRecyclerView.setAdapter(answerAdapter);
         answersRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        //Configurar el contador de preguntas
+        //El contador de preguntas
         TextView countAsksTextView = findViewById(R.id.countAsks);
         countAsksTextView.setText(this.countAsks + " Pasos");
     }
 
-    public void replied(View view) {
+    public void loadSpecie() {
+        this.recognitionService.loadSpecie(this.currentNode, new RecognitionService.RecognitionServiceCallback() {
+            @Override
+            public void onSuccess(RecognitionEntity recognitionEntity) {
+                RecognitionActivity.this.recognitionEntity = recognitionEntity;
+                RecognitionActivity.this.printSpecie();
+            }
+
+            @Override
+            public void onFailure(Exception e) {
+                Log.w(LOG_TAG, "Error loading specie: ", e);
+            }
+        });
+    }
+
+    private void printSpecie() {
+        TextView nameSpecie = findViewById(R.id.mushroomName);
+        nameSpecie.setText(this.recognitionEntity.getMusshroomName());
+
+        ImageView mushroomImage = findViewById(R.id.mushroomImage);
+        String imageUrl = this.recognitionEntity.getMusshroomImgUrl();
+        Picasso.get().load(imageUrl).into(mushroomImage);
+
+        TextView countAsksTextView = findViewById(R.id.countAsks);
+        countAsksTextView.setText(this.countAsks + " Pasos");
+
+
+    }
+
+    public void repliedAsk(View view) {
         if (view.getTag() != null) {
             String nextNodeId = view.getTag().toString();
             Log.w(LOG_TAG, "Answer replied: " + ((Button) view).getText().toString());
             Log.w(LOG_TAG, "Next NODE: " + nextNodeId);
-            Log.w(LOG_TAG, "TYPE NODE: " + AnswerEntity.typeNode(nextNodeId));
+            Log.w(LOG_TAG, "TYPE NODE: " + RecognitionEntity.typeNode(nextNodeId));
 
-            if (AnswerEntity.typeNode(nextNodeId) == NodeTypes.Ask) {
-                //Se abre nueva pregunta
-                Log.w(LOG_TAG, "NUEVA PREGUNTAAAA");
-                Intent intent = new Intent(this, RecognitionActivity.class);
-                intent.putExtra("Ask_id", view.getTag().toString());
-                intent.putExtra("countAsks", this.countAsks + 1);
-                startActivity(intent);
-                finishAffinity();
-            } else {
-                //Se abre nueva pregunta
-                Log.w(LOG_TAG, "ESPECIEEEE");
-                Intent intent = new Intent(this, RecognitionActivity.class);
-                intent.putExtra("Ask_id", "Ask_001");
-                intent.putExtra("countAsks", this.countAsks + 1);
-                startActivity(intent);
-                finishAffinity();
-            }
+
+            this.navigateToNode(view.getTag().toString());
+
         } else {
             Log.w(LOG_TAG, "Tag is null WAIT");
         }
@@ -175,24 +152,51 @@ public class RecognitionActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_recognition, menu);
+
+        // Anular el botón de retroceso si this.previusNode es null
+        MenuItem backButton = menu.findItem(R.id.opcBack);
+        if (this.previusNode == null) {
+            backButton.setEnabled(false);
+            backButton.setVisible(false);
+        }
+        // Anular el botón de stop si el nodo es Specie
+        MenuItem stopButton = menu.findItem(R.id.opcStop);
+        if (RecognitionEntity.typeNode(this.currentNode) == NodeTypes.Specie) {
+            stopButton.setEnabled(false);
+            stopButton.setVisible(false);
+        }
+
         return true;
     }
+
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-       /* switch (item.getItemId()) {
-            case R.id.opcBack:
-
-                return true;
-            case R.id.opcStop:
-
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }*/
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.opcBack) {
+            navigateToNode(previusNode);
+        } else if (item.getItemId() == R.id.opcStop) {
+            //TODO Implementar lógica para detener
+        }
         return true;
     }
+
+    private void navigateToNode(String node) {
+        Intent intent = new Intent(this, RecognitionActivity.class);
+        intent.putExtra("Current", node);
+        if (node == this.previusNode) {
+            intent.putExtra("countAsks", countAsks - 1);
+        } else {
+            intent.putExtra("Previus", this.currentNode);
+            intent.putExtra("countAsks", this.countAsks + 1);
+        }
+
+
+        startActivity(intent);
+        finishAffinity();
+    }
 }
+
+
 
 
 

@@ -4,22 +4,21 @@ import java.util.Map;
 
 public class MusshroomEntity {
     private final String id;
-    private final String textNode;
+    private final String name;
     private final String img;
+    private final String URLBase = "https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/Setas%2F";
 
     public MusshroomEntity(Map<String, Object> dataMap) {
-        this.id = "";
-        this.textNode = "";
-        this.img = "";
+        this.id = (String) dataMap.get("idNode");
+        this.name = (String) dataMap.get("textNode");
+        this.img = (String) dataMap.get("img");
     }
 
-    public MusshroomEntity(String id, String textNode, String img) {
-        this.id = "";
-        this.textNode = "";
-        this.img = "";
+    public String getName() {
+        return this.name;
     }
 
-    public String getTextNode() {
-        return this.textNode;
+    public String getImgUrl() {
+        return URLBase + this.img.replace(" ", "%20") + ".jpg?alt=media";
     }
 }

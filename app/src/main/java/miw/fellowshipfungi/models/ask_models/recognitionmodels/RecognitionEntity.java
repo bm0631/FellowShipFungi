@@ -14,12 +14,16 @@ public class RecognitionEntity {
         this.answerEntities = new ArrayList<AnswerEntity>();
     }
 
+    public static NodeTypes typeNode(String node) {
+        return node.contains("Ask_") ? NodeTypes.Ask : NodeTypes.Specie;
+    }
+
     public void addAnswer(Map<String, Object> dataMap) {
         this.answerEntities.add(new AnswerEntity(dataMap));
     }
 
-    public AskEntity getAskEntity() {
-        return askEntity;
+    public String getAskText() {
+        return askEntity.getText();
     }
 
     public void setAskEntity(Map<String, Object> dataMap) {
@@ -36,6 +40,14 @@ public class RecognitionEntity {
 
     public void setMusshroomEntity(Map<String, Object> dataMap) {
         this.musshroomEntity = new MusshroomEntity(dataMap);
+    }
+
+    public String getMusshroomName() {
+        return this.musshroomEntity.getName();
+    }
+
+    public String getMusshroomImgUrl() {
+        return this.musshroomEntity.getImgUrl();
     }
 
     @Override
