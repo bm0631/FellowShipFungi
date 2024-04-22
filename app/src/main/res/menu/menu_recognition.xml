@@ -24,7 +24,7 @@
 
         android:id="@+id/opcStop"
 
-        android:icon="@android:drawable/ic_media_pause"
+        android:icon="@android:drawable/ic_menu_delete"
 
         android:title="@string/textStopRecognition"
 

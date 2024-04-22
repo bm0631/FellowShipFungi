@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:style="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -22,22 +24,21 @@
         android:text="Creemos que es:"
         android:textSize="24sp" />
 
-
-    <!-- Nombre de la seta -->
+    <!-- Nombre de la seta en negrita y sobresaltado -->
     <TextView
         android:id="@+id/mushroomName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"
-        android:text="Nombre de la seta"
-        android:textSize="18sp" />
+        style="@style/H1.FellowshipFungi"
+       />
 
-    <!-- Imagen de la seta -->
+    <!-- Imagen de la seta más grande -->
     <ImageView
         android:id="@+id/mushroomImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp" />
 
@@ -52,6 +53,7 @@
 
     <!-- Opciones "Si" y "No" -->
     <LinearLayout
+        style="@style/Theme.FellowshipFungi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -62,14 +64,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Sí" />
+            android:text="Sí"
+            style="@style/Button.FellowshipFungi.Yes"
+            app:backgroundTint="@null"
+            />
 
         <Button
             android:id="@+id/noButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="No" />
+            android:text="No"
+            style="@style/Button.FellowshipFungi.No"
+            app:backgroundTint="@null" />
     </LinearLayout>
 
 </LinearLayout>

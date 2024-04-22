@@ -1,6 +1,9 @@
 <resources>
+    <!--Recognition Mushroom-->
+    <string name="textRecognitionTittle">RECONOCIENDO SETA</string>
     <string name="app_name">Fellowship Fungi</string>
     <string name="textStopRecognition">Anular Reconocimiento</string>
     <string name="textRecognitionStepCount">0 Pasos</string>
     <string name="textBackRecognition">Paso atras</string>
+
 </resources>
