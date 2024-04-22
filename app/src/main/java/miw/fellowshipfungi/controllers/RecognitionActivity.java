@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
+import miw.fellowshipfungi.MainActivity;
 import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.adapters.AnswerAdapter;
 import miw.fellowshipfungi.controllers.util.RecognitionService;
@@ -29,15 +30,17 @@ public class RecognitionActivity extends AppCompatActivity {
     final static String LOG_TAG = "MiW Recognition";
 
     private RecognitionEntity recognitionEntity;
-
     private String currentNode;
     private String previusNode;
     private int countAsks;
     private RecognitionService recognitionService;
+    private View progressBar;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         this.recognitionService = new RecognitionService();
 
         this.recognitionEntity = new RecognitionEntity();
@@ -60,12 +63,14 @@ public class RecognitionActivity extends AppCompatActivity {
     private void createViewMusshroom() {
         Log.w(LOG_TAG, "It's Musshrom " + this.currentNode);
         this.setContentView(R.layout.activity_mushroom);
+        this.setupProgresionBar();
         this.loadSpecie();
     }
 
     private void createViewAsk() {
         Log.w(LOG_TAG, "It's ASK " + this.currentNode);
         this.setContentView(R.layout.activity_recognition);
+        setupProgresionBar();
         this.loadAskAndAnswers();
     }
 
@@ -91,16 +96,19 @@ public class RecognitionActivity extends AppCompatActivity {
         // La pregunta en el TextView
         TextView questionTextView = findViewById(R.id.askTestView);
         questionTextView.setText(this.recognitionEntity.getAskText());
+        questionTextView.setVisibility(View.VISIBLE);
 
         // Las respuestas en el RecyclerView
         RecyclerView answersRecyclerView = findViewById(R.id.answersRecyclerView);
         AnswerAdapter answerAdapter = new AnswerAdapter(this.recognitionEntity.getAnswerEntities());
         answersRecyclerView.setAdapter(answerAdapter);
         answersRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        answersRecyclerView.setVisibility(View.VISIBLE);
 
-        //El contador de preguntas
-        TextView countAsksTextView = findViewById(R.id.countAsks);
-        countAsksTextView.setText(this.countAsks + " Pasos");
+        this.printStepCount();
+
+        this.offProgresionBar();
+
     }
 
     public void loadSpecie() {
@@ -121,14 +129,17 @@ public class RecognitionActivity extends AppCompatActivity {
     private void printSpecie() {
         TextView nameSpecie = findViewById(R.id.mushroomName);
         nameSpecie.setText(this.recognitionEntity.getMusshroomName());
+        nameSpecie.setVisibility(View.VISIBLE);
 
         ImageView mushroomImage = findViewById(R.id.mushroomImage);
         String imageUrl = this.recognitionEntity.getMusshroomImgUrl();
         Picasso.get().load(imageUrl).into(mushroomImage);
+        mushroomImage.setVisibility(View.VISIBLE);
 
-        TextView countAsksTextView = findViewById(R.id.countAsks);
-        countAsksTextView.setText(this.countAsks + " Pasos");
 
+        this.printStepCount();
+
+        this.offProgresionBar();
 
     }
 
@@ -138,7 +149,6 @@ public class RecognitionActivity extends AppCompatActivity {
             Log.w(LOG_TAG, "Answer replied: " + ((Button) view).getText().toString());
             Log.w(LOG_TAG, "Next NODE: " + nextNodeId);
             Log.w(LOG_TAG, "TYPE NODE: " + RecognitionEntity.typeNode(nextNodeId));
-
 
             this.navigateToNode(view.getTag().toString());
 
@@ -173,9 +183,11 @@ public class RecognitionActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.opcBack) {
-            navigateToNode(previusNode);
+            this.navigateToNode(previusNode);
         } else if (item.getItemId() == R.id.opcStop) {
-            //TODO Implementar lógica para detener
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finishAffinity();
         }
         return true;
     }
@@ -194,6 +206,21 @@ public class RecognitionActivity extends AppCompatActivity {
         startActivity(intent);
         finishAffinity();
     }
+
+    private void printStepCount() {
+        TextView countAsksTextView = findViewById(R.id.countAsks);
+        countAsksTextView.setText(this.countAsks + " Pasos");
+    }
+
+    protected void setupProgresionBar() {
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    private void offProgresionBar() {
+        this.progressBar.setVisibility(View.GONE);
+    }
+
 }
 
 

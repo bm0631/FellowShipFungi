@@ -5,6 +5,14 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- ProgressBar para mostrar mientras se carga -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
     <!-- Texto superior "Creemos que es:" -->
     <TextView
         android:layout_width="wrap_content"
@@ -24,6 +32,7 @@
         android:layout_marginBottom="16dp"
         android:text="Nombre de la seta"
         android:textSize="18sp" />
+
     <!-- Imagen de la seta -->
     <ImageView
         android:id="@+id/mushroomImage"
