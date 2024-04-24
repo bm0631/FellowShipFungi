@@ -13,11 +13,7 @@ public class RecognitionEntity {
     public RecognitionEntity() {
         this.answerEntities = new ArrayList<AnswerEntity>();
     }
-
-    public static NodeTypes typeNode(String node) {
-        return node.contains("Ask_") ? NodeTypes.Ask : NodeTypes.Specie;
-    }
-
+    
     public void addAnswer(Map<String, Object> dataMap) {
         this.answerEntities.add(new AnswerEntity(dataMap));
     }

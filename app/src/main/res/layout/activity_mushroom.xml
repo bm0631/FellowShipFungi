@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:style="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -27,12 +26,11 @@
     <!-- Nombre de la seta en negrita y sobresaltado -->
     <TextView
         android:id="@+id/mushroomName"
+        style="@style/H1.FellowshipFungi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="16dp"
-        style="@style/H1.FellowshipFungi"
-       />
+        android:layout_marginBottom="16dp" />
 
     <!-- Imagen de la seta más grande -->
     <ImageView
@@ -61,21 +59,20 @@
 
         <Button
             android:id="@+id/yesButton"
+            style="@style/Button.FellowshipFungi.Yes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:text="Sí"
-            style="@style/Button.FellowshipFungi.Yes"
-            app:backgroundTint="@null"
-            />
+            app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/noButton"
+            style="@style/Button.FellowshipFungi.No"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="No"
-            style="@style/Button.FellowshipFungi.No"
             app:backgroundTint="@null" />
     </LinearLayout>
 

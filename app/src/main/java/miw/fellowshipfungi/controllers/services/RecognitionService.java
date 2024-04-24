@@ -1,4 +1,4 @@
-package miw.fellowshipfungi.controllers.util;
+package miw.fellowshipfungi.controllers.services;
 
 import android.util.Log;
 

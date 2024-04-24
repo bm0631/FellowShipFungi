@@ -25,8 +25,7 @@
         <activity
             android:name=".controllers.RecognitionActivity"
             android:exported="true"
-            android:label="@string/textRecognitionTittle"
-            />
+            android:label="@string/textRecognitionTittle" />
     </application>
 
 </manifest>

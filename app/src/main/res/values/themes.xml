@@ -20,8 +20,8 @@
         <item name="colorControlActivated">@color/red2</item>
 
 
-
     </style>
+
     <style name="Button.FellowshipFungi" parent="Base.Theme.FellowshipFungi">
         <item name="android:background">?attr/colorPrimary</item>
         <item name="android:textColor">?android:attr/textColorSecondary</item>

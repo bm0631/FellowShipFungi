@@ -21,7 +21,7 @@ import com.squareup.picasso.Picasso;
 import miw.fellowshipfungi.MainActivity;
 import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.adapters.AnswerAdapter;
-import miw.fellowshipfungi.controllers.util.RecognitionService;
+import miw.fellowshipfungi.controllers.services.RecognitionService;
 import miw.fellowshipfungi.models.ask_models.recognitionmodels.NodeTypes;
 import miw.fellowshipfungi.models.ask_models.recognitionmodels.RecognitionEntity;
 
@@ -51,7 +51,7 @@ public class RecognitionActivity extends AppCompatActivity {
 
         Log.w(LOG_TAG, "CurrentNode: " + this.currentNode);
 
-        if (RecognitionEntity.typeNode(this.currentNode) == NodeTypes.Specie) {
+        if (NodeTypes.typeNode(this.currentNode) == NodeTypes.Specie) {
             this.createViewMusshroom();
         } else {
             this.createViewAsk();
@@ -148,7 +148,7 @@ public class RecognitionActivity extends AppCompatActivity {
             String nextNodeId = view.getTag().toString();
             Log.w(LOG_TAG, "Answer replied: " + ((Button) view).getText().toString());
             Log.w(LOG_TAG, "Next NODE: " + nextNodeId);
-            Log.w(LOG_TAG, "TYPE NODE: " + RecognitionEntity.typeNode(nextNodeId));
+            Log.w(LOG_TAG, "TYPE NODE: " + NodeTypes.typeNode(nextNodeId));
 
             this.navigateToNode(view.getTag().toString());
 
@@ -171,7 +171,7 @@ public class RecognitionActivity extends AppCompatActivity {
         }
         // Anular el botón de stop si el nodo es Specie
         MenuItem stopButton = menu.findItem(R.id.opcStop);
-        if (RecognitionEntity.typeNode(this.currentNode) == NodeTypes.Specie) {
+        if (NodeTypes.typeNode(this.currentNode) == NodeTypes.Specie) {
             stopButton.setEnabled(false);
             stopButton.setVisible(false);
         }

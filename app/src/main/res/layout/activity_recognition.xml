@@ -24,10 +24,10 @@
         android:padding="16dp"
         android:text="¿La seta habla?"
         android:textSize="18sp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- RecyclerView para las respuestas -->
     <androidx.recyclerview.widget.RecyclerView
@@ -35,10 +35,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="16dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/askTestView"
-        android:visibility="gone" />
+        app:layout_constraintTop_toBottomOf="@id/askTestView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

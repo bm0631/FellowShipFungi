@@ -20,6 +20,7 @@
         <item name="colorButtonNormal">@color/green1</item>
         <item name="colorControlActivated">@color/red1</item>
     </style>
+
     <style name="Button.FellowshipFungi" parent="Base.Theme.FellowshipFungi">
         <item name="android:background">?attr/colorPrimaryVariant</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
