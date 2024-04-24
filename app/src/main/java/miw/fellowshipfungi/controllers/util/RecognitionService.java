@@ -20,7 +20,6 @@ public class RecognitionService {
     private static final String ANSWER_DOCUMENT = "Answers";
     private static final String SPECIES_DOCUMENT = "Species";
 
-
     private FirebaseFirestore db;
     private RecognitionEntity recognitionEntity;
 
@@ -30,44 +29,30 @@ public class RecognitionService {
     }
 
     public void loadSpecie(String specieNode, RecognitionServiceCallback callback) {
-        DocumentReference docRef = db.collection(COLLECTION_NAME).document(SPECIES_DOCUMENT);
-
-        docRef.get().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                DocumentSnapshot result = task.getResult();
-                Map<String, Object> currentNodeData = (Map<String, Object>) result.get(specieNode);
-                if (currentNodeData != null) {
-                    recognitionEntity.setMusshroomEntity(currentNodeData);
-                    callback.onSuccess(recognitionEntity);
-                } else {
-                    callback.onFailure(new Exception("Specie data not found"));
-                }
-            } else {
-                Log.w(LOG_TAG, "Error getting documents.", task.getException());
-                callback.onFailure(task.getException());
-            }
-        });
+        loadDocument(SPECIES_DOCUMENT, specieNode, callback);
     }
 
     public void loadAskAndAnswers(String askNode, RecognitionServiceCallback callback) {
-        DocumentReference docRef = db.collection(COLLECTION_NAME).document(ASK_DOCUMENT);
+        loadDocument(ASK_DOCUMENT, askNode, callback);
+    }
+
+    private void loadDocument(String documentName, String nodeName, RecognitionServiceCallback callback) {
+        DocumentReference docRef = db.collection(COLLECTION_NAME).document(documentName);
 
         docRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 DocumentSnapshot result = task.getResult();
-                Map<String, Object> currentNodeData = (Map<String, Object>) result.get(askNode);
+                Map<String, Object> currentNodeData = (Map<String, Object>) result.get(nodeName);
                 if (currentNodeData != null) {
-                    recognitionEntity.setAskEntity(currentNodeData);
-
-                    List<String> nextNodes = (List<String>) currentNodeData.get("nextNodes");
-                    AtomicInteger loadedAnswers = new AtomicInteger(0);
-                    int totalAnswers = nextNodes.size();
-
-                    for (String answerNode : nextNodes) {
-                        loadAnswer(answerNode, loadedAnswers, totalAnswers, callback);
+                    if (documentName.equals(ASK_DOCUMENT)) {
+                        recognitionEntity.setAskEntity(currentNodeData);
+                        loadAnswers((List<String>) currentNodeData.get("nextNodes"), callback);
+                    } else {
+                        recognitionEntity.setMusshroomEntity(currentNodeData);
+                        callback.onSuccess(recognitionEntity);
                     }
                 } else {
-                    callback.onFailure(new Exception("Ask data not found"));
+                    callback.onFailure(new Exception(documentName + " data not found"));
                 }
             } else {
                 Log.w(LOG_TAG, "Error getting documents.", task.getException());
@@ -76,24 +61,28 @@ public class RecognitionService {
         });
     }
 
-    private void loadAnswer(String answerId, AtomicInteger loadedAnswers, int totalAnswers, RecognitionServiceCallback callback) {
-        DocumentReference docRef = db.collection(COLLECTION_NAME).document(ANSWER_DOCUMENT);
+    private void loadAnswers(List<String> answerIds, RecognitionServiceCallback callback) {
+        AtomicInteger loadedAnswers = new AtomicInteger(0);
+        int totalAnswers = answerIds.size();
 
-        docRef.get().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                DocumentSnapshot result = task.getResult();
-                Map<String, Object> currentNodeData = (Map<String, Object>) result.get(answerId);
-                recognitionEntity.addAnswer(currentNodeData);
+        for (String answerId : answerIds) {
+            DocumentReference docRef = db.collection(COLLECTION_NAME).document(ANSWER_DOCUMENT);
+            docRef.get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot result = task.getResult();
+                    Map<String, Object> currentNodeData = (Map<String, Object>) result.get(answerId);
+                    recognitionEntity.addAnswer(currentNodeData);
 
-                int loadedCount = loadedAnswers.incrementAndGet();
-                if (loadedCount == totalAnswers) {
-                    callback.onSuccess(recognitionEntity);
+                    int loadedCount = loadedAnswers.incrementAndGet();
+                    if (loadedCount == totalAnswers) {
+                        callback.onSuccess(recognitionEntity);
+                    }
+                } else {
+                    Log.w(LOG_TAG, "Error getting documents.", task.getException());
+                    callback.onFailure(task.getException());
                 }
-            } else {
-                Log.w(LOG_TAG, "Error getting documents.", task.getException());
-                callback.onFailure(task.getException());
-            }
-        });
+            });
+        }
     }
 
     public interface RecognitionServiceCallback {
@@ -101,5 +90,4 @@ public class RecognitionService {
 
         void onFailure(Exception e);
     }
-
 }
