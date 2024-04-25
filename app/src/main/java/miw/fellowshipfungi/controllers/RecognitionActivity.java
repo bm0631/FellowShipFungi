@@ -28,7 +28,7 @@ import miw.fellowshipfungi.models.ask_models.recognitionmodels.RecognitionEntity
 
 public class RecognitionActivity extends AppCompatActivity {
 
-    final static String LOG_TAG = "MiW Recognition";
+    final static String LOG_TAG = "Fellowship Fungi Recognition";
 
     private RecognitionEntity recognitionEntity;
     private String currentNode;
@@ -57,8 +57,6 @@ public class RecognitionActivity extends AppCompatActivity {
         } else {
             this.createViewAsk();
         }
-
-
     }
 
     private void createViewMusshroom() {

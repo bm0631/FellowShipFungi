@@ -5,7 +5,16 @@
     <string name="textStopRecognition">Anular Reconocimiento</string>
     <string name="textRecognitionStepCount">0 Pasos</string>
     <string name="textBackRecognition">Paso atras</string>
-
+    <!--Dialog-->
     <string name="YES">SI</string>
     <string name="CANCELAR">CANCELAR</string>
+
+    <!--Main Menu-->
+    <string name="OpenProfileTitle">Ver Perfil</string>
+    <string name="LogoutTitle">Cerrar Sesión</string>
+    <string name="LoginTitle">Identificate</string>
+    <string name="RecognitionTitle">Reconocer Seta</string>
+    <string name="CuriosityTitle">Curiosidad diaria</string>
+    <string name="TestTitle">Test de conocimientos</string>
+
 </resources>
