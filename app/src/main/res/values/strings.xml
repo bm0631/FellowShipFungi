@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!--Recognition Mushroom-->
     <string name="textRecognitionTittle">RECONOCIENDO SETA</string>
     <string name="app_name">Fellowship Fungi</string>
@@ -17,4 +17,44 @@
     <string name="CuriosityTitle">Curiosidad diaria</string>
     <string name="TestTitle">Test de conocimientos</string>
 
+
+    <!-- LOGING -->
+    <string name="fui_sign_in_anonymously" translation_description="Continuar como invitado boton">Continuar como invitado</string>
+    <string name="fui_sign_in_with_email" translation_description="Inicio de sesión con correoboton">Iniciar sesion/Registrarse con correo</string>
+    <string name="fui_next_default" translation_description="Boton continuar">Siguiente</string>
+    <string name="fui_welcome_back_email_header" translation_description="Mensaje para los usuarios que vuelven">Bienvenido de nuevo!</string>
+    <string name="fui_missing_email_address" translation_description="Error inline por dirección de correo electrónico vacía en el campo de entrada">Introduzca su dirección de correo electrónico para continuar</string>
+    <string name="fui_welcome_back_idp_prompt" translation_description="Mensaje para usuarios que necesitan iniciar sesión usando cuentas de proveedores de identidad existentes">
+    Ya has utilizado <xliff:g example="jane.doe@example.com" id="email_addr" translation_description="">%1$s</xliff:g>.
+    Inicia sesión con <xliff:g example="Google" id="provider_name" translation_description="">%2$s</xliff:g> para continuar.
+    </string>
+
+    <string name="fui_welcome_back_password_prompt_body" translation_description="Mensaje para usuarios que necesitan iniciar sesión usando cuentas de correo electrónico existentes">
+    Ya has utilizado <xliff:g example="jane.doe@example.com" id="email_addr" translation_description="">%1$s</xliff:g>
+    para iniciar sesión. Ingresa tu contraseña para esa cuenta.
+    </string>
+    <string name="fui_trouble_signing_in" translation_description="Enlace para contraseña olvidada">¿Problemas para iniciar sesión?</string>
+    <string name="fui_password_recovery_body" translation_description="Cuerpo del mensaje de recuperación de contraseña">
+    Recibe instrucciones enviadas a este correo electrónico que explican cómo restablecer tu contraseña.
+    </string>
+
+    <string name="fui_button_text_send" translation_description="Texto del botón para enviar el correo de recuperación">Enviar</string>
+
+    <string name="fui_sign_in_default" translation_description="Texto del botón para iniciar sesión">Iniciar sesión</string>
+    <string name="fui_missing_first_and_last_name" translation_description="Error en línea para campos de nombre y apellido vacíos">Por favor, ingresa un nombre y un apellido.</string>
+
+    <string name="fui_button_text_save" translation_description="Texto del botón para guardar el formulario">Guardar</string>
+
+    <string name="fui_new_password_hint" translation_description="Sugerencia para el campo de contraseña de nuevas contraseñas">Nueva contraseña</string>
+
+    <plurals name="fui_error_weak_password">
+        <item quantity="one">La contraseña no es lo suficientemente segura. Usa al menos %1$d carácter y una combinación de letras y números</item>
+        <item quantity="other">La contraseña no es lo suficientemente segura. Usa al menos %1$d caracteres y una combinación de letras y números</item>
+    </plurals>
+
+    <string name="fui_name_hint">Nombre y Apellidos</string>
+
+    <string name="fui_email_account_creation_error">No se pudo registrar la cuenta de correo electrónico</string>
+
+    <string name="fui_title_register_email">Registrarse</string>
 </resources>

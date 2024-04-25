@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:padding="16dp">
 
     <ImageView
         android:id="@+id/logoImageView"
@@ -16,34 +15,35 @@
         android:adjustViewBounds="true"
         android:maxHeight="100dp"
         app:srcCompat="@drawable/ic_launcher_background" />
+
     <LinearLayout
         android:id="@+id/invisibleRow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonsLayout"
         android:layout_centerHorizontal="true"
-        android:visibility="invisible"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:visibility="invisible">
 
         <Button
             android:id="@+id/verPerfilButton"
+            style="@style/Button.FellowshipFungi"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/OpenProfileTitle"
             android:layout_marginEnd="8dp"
+            android:layout_weight="1"
             android:onClick="onOpenProfileClick"
-            style="@style/Button.FellowshipFungi"/>
+            android:text="@string/OpenProfileTitle" />
 
         <Button
             android:id="@+id/cerrarSesionButton"
+            style="@style/Button.FellowshipFungi"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/LoginTitle"
             android:layout_marginStart="8dp"
+            android:layout_weight="1"
             android:onClick="onLogoutClick"
-            style="@style/Button.FellowshipFungi"/>
+            android:text="@string/LoginTitle" />
     </LinearLayout>
 
 
@@ -58,44 +58,43 @@
 
         <Button
             android:id="@+id/identificateButton"
+            style="@style/Button.FellowshipFungi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:onClick="onLoginClick"
-            android:text="@string/LoginTitle"
-            style="@style/Button.FellowshipFungi"/>
+            android:text="@string/LoginTitle" />
 
         <Button
             android:id="@+id/reconocerButton"
+            style="@style/Button.FellowshipFungi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:onClick="onRecognitionClick"
-            android:text="@string/RecognitionTitle"
-            style="@style/Button.FellowshipFungi"
-            />
+            android:text="@string/RecognitionTitle" />
 
         <Button
             android:id="@+id/curiosidadButton"
+            style="@style/Button.FellowshipFungi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:onClick="onOpenCuriosityClick"
-            android:text="@string/TestTitle"
-            style="@style/Button.FellowshipFungi"/>
+            android:text="@string/TestTitle" />
 
         <Button
             android:id="@+id/testButton"
+            style="@style/Button.FellowshipFungi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onOpenTestClick"
             android:text="@string/TestTitle"
-            android:textSize="10sp"
-            style="@style/Button.FellowshipFungi"/>
+            android:textSize="10sp" />
     </LinearLayout>
 
 

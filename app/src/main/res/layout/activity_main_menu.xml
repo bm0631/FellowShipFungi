@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:padding="16dp">
 
 
     <ImageView
@@ -24,29 +23,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/logoImageView"
-        android:visibility="invisible"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:visibility="invisible">
 
         <Button
             android:id="@+id/verPerfilButton"
+            style="@style/Button.FellowshipFungi"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="@string/OpenProfileTitle"
             android:layout_marginEnd="8dp"
+            android:layout_weight="1"
             android:onClick="onOpenProfileClick"
-            style="@style/Button.FellowshipFungi"/>
+            android:text="@string/OpenProfileTitle" />
 
         <Button
             android:id="@+id/cerrarSesionButton"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="@string/LogoutTitle"
-            android:layout_marginStart="8dp"
-            android:onClick="onLogoutClick"
             style="@style/Button.FellowshipFungi"
-            />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:onClick="onLogoutClick"
+            android:text="@string/LogoutTitle" />
     </LinearLayout>
 
     <LinearLayout
@@ -55,43 +53,43 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/invisibleRow"
         android:layout_centerVertical="true"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
 
         <Button
-            android:id="@+id/identificateButton"
+            android:id="@+id/loginButton"
+            style="@style/Button.FellowshipFungi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/LoginTitle"
             android:layout_marginBottom="8dp"
             android:onClick="onLoginClick"
-            style="@style/Button.FellowshipFungi"/>
+            android:text="@string/LoginTitle" />
 
         <Button
-            android:id="@+id/reconocerButton"
+            android:id="@+id/recognitionButton"
+            style="@style/Button.FellowshipFungi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/RecognitionTitle"
             android:layout_marginBottom="8dp"
             android:onClick="onRecognitionClick"
-            style="@style/Button.FellowshipFungi"/>
+            android:text="@string/RecognitionTitle" />
 
         <Button
-            android:id="@+id/curiosidadButton"
+            android:id="@+id/curiosityButton"
+            style="@style/Button.FellowshipFungi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/CuriosityTitle"
             android:layout_marginBottom="8dp"
             android:onClick="onOpenCuriosityClick"
-            style="@style/Button.FellowshipFungi"/>
+            android:text="@string/CuriosityTitle" />
 
         <Button
             android:id="@+id/testButton"
+            style="@style/Button.FellowshipFungi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/TestTitle"
             android:onClick="onOpenTestClick"
-            style="@style/Button.FellowshipFungi"/>
+            android:text="@string/TestTitle" />
     </LinearLayout>
 
 </RelativeLayout>
