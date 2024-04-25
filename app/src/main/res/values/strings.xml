@@ -6,4 +6,6 @@
     <string name="textRecognitionStepCount">0 Pasos</string>
     <string name="textBackRecognition">Paso atras</string>
 
+    <string name="YES">SI</string>
+    <string name="CANCELAR">CANCELAR</string>
 </resources>

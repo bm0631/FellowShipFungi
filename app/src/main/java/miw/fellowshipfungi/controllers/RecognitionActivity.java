@@ -21,6 +21,7 @@ import com.squareup.picasso.Picasso;
 import miw.fellowshipfungi.MainActivity;
 import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.adapters.AnswerAdapter;
+import miw.fellowshipfungi.controllers.dialogs.YesCancelDialog;
 import miw.fellowshipfungi.controllers.services.RecognitionService;
 import miw.fellowshipfungi.models.ask_models.recognitionmodels.NodeTypes;
 import miw.fellowshipfungi.models.ask_models.recognitionmodels.RecognitionEntity;
@@ -185,9 +186,7 @@ public class RecognitionActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.opcBack) {
             this.navigateToNode(previusNode);
         } else if (item.getItemId() == R.id.opcStop) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            finishAffinity();
+            this.showYesNoDialog_Anular();
         }
         return true;
     }
@@ -221,6 +220,18 @@ public class RecognitionActivity extends AppCompatActivity {
         this.progressBar.setVisibility(View.GONE);
     }
 
+    private void showYesNoDialog_Anular() {
+        YesCancelDialog dialog = YesCancelDialog.newInstance("Anular", "¿Quieres anular el Reconocimiento?");
+        dialog.setCallback(this::OpenMainMenu);
+        dialog.show(getSupportFragmentManager(), "yes_no_dialog");
+    }
+
+    private YesCancelDialog.YesNoDialogCallback OpenMainMenu() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finishAffinity();
+        return null;
+    }
 }
 
 
