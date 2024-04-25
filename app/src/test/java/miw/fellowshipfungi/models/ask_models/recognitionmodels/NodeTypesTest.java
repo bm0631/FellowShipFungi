@@ -1,8 +1,8 @@
 package miw.fellowshipfungi.models.ask_models.recognitionmodels;
 
-import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
 
 public class NodeTypesTest {
 

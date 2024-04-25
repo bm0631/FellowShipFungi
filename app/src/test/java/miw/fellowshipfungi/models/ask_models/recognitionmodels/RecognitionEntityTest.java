@@ -1,13 +1,14 @@
 package miw.fellowshipfungi.models.ask_models.recognitionmodels;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static org.junit.Assert.*;
 
 public class RecognitionEntityTest {
 
@@ -55,7 +56,7 @@ public class RecognitionEntityTest {
         mushroomData.put("textNode", MUSHROOM_NAME);
         mushroomData.put("img", MUSHROOM_IMG);
 
-        String expectImgURL ="https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/Setas%2F" + MUSHROOM_IMG.replace(" ", "%20") + ".jpg?alt=media";
+        String expectImgURL = "https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/Setas%2F" + MUSHROOM_IMG.replace(" ", "%20") + ".jpg?alt=media";
         recognitionEntity.setMusshroomEntity(mushroomData);
 
         assertEquals(MUSHROOM_NAME, recognitionEntity.getMusshroomName());

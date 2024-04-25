@@ -13,7 +13,7 @@ public class RecognitionEntity {
     public RecognitionEntity() {
         this.answerEntities = new ArrayList<AnswerEntity>();
     }
-    
+
     public void addAnswer(Map<String, Object> dataMap) {
         this.answerEntities.add(new AnswerEntity(dataMap));
     }
