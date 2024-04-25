@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- ProgressBar para mostrar mientras se carga -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <!-- Contenedor para la información de la seta -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Texto superior "Creemos que es:" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Creemos que es:"
+            android:textSize="24sp" />
+
+        <!-- Nombre de la seta en negrita y sobresaltado -->
+        <TextView
+            android:id="@+id/mushroomName"
+            style="@style/H1.FellowshipFungi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Imagen de la seta más grande -->
+        <ImageView
+            android:id="@+id/mushroomImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+
+    <!-- Contenedor para la pregunta y botones -->
+    <LinearLayout
+        style="@style/Theme.FellowshipFungi"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Texto "Quieres Registrar el encuentro?" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="¿Quieres registrar el encuentro?"
+            android:textSize="20sp" />
+
+        <!-- Opciones "Si" y "No" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/yesButton"
+                style="@style/Button.FellowshipFungi.Yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Sí"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/noButton"
+                style="@style/Button.FellowshipFungi.No"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="No"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
