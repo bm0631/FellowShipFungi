@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!-- Botón Atrás -->
+
+    <item
+
+        android:id="@+id/opcBack"
+
+        android:icon="@android:drawable/ic_media_rew"
+
+        android:title="@string/textBackMenu"
+
+        app:showAsAction="always" />
+
+
+    <!-- Botón ShareWhatsaap -->
+
+    <item
+
+        android:id="@+id/optShare"
+
+        android:icon="@mipmap/ic_whasapp"
+
+        android:title="@string/textStopRecognition"
+
+        app:showAsAction="always" />
+
+
+</menu>

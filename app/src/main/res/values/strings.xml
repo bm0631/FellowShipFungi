@@ -1,6 +1,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!--Recognition Mushroom-->
-    <string name="textRecognitionTittle">RECONOCIENDO SETA</string>
+    <string name="textRecognitionTitle">RECONOCIENDO SETA</string>
     <string name="app_name">Fellowship Fungi</string>
     <string name="textStopRecognition">Anular Reconocimiento</string>
     <string name="textRecognitionStepCount">0 Pasos</string>
@@ -66,4 +66,10 @@
     <string name="fui_sms_terms_of_service">Si presionas “%1$s”, se enviará un SMS. Se aplicarán las tarifas de mensajes y datos.</string>
     <string name="fui_sms_terms_of_service_and_privacy_policy_extended">Si presionas “%1$s”, indicas que aceptas nuestras %2$s y %3$s. Es posible que se te envíe un SMS. Podrían aplicarse las tarifas de mensajes y datos.</string>
     <string name="fui_country_hint">País</string>
+
+    <!-- CURIOSITY -->
+    <string name="textBackMenu">Volver al Menu Principal</string>
+    <string name="textCuriosityTitle">Curiosidad del día</string>
+
+
 </resources>

@@ -59,7 +59,7 @@ public class MainMenuActivity extends AppCompatActivity {
                                             new AuthUI.IdpConfig.EmailBuilder().build(),
                                             new AuthUI.IdpConfig.GoogleBuilder().build(),
                                             new AuthUI.IdpConfig.PhoneBuilder().build()
-                                     ))
+                                    ))
                                     .setLogo(R.mipmap.ic_launcher).setTheme(R.style.Base_Theme_FellowshipFungi)
                                     .build(),
                             RC_SIGN_IN
@@ -83,10 +83,14 @@ public class MainMenuActivity extends AppCompatActivity {
         intent.putExtra("Current", "Ask_001");
         intent.putExtra("countAsks", 1);
         startActivity(intent);
+        finishAffinity();
     }
 
     public void onOpenCuriosityClick(View view) {
-        //TODO
+        Log.i(LOG_TAG, "Se pulsa Reconocimiento");
+        Intent intent = new Intent(this, CuriosityActivity.class);
+        startActivity(intent);
+        finishAffinity();
     }
 
     public void onOpenTestClick(View view) {

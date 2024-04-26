@@ -28,11 +28,16 @@
         <activity
             android:name=".controllers.RecognitionActivity"
             android:exported="true"
-            android:label="@string/textRecognitionTittle" />
+            android:label="@string/textRecognitionTitle" />
 
         <activity
             android:name=".controllers.MainMenuActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".controllers.CuriosityActivity"
+            android:exported="true"
+            android:label="@string/textCuriosityTitle" />
     </application>
 
 </manifest>
