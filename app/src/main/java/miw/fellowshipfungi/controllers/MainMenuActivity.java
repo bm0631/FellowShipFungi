@@ -56,7 +56,10 @@ public class MainMenuActivity extends AppCompatActivity {
                                     .createSignInIntentBuilder()
                                     .setIsSmartLockEnabled(!BuildConfig.DEBUG, false)
                                     .setAvailableProviders(Arrays.asList(
-                                            new AuthUI.IdpConfig.EmailBuilder().build()))
+                                            new AuthUI.IdpConfig.EmailBuilder().build(),
+                                            new AuthUI.IdpConfig.GoogleBuilder().build(),
+                                            new AuthUI.IdpConfig.PhoneBuilder().build()
+                                     ))
                                     .setLogo(R.mipmap.ic_launcher).setTheme(R.style.Base_Theme_FellowshipFungi)
                                     .build(),
                             RC_SIGN_IN
@@ -112,7 +115,7 @@ public class MainMenuActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
 
                         // below method is used after logout from device.
-                        Toast.makeText(MainMenuActivity.this, "User Signed Out", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainMenuActivity.this, "Cerrada Sesion", Toast.LENGTH_SHORT).show();
 
                         // below line is to go to MainActivity via an intent.
                         Intent i = new Intent(MainMenuActivity.this, MainMenuActivity.class);
