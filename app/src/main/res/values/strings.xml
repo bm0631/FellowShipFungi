@@ -80,6 +80,8 @@
     <string name="RequestLocationLabel">Localidad del Encuentro</string>
     <string name="WeatherLabel">¿Qué tiempo hacia?</string>
     <string name="mustLogged">Si quiere, debe idenficiarse</string>
+    <string name="writtenEnconter">Encuentro creado</string>
+    <string name="select">Seleccione</string>
     <string-array name="optionsweather">
         <item>Seleccione</item>
         <item>Soleado</item>
