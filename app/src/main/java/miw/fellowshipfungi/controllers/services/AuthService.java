@@ -24,7 +24,8 @@ public class AuthService {
     public String getIdUserLogged() {
         return mFirebaseAuth.getCurrentUser().getUid();
     }
-    public String getUserName(){
+
+    public String getUserName() {
         return mFirebaseAuth.getCurrentUser().getDisplayName();
     }
 }

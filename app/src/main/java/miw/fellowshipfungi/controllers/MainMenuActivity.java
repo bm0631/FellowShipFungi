@@ -16,7 +16,6 @@ import com.firebase.ui.auth.BuildConfig;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
 import java.util.Arrays;
@@ -45,7 +44,7 @@ public class MainMenuActivity extends AppCompatActivity {
             @SuppressLint("ResourceType")
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                AuthService authService=AuthService.getInstance();
+                AuthService authService = AuthService.getInstance();
                 if (authService.isLogged()) {
                     Log.w(LOG_TAG, "HAY USER");
                     Toast.makeText(MainMenuActivity.this, "Usuario  " + authService.getUserName(), Toast.LENGTH_SHORT).show();

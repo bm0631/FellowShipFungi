@@ -127,7 +127,7 @@ public class CuriosityActivity extends AppCompatActivity {
     }
 
     private void updateStreakCuriosities() {
-        //TODO update count de la persona si procede
+        this.curiosityService.updateStreakCuriosities();
     }
 
 }

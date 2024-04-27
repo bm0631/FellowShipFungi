@@ -13,7 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -247,9 +246,10 @@ public class RecognitionActivity extends AppCompatActivity {
         startActivity(intent);
         finishAffinity();
     }
-    public void visibilityCreateEnconterAsk(){
-        if(!AuthService.getInstance().isLogged()){
-            Button yesEnconterButton=findViewById(R.id.yesButton);
+
+    public void visibilityCreateEnconterAsk() {
+        if (!AuthService.getInstance().isLogged()) {
+            Button yesEnconterButton = findViewById(R.id.yesButton);
             yesEnconterButton.setEnabled(false);
             yesEnconterButton.setText(R.string.mustLogged);
             yesEnconterButton.setBackgroundResource(android.R.drawable.btn_default);
