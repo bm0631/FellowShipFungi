@@ -13,6 +13,7 @@ import java.util.Map;
 public class RecognitionEntityTest {
 
     private static final String ASK_TEXT = "What is this mushroom?";
+    private static final String MUSHROOM_ID = "Species_001";
     private static final String MUSHROOM_NAME = "Amanita muscaria";
     private static final String MUSHROOM_IMG = "amanita_muscaria";
 
@@ -52,7 +53,7 @@ public class RecognitionEntityTest {
     @Test
     public void testSetMusshroomEntity() {
         Map<String, Object> mushroomData = new HashMap<>();
-        mushroomData.put("idNode", "Species_001");
+        mushroomData.put("idNode", MUSHROOM_ID);
         mushroomData.put("textNode", MUSHROOM_NAME);
         mushroomData.put("img", MUSHROOM_IMG);
 

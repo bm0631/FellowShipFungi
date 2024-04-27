@@ -38,6 +38,11 @@
             android:name=".controllers.CuriosityActivity"
             android:exported="true"
             android:label="@string/textCuriosityTitle" />
+
+        <activity
+            android:name=".controllers.CreateEnconterActivity"
+            android:exported="true"
+            android:label="@string/textCreateEnconterTitle" />
     </application>
 
 </manifest>

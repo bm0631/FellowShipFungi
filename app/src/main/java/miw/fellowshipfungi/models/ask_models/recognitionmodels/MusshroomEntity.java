@@ -14,6 +14,10 @@ public class MusshroomEntity {
         this.img = (String) dataMap.get("img");
     }
 
+    public String getId() {
+        return this.id;
+    }
+
     public String getName() {
         return this.name;
     }

@@ -46,6 +46,10 @@ public class RecognitionEntity {
         return this.musshroomEntity.getImgUrl();
     }
 
+    public String getMusshroomId() {
+        return this.musshroomEntity.getId();
+    }
+
     @Override
     public String toString() {
         return "RecognitionEntity{" +

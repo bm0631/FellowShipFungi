@@ -70,6 +70,22 @@
     <!-- CURIOSITY -->
     <string name="textBackMenu">Volver al Menu Principal</string>
     <string name="textCuriosityTitle">Curiosidad del día</string>
-
+    <!-- CREATE ENCONTER -->
+    <string name="saveEnconter">Guardar Encuentro</string>
+    <string name="textCreateEnconterTitle">Crear Encuentro</string>
+    <string name="RequestDate"> Introduce Fecha</string>
+    <string name="RequestLocation">Introduce Localidad</string>
+    <string name="nameMusshroomLabel">Nombre de la Seta</string>
+    <string name="RequestDateLabel">Fecha Del Encuentro</string>
+    <string name="RequestLocationLabel">Localidad del Encuentro</string>
+    <string name="WeatherLabel">¿Qué tiempo hacia?</string>
+    <string-array name="optionsweather">
+        <item>Seleccione</item>
+        <item>Soleado</item>
+        <item>Nublado</item>
+        <item>Lluvia</item>
+        <item>Neblina</item>
+        <item>Viento</item>
+    </string-array>
 
 </resources>

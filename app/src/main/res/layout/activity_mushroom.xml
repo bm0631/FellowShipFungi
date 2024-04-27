@@ -63,6 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
+            android:onClick="openCreateEnconter"
             android:text="Sí"
             app:backgroundTint="@null" />
 
@@ -72,6 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:onClick="openMainMenu"
             android:text="No"
             app:backgroundTint="@null" />
     </LinearLayout>

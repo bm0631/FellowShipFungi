@@ -30,6 +30,7 @@ public class MusshroomEntityTest {
         MusshroomEntity musshroomEntity = new MusshroomEntity(dataMap);
 
         assertNotNull(musshroomEntity);
+        assertEquals(ID, musshroomEntity.getId());
         assertEquals(NAME, musshroomEntity.getName());
         assertEquals(expectImgURL, musshroomEntity.getImgUrl());
     }

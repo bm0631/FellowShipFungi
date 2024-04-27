@@ -18,7 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
-import miw.fellowshipfungi.MainActivity;
 import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.adapters.AnswerAdapter;
 import miw.fellowshipfungi.controllers.dialogs.YesCancelDialog;
@@ -220,15 +219,29 @@ public class RecognitionActivity extends AppCompatActivity {
 
     private void showYesNoDialog_Anular() {
         YesCancelDialog dialog = YesCancelDialog.newInstance("Anular", "¿Quieres anular el Reconocimiento?");
-        dialog.setCallback(this::OpenMainMenu);
+        dialog.setCallback(this::openMainMenu);
         dialog.show(getSupportFragmentManager(), "yes_no_dialog");
     }
 
-    private YesCancelDialog.YesNoDialogCallback OpenMainMenu() {
-        Intent intent = new Intent(this, MainActivity.class);
+    public void openMainMenu(View view) {
+        this.openMainMenu();
+    }
+
+    private YesCancelDialog.YesNoDialogCallback openMainMenu() {
+        Intent intent = new Intent(this, MainMenuActivity.class);
         startActivity(intent);
         finishAffinity();
         return null;
+    }
+
+    public void openCreateEnconter(View view) {
+        Intent intent = new Intent(this, CreateEnconterActivity.class);
+        intent.putExtra("specieId", this.recognitionEntity.getMusshroomId());
+        intent.putExtra("specieName", this.recognitionEntity.getMusshroomName());
+        intent.putExtra("Previus", this.previusNode);
+        intent.putExtra("countAsks", this.countAsks);
+        startActivity(intent);
+        finishAffinity();
     }
 }
 
