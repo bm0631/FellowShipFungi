@@ -53,11 +53,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/logoImageView"
         android:layout_marginTop="16dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        android:weightSum="4"> <!-- Suma total de los pesos de los botones -->
+        android:weightSum="4">
 
         <Button
-            android:id="@+id/identificateButton"
+            android:id="@+id/loginButton"
             style="@style/Button.FellowshipFungi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -67,7 +68,7 @@
             android:text="@string/LoginTitle" />
 
         <Button
-            android:id="@+id/reconocerButton"
+            android:id="@+id/recognitionButton"
             style="@style/Button.FellowshipFungi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -77,7 +78,7 @@
             android:text="@string/RecognitionTitle" />
 
         <Button
-            android:id="@+id/curiosidadButton"
+            android:id="@+id/curiosityButton"
             style="@style/Button.FellowshipFungi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
