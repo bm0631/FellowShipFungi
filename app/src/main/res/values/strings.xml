@@ -82,6 +82,8 @@
     <string name="mustLogged">Si quiere, debe idenficiarse</string>
     <string name="writtenEnconter">Encuentro creado</string>
     <string name="select">Seleccione</string>
+    <string name="textStopTest">Anular Test</string>
+    <string name="textTestTitle">TEST</string>
     <string-array name="optionsweather">
         <item>Seleccione</item>
         <item>Soleado</item>

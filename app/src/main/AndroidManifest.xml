@@ -43,6 +43,10 @@
             android:name=".controllers.CreateEnconterActivity"
             android:exported="true"
             android:label="@string/textCreateEnconterTitle" />
+        <activity
+            android:name=".controllers.TestActivity"
+            android:exported="true"
+            android:label="@string/textTestTitle" />
     </application>
 
 </manifest>

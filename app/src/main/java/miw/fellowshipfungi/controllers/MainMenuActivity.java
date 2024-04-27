@@ -93,7 +93,10 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     public void onOpenTestClick(View view) {
-        //TODO
+        Log.i(LOG_TAG, "Se pulsa TEST");
+        Intent intent = new Intent(this, TestActivity.class);
+        startActivity(intent);
+        finishAffinity();
     }
 
     public void onOpenProfileClick(View view) {
