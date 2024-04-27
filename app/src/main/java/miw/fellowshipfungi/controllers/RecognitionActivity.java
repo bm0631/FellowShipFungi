@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +22,7 @@ import com.squareup.picasso.Picasso;
 import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.adapters.AnswerAdapter;
 import miw.fellowshipfungi.controllers.dialogs.YesCancelDialog;
+import miw.fellowshipfungi.controllers.services.AuthService;
 import miw.fellowshipfungi.controllers.services.RecognitionService;
 import miw.fellowshipfungi.models.ask_models.recognitionmodels.NodeTypes;
 import miw.fellowshipfungi.models.ask_models.recognitionmodels.RecognitionEntity;
@@ -139,6 +141,8 @@ public class RecognitionActivity extends AppCompatActivity {
 
         this.offProgresionBar();
 
+        this.visibilityCreateEnconterAsk();
+
     }
 
     public void repliedAsk(View view) {
@@ -242,6 +246,14 @@ public class RecognitionActivity extends AppCompatActivity {
         intent.putExtra("countAsks", this.countAsks);
         startActivity(intent);
         finishAffinity();
+    }
+    public void visibilityCreateEnconterAsk(){
+        if(!AuthService.getInstance().isLogged()){
+            Button yesEnconterButton=findViewById(R.id.yesButton);
+            yesEnconterButton.setEnabled(false);
+            yesEnconterButton.setText(R.string.mustLogged);
+            yesEnconterButton.setBackgroundResource(android.R.drawable.btn_default);
+        }
     }
 }
 

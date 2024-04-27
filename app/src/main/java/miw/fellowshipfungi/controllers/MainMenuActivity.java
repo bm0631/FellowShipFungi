@@ -23,6 +23,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 import miw.fellowshipfungi.R;
+import miw.fellowshipfungi.controllers.services.AuthService;
 
 public class MainMenuActivity extends AppCompatActivity {
     final static String LOG_TAG = "Fellowship Main Menu";
@@ -41,14 +42,13 @@ public class MainMenuActivity extends AppCompatActivity {
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
 
-            FirebaseUser user = mFirebaseAuth.getCurrentUser();
-
             @SuppressLint("ResourceType")
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if (user != null) {
+                AuthService authService=AuthService.getInstance();
+                if (authService.isLogged()) {
                     Log.w(LOG_TAG, "HAY USER");
-                    Toast.makeText(MainMenuActivity.this, "Usuario  " + user.getDisplayName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainMenuActivity.this, "Usuario  " + authService.getUserName(), Toast.LENGTH_SHORT).show();
                 } else {
                     Log.w(LOG_TAG, "ARRANCA LOGIN/REGISTER");
                     startActivityForResult(
@@ -142,8 +142,7 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     private void setVisibilyAuth() {
-        FirebaseUser currentUser = mFirebaseAuth.getCurrentUser();
-        if (currentUser != null) {
+        if (AuthService.getInstance().isLogged()) {
             findViewById(R.id.invisibleRow).setVisibility(View.VISIBLE);
             findViewById(R.id.loginButton).setVisibility(View.GONE);
         }

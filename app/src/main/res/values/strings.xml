@@ -79,6 +79,7 @@
     <string name="RequestDateLabel">Fecha Del Encuentro</string>
     <string name="RequestLocationLabel">Localidad del Encuentro</string>
     <string name="WeatherLabel">¿Qué tiempo hacia?</string>
+    <string name="mustLogged">Si quiere, debe idenficiarse</string>
     <string-array name="optionsweather">
         <item>Seleccione</item>
         <item>Soleado</item>
