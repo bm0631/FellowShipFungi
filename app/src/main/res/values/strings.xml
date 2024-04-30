@@ -82,8 +82,7 @@
     <string name="mustLogged">Si quiere, debe idenficiarse</string>
     <string name="writtenEnconter">Encuentro creado</string>
     <string name="select">Seleccione</string>
-    <string name="textStopTest">Anular Test</string>
-    <string name="textTestTitle">TEST</string>
+
     <string-array name="optionsweather">
         <item>Seleccione</item>
         <item>Soleado</item>
@@ -92,5 +91,16 @@
         <item>Neblina</item>
         <item>Viento</item>
     </string-array>
+
+
+    <!-- TEST -->
+    <string name="textStopTest">Anular Test</string>
+    <string name="textTestTitle">TEST</string>
+    <string name="CorrectTest">C</string>
+    <string name="FailTest">F</string>
+    <string name="Congratulations">¡Enhorabuena!</string>
+    <string name="porcentaje_de_aciertos">Porcentaje de aciertos: %.2f %%</string>
+    <string name="ReplayTextoButton">Volver a Jugar</string>
+    <string name="Exit">Salir</string>
 
 </resources>

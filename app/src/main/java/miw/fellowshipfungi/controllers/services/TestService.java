@@ -6,8 +6,8 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
 import java.util.Map;
-
 
 import miw.fellowshipfungi.models.ask_models.TestEntity;
 
@@ -28,7 +28,7 @@ public class TestService {
 
     public void loadCuriosity(String idQuestion, TestService.TestServiceCallback callback) {
         DocumentReference docRef = db.collection(COLLECTION_NAME).document(TEST_DOCUMENT);
-        Log.w(LOG_TAG,"Questions Request: "+idQuestion);
+        Log.w(LOG_TAG, "Questions Request: " + idQuestion);
         docRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 DocumentSnapshot result = task.getResult();
@@ -47,6 +47,32 @@ public class TestService {
         });
     }
 
+    public void updateBestResult(Double newResult) {
+        final String COLLECTION_PROFILE = "Profiles";
+        String userId = AuthService.getInstance().getIdUserLogged();
+        if (userId == null) {
+            Log.e(LOG_TAG, "User ID is null");
+            return;
+        }
+
+        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(userId);
+
+        userRef.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                Double bestResult = document.getDouble("bestResult");
+
+                if (bestResult == null || newResult >= bestResult) {
+                    Map<String, Object> streakData = new HashMap<>();
+                    streakData.put("bestResult", newResult);
+                    userRef.update(streakData);
+                }
+
+            } else {
+                Log.e(LOG_TAG, "Error getting streak document", task.getException());
+            }
+        });
+    }
 
 
     public interface TestServiceCallback {

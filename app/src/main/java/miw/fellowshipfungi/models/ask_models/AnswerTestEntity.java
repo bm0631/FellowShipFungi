@@ -4,11 +4,11 @@ import java.util.Map;
 
 public class AnswerTestEntity {
     private String text;
-    private boolean istrue;
+    private boolean isTrue;
 
-    public AnswerTestEntity(Map<String, Object> dataMap){
-        this.text=(String)dataMap.get("textAnswer");
-        this.istrue=Boolean.getBoolean((String)dataMap.get("istrue"));
+    public AnswerTestEntity(Map<String, Object> dataMap) {
+        this.text = (String) dataMap.get("textAnswer");
+        this.isTrue = Boolean.parseBoolean((String) dataMap.get("isTrue"));
     }
 
 
@@ -16,7 +16,15 @@ public class AnswerTestEntity {
     public String toString() {
         return "AnswerTestEntity{" +
                 "text='" + text + '\'' +
-                ", istrue=" + istrue +
+                ", istrue=" + isTrue +
                 '}';
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public boolean isTrue() {
+        return isTrue;
     }
 }

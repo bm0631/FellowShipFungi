@@ -1,6 +1,7 @@
 package miw.fellowshipfungi.controllers.services;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class AuthService {
     private static AuthService instance;
@@ -22,7 +23,12 @@ public class AuthService {
     }
 
     public String getIdUserLogged() {
-        return mFirebaseAuth.getCurrentUser().getUid();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            return user.getUid();
+        } else {
+            return null;
+        }
     }
 
     public String getUserName() {

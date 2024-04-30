@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_test">
 
 
     <item
@@ -19,23 +18,30 @@
     <item
 
         android:id="@+id/countWrong"
-        app:showAsAction="always"
-        android:title=""
-        />
-
-
+        android:title="0"
+        app:showAsAction="always" />
     <item
 
-        android:id="@+id/countRight"
-        app:showAsAction="always"
-        android:title=""/>
+        android:title="@string/FailTest"
+        app:showAsAction="always" />
 
+    <item
+        android:id="@+id/countRight"
+        android:title="0"
+        app:showAsAction="always"
+
+        />
+    <item
+
+        android:title="@string/CorrectTest"
+        app:showAsAction="always"
+
+        />
     <item
 
         android:id="@+id/count"
-        app:showAsAction="always"
-        android:title=""/>
-
+        android:title="0/10"
+        app:showAsAction="always" />
 
 
 </menu>
