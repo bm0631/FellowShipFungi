@@ -30,4 +30,10 @@ public class ProfileDataTest {
         profileData.setBestResult(0.75);
         assertEquals(0.75, profileData.getBestResult(), 0.001); // Use delta for double comparison
     }
+
+    @Test
+    public void testSetUsername() {
+        profileData.setUsername("Prueba");
+        assertEquals("Prueba", profileData.getUsername());
+    }
 }

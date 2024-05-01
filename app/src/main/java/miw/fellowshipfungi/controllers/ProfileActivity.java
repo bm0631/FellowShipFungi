@@ -1,12 +1,18 @@
 package miw.fellowshipfungi.controllers;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import miw.fellowshipfungi.R;
+import miw.fellowshipfungi.controllers.dialogs.YesCancelDialog;
 import miw.fellowshipfungi.controllers.services.ProfileService;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -26,7 +32,7 @@ public class ProfileActivity extends AppCompatActivity {
             TextView lengthTextView = findViewById(R.id.lenghtCollectionTextView);
             TextView streakTextView = findViewById(R.id.streakCuriositiesTextView);
             TextView bestResultTextView = findViewById(R.id.bestResultTextView);
-
+            TextView userName = findViewById(R.id.userName);
             // Mostrar la longitud de la colección
             lengthTextView.setText(getString(R.string.length_registered_mushrooms, (int) profileData.getLengthCollection()));
 
@@ -35,7 +41,24 @@ public class ProfileActivity extends AppCompatActivity {
 
             // Mostrar el mejor resultado
             bestResultTextView.setText(getString(R.string.best_result_profile, profileData.getBestResult() * 100));
+            // Mostar nombre del usuario
+            userName.setText(profileData.getUsername());
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_profile, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent = new Intent(this, MainMenuActivity.class);
+        startActivity(intent);
+        finishAffinity();
+        return true;
     }
 
 }

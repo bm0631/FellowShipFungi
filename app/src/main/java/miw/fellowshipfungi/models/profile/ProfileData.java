@@ -4,7 +4,7 @@ public class ProfileData {
     private long lengthCollection;
     private int streak;
     private double bestResult;
-
+    private String username;
     public void setLengthCollection(long lengthCollection) {
         this.lengthCollection = lengthCollection;
     }
@@ -27,5 +27,13 @@ public class ProfileData {
 
     public double getBestResult() {
         return bestResult;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

@@ -30,6 +30,9 @@ public class ProfileService {
     public void getProfileData(final OnProfileDataListener listener) {
         ProfileData profileData = new ProfileData();
 
+        // Obtener nombre de usuario
+        profileData.setUsername(AuthService.getInstance().getUserName());
+
         // Obtener longitud de la colección
         getLengthCollection(length -> {
             profileData.setLengthCollection(length);
@@ -48,6 +51,7 @@ public class ProfileService {
             });
         });
     }
+
 
     public interface OnProfileDataListener {
         void onProfileDataLoaded(ProfileData profileData);
