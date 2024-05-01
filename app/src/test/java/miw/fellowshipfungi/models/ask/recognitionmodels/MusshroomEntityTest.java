@@ -1,4 +1,4 @@
-package miw.fellowshipfungi.models.ask_models.recognitionmodels;
+package miw.fellowshipfungi.models.ask.recognitionmodels;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

@@ -100,7 +100,10 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     public void onOpenProfileClick(View view) {
-        //TODO
+        Log.i(LOG_TAG, "Se pulsa PROFILE");
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+        finishAffinity();
     }
 
     public void onLoginClick(View view) {

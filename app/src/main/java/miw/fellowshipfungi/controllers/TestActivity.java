@@ -26,7 +26,7 @@ import java.util.Set;
 import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.dialogs.YesCancelDialog;
 import miw.fellowshipfungi.controllers.services.TestService;
-import miw.fellowshipfungi.models.ask_models.TestEntity;
+import miw.fellowshipfungi.models.ask.TestEntity;
 
 public class TestActivity extends AppCompatActivity {
     final static String LOG_TAG = "Fellowship Fungi Test";

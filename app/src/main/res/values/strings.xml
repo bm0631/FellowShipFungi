@@ -103,4 +103,12 @@
     <string name="ReplayTextoButton">Volver a Jugar</string>
     <string name="Exit">Salir</string>
 
+    <!-- PROFILE -->
+    <string name="textProfileTitle">PERFIL</string>
+    <string name="length_registered_mushrooms">%d Setas En tu Colección</string>
+    <string name="go_to_collection">Ver Colección</string>
+    <string name="consecutive_days_of_curiosities">%d Días Conscutivos de Curiosidades</string>
+    <string name="best_result_profile">Mejor Resultado Test: %.2f %%</string>
+
+
 </resources>

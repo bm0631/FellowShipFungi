@@ -19,12 +19,14 @@ public class CuriosityService {
     final static String LOG_TAG = "Curiosity Service";
     private static final String COLLECTION_NAME = "Daily Curiosity";
     private static final String CURIOSITY_DOCUMENT = "Curiosities";
-
+    private final String COLLECTION_PROFILE = "Profiles";
     private final FirebaseFirestore db;
+    private String userId;
     private CuriosityEntity curiosityEntity;
 
     public CuriosityService() {
         this.db = FirebaseFirestore.getInstance();
+        this.userId = AuthService.getInstance().getIdUserLogged();
 
     }
 
@@ -50,9 +52,8 @@ public class CuriosityService {
     }
 
     public void updateStreakCuriosities() {
-        final String COLLECTION_PROFILE = "Profiles";
-        String userId = AuthService.getInstance().getIdUserLogged();
-        if (userId == null) {
+
+        if (this.userId == null) {
             Log.e(LOG_TAG, "User ID is null");
             return;
         }
@@ -66,11 +67,11 @@ public class CuriosityService {
                 Date streakLastDate = document.getDate("streakLastDate");
                 int currentStreakInt = 1;
 
-                if (currentStreak == null || !this.isYesterday(streakLastDate)) {
+                if (currentStreak == null ) {
                     streakLastDate = new Date();
                 } else if (isSameDay(streakLastDate, new Date())) {
                     return;
-                } else {
+                } else if (this.isYesterday(streakLastDate)) {
                     currentStreakInt = currentStreak.intValue() + 1;
                     streakLastDate = new Date();
                 }
@@ -90,6 +91,8 @@ public class CuriosityService {
     }
 
     private boolean isSameDay(Date date1, Date date2) {
+        Log.w(LOG_TAG,date1.toString());
+        Log.w(LOG_TAG,date2.toString());
         Calendar cal1 = Calendar.getInstance();
         cal1.setTime(date1);
         Calendar cal2 = Calendar.getInstance();

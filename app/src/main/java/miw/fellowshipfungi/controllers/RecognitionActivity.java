@@ -23,8 +23,8 @@ import miw.fellowshipfungi.controllers.adapters.AnswerAdapter;
 import miw.fellowshipfungi.controllers.dialogs.YesCancelDialog;
 import miw.fellowshipfungi.controllers.services.AuthService;
 import miw.fellowshipfungi.controllers.services.RecognitionService;
-import miw.fellowshipfungi.models.ask_models.recognitionmodels.NodeTypes;
-import miw.fellowshipfungi.models.ask_models.recognitionmodels.RecognitionEntity;
+import miw.fellowshipfungi.models.ask.recognitionmodels.NodeTypes;
+import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
 
 public class RecognitionActivity extends AppCompatActivity {
 

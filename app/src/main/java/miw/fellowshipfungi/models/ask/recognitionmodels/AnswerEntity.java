@@ -1,4 +1,4 @@
-package miw.fellowshipfungi.models.ask_models.recognitionmodels;
+package miw.fellowshipfungi.models.ask.recognitionmodels;
 
 import java.util.Map;
 

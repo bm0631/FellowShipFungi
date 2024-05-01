@@ -47,8 +47,11 @@
             android:name=".controllers.TestActivity"
             android:exported="true"
             android:label="@string/textTestTitle"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".controllers.ProfileActivity"
+            android:exported="true"
+            android:label="@string/textProfileTitle" />
     </application>
 
 </manifest>

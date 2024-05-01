@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import miw.fellowshipfungi.R;
-import miw.fellowshipfungi.models.ask_models.recognitionmodels.AnswerEntity;
+import miw.fellowshipfungi.models.ask.recognitionmodels.AnswerEntity;
 
 public class AnswerAdapter extends RecyclerView.Adapter<AnswerAdapter.ViewHolder> {
 

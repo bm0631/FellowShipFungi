@@ -1,4 +1,4 @@
-package miw.fellowshipfungi.models.ask_models;
+package miw.fellowshipfungi.models.ask;
 
 import java.util.Map;
 

@@ -9,7 +9,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-import miw.fellowshipfungi.models.ask_models.TestEntity;
+import miw.fellowshipfungi.models.ask.TestEntity;
 
 public class TestService {
 
@@ -17,12 +17,14 @@ public class TestService {
     final static String LOG_TAG = "Test Service";
     private static final String COLLECTION_NAME = "Test";
     private static final String TEST_DOCUMENT = "Questions";
-
+    private final String COLLECTION_PROFILE = "Profiles";
     private final FirebaseFirestore db;
+    private String userId;
     private TestEntity testEntity;
 
     public TestService() {
         this.db = FirebaseFirestore.getInstance();
+        this.userId = AuthService.getInstance().getIdUserLogged();
 
     }
 
@@ -48,9 +50,8 @@ public class TestService {
     }
 
     public void updateBestResult(Double newResult) {
-        final String COLLECTION_PROFILE = "Profiles";
-        String userId = AuthService.getInstance().getIdUserLogged();
-        if (userId == null) {
+
+        if (this.userId == null) {
             Log.e(LOG_TAG, "User ID is null");
             return;
         }

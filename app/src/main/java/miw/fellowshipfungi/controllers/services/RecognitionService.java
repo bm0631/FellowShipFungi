@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import miw.fellowshipfungi.models.ask_models.recognitionmodels.RecognitionEntity;
+import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
 
 public class RecognitionService {
 
