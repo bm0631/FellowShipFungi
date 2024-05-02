@@ -52,6 +52,11 @@
             android:name=".controllers.ProfileActivity"
             android:exported="true"
             android:label="@string/textProfileTitle" />
+
+        <activity
+            android:name=".controllers.CollectionActivity"
+            android:exported="true"
+            android:label="@string/textCollectiontitle" />
     </application>
 
 </manifest>

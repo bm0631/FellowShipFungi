@@ -54,7 +54,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/go_to_collection"
                 android:textSize="14sp"
-                app:backgroundTint="@null" />
+                app:backgroundTint="@null"
+                android:onClick="openCollection"
+                />
 
         </LinearLayout>
 

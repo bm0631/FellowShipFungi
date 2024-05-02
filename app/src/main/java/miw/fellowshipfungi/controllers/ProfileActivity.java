@@ -2,6 +2,7 @@ package miw.fellowshipfungi.controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -59,6 +60,12 @@ public class ProfileActivity extends AppCompatActivity {
         startActivity(intent);
         finishAffinity();
         return true;
+    }
+    public void openCollection (View view){
+        Log.w("lll","----");
+        Intent intent = new Intent(this, CollectionActivity.class);
+        startActivity(intent);
+        finishAffinity();
     }
 
 }

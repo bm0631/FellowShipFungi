@@ -110,5 +110,12 @@
     <string name="consecutive_days_of_curiosities">%d Días Conscutivos de Curiosidades</string>
     <string name="best_result_profile">Mejor Resultado Test: %.2f %%</string>
 
+    <!-- COLLECTION -->
+    <string name="EnconterCollectionDate">Fecha</string>
+    <string name="EnconterCollectionLocation">Localidad</string>
+    <string name="EnconterCollectionWeather">Tiempo</string>
+    <string name="EnconterCollectionDeleteButton">Borrar</string>
+    <string name="textCollectiontitle">COLECCIÓN</string>
+
 
 </resources>
