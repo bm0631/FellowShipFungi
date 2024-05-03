@@ -1,6 +1,5 @@
 package miw.fellowshipfungi.controllers.adapters;
 
-import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +23,7 @@ public class EnconterAdapter extends RecyclerView.Adapter<EnconterAdapter.Encont
 
     private List<EnconterCollectionEntity> enconterCollectionEntities;
 
-    public EnconterAdapter( List<EnconterCollectionEntity> enconterCollectionEntities) {
+    public EnconterAdapter(List<EnconterCollectionEntity> enconterCollectionEntities) {
 
         this.enconterCollectionEntities = enconterCollectionEntities;
         Log.w("EnconterAdapter", this.enconterCollectionEntities.toString());
@@ -45,7 +44,7 @@ public class EnconterAdapter extends RecyclerView.Adapter<EnconterAdapter.Encont
         EnconterCollectionEntity enconterCollectionEntity = enconterCollectionEntities.get(position);
 
 
-        Picasso.get().load(enconterCollectionEntity.getImgUrl()).into( holder.mushroomImage);
+        Picasso.get().load(enconterCollectionEntity.getImgUrl()).into(holder.mushroomImage);
         holder.nameMusshroom.setText(enconterCollectionEntity.getNameMussroom());
         holder.etDate.setText(enconterCollectionEntity.getDate());
         holder.location.setText(enconterCollectionEntity.getLocation());

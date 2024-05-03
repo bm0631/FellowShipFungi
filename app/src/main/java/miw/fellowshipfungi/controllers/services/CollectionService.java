@@ -11,16 +11,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import miw.fellowshipfungi.models.profile.EnconterCollectionEntity;
 import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
+import miw.fellowshipfungi.models.profile.EnconterCollectionEntity;
 
 public class CollectionService {
 
     private static final String COLLECTION_PROFILE = "Profiles";
     private static final String COLLECTION_ENCONTERS = "Enconters";
+    private static CollectionService instance;
     private String user;
     private FirebaseFirestore db;
-    private static CollectionService instance;
 
     public CollectionService() {
         this.db = FirebaseFirestore.getInstance();
@@ -36,25 +36,25 @@ public class CollectionService {
     }
 
     public void getCollection(final OnCollectionListener listener) {
-        Log.w("lll","ENTRO");
+        Log.w("lll", "ENTRO");
         db.collection(COLLECTION_PROFILE)
                 .document(user)
                 .collection(COLLECTION_ENCONTERS)
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        Log.w("lll","TENGO LOS ENCUENTROS");
+                        Log.w("lll", "TENGO LOS ENCUENTROS");
                         List<EnconterCollectionEntity> collectionEntities = new ArrayList<>();
                         AtomicInteger loadedCount = new AtomicInteger(0);
                         int totalCount = task.getResult().size();
                         for (DocumentSnapshot document : task.getResult()) {
-                            Log.w("lll","ECUENTRO: "+document.getData());
+                            Log.w("lll", "ECUENTRO: " + document.getData());
                             Map<String, Object> enconterData = document.getData();
                             String specieId = (String) enconterData.get("speciedId");
                             new RecognitionService().loadSpecie(specieId, new RecognitionService.RecognitionServiceCallback() {
                                 @Override
                                 public void onSuccess(RecognitionEntity recognitionEntity) {
-                                    Log.w("lll","SETA: "+recognitionEntity.getMusshroomName());
+                                    Log.w("lll", "SETA: " + recognitionEntity.getMusshroomName());
                                     EnconterCollectionEntity entity = new EnconterCollectionEntity(enconterData, recognitionEntity);
                                     collectionEntities.add(entity);
                                     if (loadedCount.incrementAndGet() == totalCount) {
@@ -78,10 +78,9 @@ public class CollectionService {
     }
 
 
-
-
     public interface OnCollectionListener {
         void onCollectionLoaded(List<EnconterCollectionEntity> collection);
+
         void onFailure(String errorMessage);
     }
 }

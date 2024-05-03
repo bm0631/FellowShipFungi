@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import miw.fellowshipfungi.R;
-import miw.fellowshipfungi.controllers.dialogs.YesCancelDialog;
 import miw.fellowshipfungi.controllers.services.ProfileService;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -61,8 +60,9 @@ public class ProfileActivity extends AppCompatActivity {
         finishAffinity();
         return true;
     }
-    public void openCollection (View view){
-        Log.w("lll","----");
+
+    public void openCollection(View view) {
+        Log.w("lll", "----");
         Intent intent = new Intent(this, CollectionActivity.class);
         startActivity(intent);
         finishAffinity();

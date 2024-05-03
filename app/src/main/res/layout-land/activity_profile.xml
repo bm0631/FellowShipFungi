@@ -16,11 +16,11 @@
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@mipmap/ic_profile"
             android:layout_gravity="center"
-            android:scaleType="centerCrop"
+            android:layout_marginBottom="32dp"
             android:contentDescription="@null"
-            android:layout_marginBottom="32dp" />
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_profile" />
     </LinearLayout>
 
     <LinearLayout
@@ -52,11 +52,10 @@
                 style="@style/Button.FellowshipFungi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="openCollection"
                 android:text="@string/go_to_collection"
                 android:textSize="14sp"
-                app:backgroundTint="@null"
-                android:onClick="openCollection"
-                />
+                app:backgroundTint="@null" />
 
         </LinearLayout>
 

@@ -8,6 +8,7 @@ import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
 
 public class EnconterCollectionEntity extends EnconterEntity {
     private MusshroomEntity musshroomEntity;
+
     public EnconterCollectionEntity(Map<String, Object> dataMapEnconter, RecognitionEntity recognitionEntity) {
 
         super((String) dataMapEnconter.get("speciedId"));
@@ -15,8 +16,9 @@ public class EnconterCollectionEntity extends EnconterEntity {
         super.setLocation((String) dataMapEnconter.get("location"));
         super.setWeather((String) dataMapEnconter.get("weather"));
 
-        this.musshroomEntity=recognitionEntity.getMusshroomEntity();
+        this.musshroomEntity = recognitionEntity.getMusshroomEntity();
     }
+
     public String getNameMussroom() {
         return musshroomEntity.getName();
     }

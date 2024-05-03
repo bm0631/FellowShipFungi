@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black1" />
 
         <TableRow
             android:layout_width="match_parent"
@@ -23,22 +27,23 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="16dp"
                 android:gravity="center" />
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="@string/nameMusshroomLabel"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/nameMusshroom"
                 style="@style/H1.FellowshipFungi"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </TableRow>
 
@@ -97,21 +102,28 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/deleteEnconter"
                 style="@style/Button.FellowshipFungi.No"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_span="2"
                 android:contentDescription="@string/EnconterCollectionDeleteButton"
-                android:onClick="saveEnconter"
-                android:gravity="center"
+                android:onClick="deleteEnconter"
+                android:textAlignment="center"
                 app:backgroundTint="@null"
-                app:icon="@android:drawable/ic_menu_delete" />
+                app:icon="@android:drawable/ic_menu_delete"
+                app:iconGravity="textStart" />
+
         </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black1" />
     </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

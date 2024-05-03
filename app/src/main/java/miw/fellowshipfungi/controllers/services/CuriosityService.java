@@ -67,7 +67,7 @@ public class CuriosityService {
                 Date streakLastDate = document.getDate("streakLastDate");
                 int currentStreakInt = 1;
 
-                if (currentStreak == null ) {
+                if (currentStreak == null) {
                     streakLastDate = new Date();
                 } else if (isSameDay(streakLastDate, new Date())) {
                     return;
@@ -91,8 +91,8 @@ public class CuriosityService {
     }
 
     private boolean isSameDay(Date date1, Date date2) {
-        Log.w(LOG_TAG,date1.toString());
-        Log.w(LOG_TAG,date2.toString());
+        Log.w(LOG_TAG, date1.toString());
+        Log.w(LOG_TAG, date2.toString());
         Calendar cal1 = Calendar.getInstance();
         cal1.setTime(date1);
         Calendar cal2 = Calendar.getInstance();

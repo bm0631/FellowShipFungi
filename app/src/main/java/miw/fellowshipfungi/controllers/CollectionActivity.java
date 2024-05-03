@@ -1,20 +1,21 @@
 package miw.fellowshipfungi.controllers;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import miw.fellowshipfungi.R;
-import miw.fellowshipfungi.controllers.adapters.AnswerAdapter;
 import miw.fellowshipfungi.controllers.adapters.EnconterAdapter;
 import miw.fellowshipfungi.controllers.services.CollectionService;
 import miw.fellowshipfungi.models.profile.EnconterCollectionEntity;
@@ -64,5 +65,25 @@ public class CollectionActivity extends AppCompatActivity {
         Log.d("CollectionActivity", collection.toString());
         this.enconterCollectionEntities = collection;
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_profile, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent = new Intent(this, ProfileActivity.class);
+        startActivity(intent);
+        finishAffinity();
+        return true;
+    }
+
+    public void deleteEnconter(View view) {
+        //TODO
+    }
+
 }
 

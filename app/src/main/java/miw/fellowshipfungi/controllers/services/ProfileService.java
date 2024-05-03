@@ -27,6 +27,7 @@ public class ProfileService {
         this.db = FirebaseFirestore.getInstance();
         this.userId = AuthService.getInstance().getIdUserLogged();
     }
+
     public void getProfileData(final OnProfileDataListener listener) {
         ProfileData profileData = new ProfileData();
 
@@ -50,11 +51,6 @@ public class ProfileService {
                 });
             });
         });
-    }
-
-
-    public interface OnProfileDataListener {
-        void onProfileDataLoaded(ProfileData profileData);
     }
 
     public void getCurrentStreak(final OnGetCurrentStreakListener listener) {
@@ -112,6 +108,10 @@ public class ProfileService {
                 listener.onGetBestResult(0);
             }
         });
+    }
+
+    public interface OnProfileDataListener {
+        void onProfileDataLoaded(ProfileData profileData);
     }
 
     public interface OnGetCurrentStreakListener {
