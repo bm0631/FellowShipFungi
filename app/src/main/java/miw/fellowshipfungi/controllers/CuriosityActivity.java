@@ -83,7 +83,7 @@ public class CuriosityActivity extends AppCompatActivity {
         curiosityImage.setVisibility(View.VISIBLE);
 
         Date today = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/mm/yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         String formatToday = formatter.format(today);
 
         TextView date = findViewById(R.id.date);
