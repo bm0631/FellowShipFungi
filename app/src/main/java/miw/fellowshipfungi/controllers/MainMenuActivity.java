@@ -46,10 +46,8 @@ public class MainMenuActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 AuthService authService = AuthService.getInstance();
                 if (authService.isLogged()) {
-                    Log.w(LOG_TAG, "HAY USER");
                     Toast.makeText(MainMenuActivity.this, "Usuario  " + authService.getUserName(), Toast.LENGTH_SHORT).show();
                 } else {
-                    Log.w(LOG_TAG, "ARRANCA LOGIN/REGISTER");
                     startActivityForResult(
                             AuthUI.getInstance()
                                     .createSignInIntentBuilder()

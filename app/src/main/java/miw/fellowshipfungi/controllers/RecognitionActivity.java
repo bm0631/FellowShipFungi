@@ -50,7 +50,6 @@ public class RecognitionActivity extends AppCompatActivity {
         this.currentNode = getIntent().getStringExtra("Current");
         this.countAsks = getIntent().getIntExtra("countAsks", 0);
 
-        Log.w(LOG_TAG, "CurrentNode: " + this.currentNode);
 
         if (NodeTypes.typeNode(this.currentNode) == NodeTypes.Specie) {
             this.createViewMusshroom();
@@ -69,7 +68,7 @@ public class RecognitionActivity extends AppCompatActivity {
     private void createViewAsk() {
         Log.w(LOG_TAG, "It's ASK " + this.currentNode);
         this.setContentView(R.layout.activity_recognition);
-        setupProgresionBar();
+        this.setupProgresionBar();
         this.loadAskAndAnswers();
     }
 
@@ -147,13 +146,7 @@ public class RecognitionActivity extends AppCompatActivity {
 
     public void repliedAsk(View view) {
         if (view.getTag() != null) {
-            String nextNodeId = view.getTag().toString();
-            Log.w(LOG_TAG, "Answer replied: " + ((Button) view).getText().toString());
-            Log.w(LOG_TAG, "Next NODE: " + nextNodeId);
-            Log.w(LOG_TAG, "TYPE NODE: " + NodeTypes.typeNode(nextNodeId));
-
             this.navigateToNode(view.getTag().toString());
-
         } else {
             Log.w(LOG_TAG, "Tag is null WAIT");
         }
