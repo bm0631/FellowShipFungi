@@ -12,21 +12,27 @@ import java.util.Map;
 import miw.fellowshipfungi.models.ask.TestEntity;
 
 public class TestService {
-
-
     final static String LOG_TAG = "Test Service";
     private static final String COLLECTION_NAME = "Test";
     private static final String TEST_DOCUMENT = "Questions";
+    private static TestService instance;
     private final String COLLECTION_PROFILE = "Profiles";
     private final FirebaseFirestore db;
     private String userId;
     private TestEntity testEntity;
 
-    public TestService() {
+    private TestService() {
         this.db = FirebaseFirestore.getInstance();
         this.userId = AuthService.getInstance().getIdUserLogged();
-
     }
+
+    public static TestService getInstance() {
+        if (instance == null) {
+            instance = new TestService();
+        }
+        return instance;
+    }
+
 
     public void loadCuriosity(String idQuestion, TestService.TestServiceCallback callback) {
         DocumentReference docRef = db.collection(COLLECTION_NAME).document(TEST_DOCUMENT);

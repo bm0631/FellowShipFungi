@@ -24,7 +24,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void loadLayout() {
-        ProfileService profileService = new ProfileService();
+        ProfileService profileService = ProfileService.getInstance();
 
         // Cargar los datos del perfil
         profileService.getProfileData(profileData -> {

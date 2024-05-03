@@ -44,7 +44,7 @@ public class CuriosityActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
 
-        this.curiosityService = new CuriosityService();
+        this.curiosityService = CuriosityService.getInstance();
         this.idCuriosity = this.getDayIdCuriosity();
         Log.w(LOG_TAG, "Se Solicita la curiosidad: " + this.idCuriosity);
         this.curiosityService.loadCuriosity(this.idCuriosity, new CuriosityService.CuriosityServiceCallback() {

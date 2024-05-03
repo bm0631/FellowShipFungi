@@ -13,19 +13,25 @@ import java.util.concurrent.atomic.AtomicInteger;
 import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
 
 public class RecognitionService {
-
     final static String LOG_TAG = "MiW Recognition";
     private static final String COLLECTION_NAME = "RecognitonMushroom";
     private static final String ASK_DOCUMENT = "Asks";
     private static final String ANSWER_DOCUMENT = "Answers";
     private static final String SPECIES_DOCUMENT = "Species";
-
+    private static RecognitionService instance;
     private FirebaseFirestore db;
     private RecognitionEntity recognitionEntity;
 
-    public RecognitionService() {
+    private RecognitionService() {
         this.db = FirebaseFirestore.getInstance();
         this.recognitionEntity = new RecognitionEntity();
+    }
+
+    public static RecognitionService getInstance() {
+        if (instance == null) {
+            instance = new RecognitionService();
+        }
+        return instance;
     }
 
     public void loadSpecie(String specieNode, RecognitionServiceCallback callback) {

@@ -16,16 +16,22 @@ import com.google.firebase.firestore.Source;
 import miw.fellowshipfungi.models.profile.ProfileData;
 
 public class ProfileService {
-
     private static final String COLLECTION_PROFILE = "Profiles";
     private static final String COLLECTION_ENCONTERS = "Enconters";
-
+    private static ProfileService instance;
     private final FirebaseFirestore db;
     private final String userId;
 
-    public ProfileService() {
+    private ProfileService() {
         this.db = FirebaseFirestore.getInstance();
         this.userId = AuthService.getInstance().getIdUserLogged();
+    }
+
+    public static ProfileService getInstance() {
+        if (instance == null) {
+            instance = new ProfileService();
+        }
+        return instance;
     }
 
     public void getProfileData(final OnProfileDataListener listener) {

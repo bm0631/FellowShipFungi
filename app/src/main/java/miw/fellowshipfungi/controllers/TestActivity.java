@@ -44,7 +44,7 @@ public class TestActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_test);
-        this.testService = new TestService();
+        this.testService = TestService.getInstance();
         this.testEntities = new ArrayList<>();
 
         this.currentQuestionIndex = 0;

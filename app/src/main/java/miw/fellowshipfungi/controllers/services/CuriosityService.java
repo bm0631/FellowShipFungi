@@ -15,19 +15,25 @@ import miw.fellowshipfungi.models.CuriosityEntity;
 
 public class CuriosityService {
 
-
     final static String LOG_TAG = "Curiosity Service";
     private static final String COLLECTION_NAME = "Daily Curiosity";
     private static final String CURIOSITY_DOCUMENT = "Curiosities";
+    private static CuriosityService instance;
     private final String COLLECTION_PROFILE = "Profiles";
     private final FirebaseFirestore db;
     private String userId;
     private CuriosityEntity curiosityEntity;
 
-    public CuriosityService() {
+    private CuriosityService() {
         this.db = FirebaseFirestore.getInstance();
         this.userId = AuthService.getInstance().getIdUserLogged();
+    }
 
+    public static CuriosityService getInstance() {
+        if (instance == null) {
+            instance = new CuriosityService();
+        }
+        return instance;
     }
 
     public void loadCuriosity(String idCuriosity, CuriosityService.CuriosityServiceCallback callback) {

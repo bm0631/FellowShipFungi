@@ -87,7 +87,7 @@ public class CreateEnconterActivity extends AppCompatActivity {
         this.enconterEntity.setLocation(location);
         this.enconterEntity.setWeather(weather);
 
-        new EnconterService().saveEnconter(this.enconterEntity);
+        EnconterService.getInstance().saveEnconter(this.enconterEntity);
         Toast.makeText(this, R.string.writtenEnconter, Toast.LENGTH_SHORT).show();
 
         this.returnMainMenu();

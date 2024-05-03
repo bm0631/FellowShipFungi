@@ -50,7 +50,7 @@ public class CollectionService {
                             String enconterID = document.getId();
                             Map<String, Object> enconterData = document.getData();
                             String specieId = (String) enconterData.get("speciedId");
-                            new RecognitionService().loadSpecie(specieId, new RecognitionService.RecognitionServiceCallback() {
+                            RecognitionService.getInstance().loadSpecie(specieId, new RecognitionService.RecognitionServiceCallback() {
                                 @Override
                                 public void onSuccess(RecognitionEntity recognitionEntity) {
                                     EnconterCollectionEntity entity = new EnconterCollectionEntity(enconterID, enconterData, recognitionEntity);
