@@ -135,6 +135,7 @@ public class RecognitionActivity extends AppCompatActivity {
         Picasso.get().load(imageUrl).into(mushroomImage);
         mushroomImage.setVisibility(View.VISIBLE);
 
+        findViewById(R.id.countAsks).setVisibility(View.GONE);
 
         this.printStepCount();
 
