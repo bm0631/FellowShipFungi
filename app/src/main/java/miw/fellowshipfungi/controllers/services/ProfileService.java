@@ -8,23 +8,19 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.Source;
 
 import miw.fellowshipfungi.models.profile.ProfileData;
 
-public class ProfileService {
-    private static final String COLLECTION_PROFILE = "Profiles";
-    private static final String COLLECTION_ENCONTERS = "Enconters";
+public class ProfileService extends BaseService {
+
     private static ProfileService instance;
-    private final FirebaseFirestore db;
-    private final String userId;
+
 
     private ProfileService() {
-        this.db = FirebaseFirestore.getInstance();
-        this.userId = AuthService.getInstance().getIdUserLogged();
+        super();
     }
 
     public static ProfileService getInstance() {
@@ -37,10 +33,10 @@ public class ProfileService {
     public void getProfileData(final OnProfileDataListener listener) {
         ProfileData profileData = new ProfileData();
 
-        // Obtener nombre de usuario
-        profileData.setUsername(AuthService.getInstance().getUserName());
 
-        // Obtener longitud de la colección
+        profileData.setUsername(this.getName());
+
+
         getLengthCollection(length -> {
             profileData.setLengthCollection(length);
 
@@ -60,7 +56,7 @@ public class ProfileService {
     }
 
     public void getCurrentStreak(final OnGetCurrentStreakListener listener) {
-        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(userId);
+        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(this.getUserId());
         userRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 DocumentSnapshot document = task.getResult();
@@ -80,7 +76,7 @@ public class ProfileService {
 
     public void getLengthCollection(final OnLengthCollectionListener listener) {
         Query query = db.collection(COLLECTION_PROFILE)
-                .document(this.userId)
+                .document(this.getUserId())
                 .collection(COLLECTION_ENCONTERS);
 
         query.get(Source.SERVER).addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -99,7 +95,7 @@ public class ProfileService {
     }
 
     public void getBestResult(final OnGetBestResultListener listener) {
-        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(userId);
+        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(getUserId());
         userRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 DocumentSnapshot document = task.getResult();

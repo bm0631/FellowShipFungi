@@ -4,7 +4,6 @@ import android.util.Log;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 import java.util.Map;
@@ -12,27 +11,17 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
 
-public class RecognitionService {
+public class RecognitionService extends BaseService {
     final static String LOG_TAG = "MiW Recognition";
-    private static final String COLLECTION_NAME = "RecognitonMushroom";
-    private static final String ASK_DOCUMENT = "Asks";
-    private static final String ANSWER_DOCUMENT = "Answers";
-    private static final String SPECIES_DOCUMENT = "Species";
-    private static RecognitionService instance;
-    private FirebaseFirestore db;
+
+
     private RecognitionEntity recognitionEntity;
 
-    private RecognitionService() {
-        this.db = FirebaseFirestore.getInstance();
+    public RecognitionService() {
+        super();
         this.recognitionEntity = new RecognitionEntity();
     }
 
-    public static RecognitionService getInstance() {
-        if (instance == null) {
-            instance = new RecognitionService();
-        }
-        return instance;
-    }
 
     public void loadSpecie(String specieNode, RecognitionServiceCallback callback) {
         loadDocument(SPECIES_DOCUMENT, specieNode, callback);
@@ -43,7 +32,7 @@ public class RecognitionService {
     }
 
     private void loadDocument(String documentName, String nodeName, RecognitionServiceCallback callback) {
-        DocumentReference docRef = db.collection(COLLECTION_NAME).document(documentName);
+        DocumentReference docRef = db.collection(COLLECTION_RECOGNITION).document(documentName);
 
         docRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
@@ -72,7 +61,7 @@ public class RecognitionService {
         int totalAnswers = answerIds.size();
 
         for (String answerId : answerIds) {
-            DocumentReference docRef = db.collection(COLLECTION_NAME).document(ANSWER_DOCUMENT);
+            DocumentReference docRef = db.collection(COLLECTION_RECOGNITION).document(ANSWER_DOCUMENT);
             docRef.get().addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     DocumentSnapshot result = task.getResult();

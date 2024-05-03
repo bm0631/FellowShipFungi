@@ -4,7 +4,6 @@ package miw.fellowshipfungi.controllers.services;
 import android.util.Log;
 
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,17 +13,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
 import miw.fellowshipfungi.models.profile.EnconterCollectionEntity;
 
-public class CollectionService {
+public class CollectionService extends BaseService {
 
-    private static final String COLLECTION_PROFILE = "Profiles";
-    private static final String COLLECTION_ENCONTERS = "Enconters";
     private static CollectionService instance;
-    private String user;
-    private FirebaseFirestore db;
 
     public CollectionService() {
-        this.db = FirebaseFirestore.getInstance();
-        this.user = AuthService.getInstance().getIdUserLogged();
+        super();
     }
 
 
@@ -37,7 +31,7 @@ public class CollectionService {
 
     public void getCollection(final OnCollectionListener listener) {
         db.collection(COLLECTION_PROFILE)
-                .document(user)
+                .document(this.getUserId())
                 .collection(COLLECTION_ENCONTERS)
                 .get()
                 .addOnCompleteListener(task -> {
@@ -50,7 +44,7 @@ public class CollectionService {
                             String enconterID = document.getId();
                             Map<String, Object> enconterData = document.getData();
                             String specieId = (String) enconterData.get("speciedId");
-                            RecognitionService.getInstance().loadSpecie(specieId, new RecognitionService.RecognitionServiceCallback() {
+                            new RecognitionService().loadSpecie(specieId, new RecognitionService.RecognitionServiceCallback() {
                                 @Override
                                 public void onSuccess(RecognitionEntity recognitionEntity) {
                                     EnconterCollectionEntity entity = new EnconterCollectionEntity(enconterID, enconterData, recognitionEntity);
@@ -77,7 +71,7 @@ public class CollectionService {
 
     public void deleteEnconter(String enconterId, OnDeleteEnconterListener listener) {
         db.collection(COLLECTION_PROFILE)
-                .document(user)
+                .document(this.getUserId())
                 .collection(COLLECTION_ENCONTERS)
                 .document(enconterId)
                 .delete()

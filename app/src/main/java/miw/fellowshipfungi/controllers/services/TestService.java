@@ -4,26 +4,21 @@ import android.util.Log;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import miw.fellowshipfungi.models.ask.TestEntity;
 
-public class TestService {
+public class TestService extends BaseService {
     final static String LOG_TAG = "Test Service";
-    private static final String COLLECTION_NAME = "Test";
-    private static final String TEST_DOCUMENT = "Questions";
+
     private static TestService instance;
-    private final String COLLECTION_PROFILE = "Profiles";
-    private final FirebaseFirestore db;
-    private String userId;
+
     private TestEntity testEntity;
 
     private TestService() {
-        this.db = FirebaseFirestore.getInstance();
-        this.userId = AuthService.getInstance().getIdUserLogged();
+        super();
     }
 
     public static TestService getInstance() {
@@ -35,7 +30,7 @@ public class TestService {
 
 
     public void loadCuriosity(String idQuestion, TestService.TestServiceCallback callback) {
-        DocumentReference docRef = db.collection(COLLECTION_NAME).document(TEST_DOCUMENT);
+        DocumentReference docRef = db.collection(COLLECTION_TEST).document(TEST_DOCUMENT);
         Log.w(LOG_TAG, "Questions Request: " + idQuestion);
         docRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
@@ -57,12 +52,12 @@ public class TestService {
 
     public void updateBestResult(Double newResult) {
 
-        if (this.userId == null) {
+        if (this.getUserId() == null) {
             Log.e(LOG_TAG, "User ID is null");
             return;
         }
 
-        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(userId);
+        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(getUserId());
 
         userRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {

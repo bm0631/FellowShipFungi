@@ -42,7 +42,7 @@ public class RecognitionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-        this.recognitionService = RecognitionService.getInstance();
+        this.recognitionService = new RecognitionService();
 
         this.recognitionEntity = new RecognitionEntity();
 

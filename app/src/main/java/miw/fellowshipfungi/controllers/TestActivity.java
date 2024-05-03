@@ -154,7 +154,6 @@ public class TestActivity extends AppCompatActivity {
 
     public void answerQuestion(View view) {
         boolean isCorrect = Boolean.parseBoolean(view.getTag().toString());
-        Log.w("kkk", view.getTag().toString());
         TextView countRight = findViewById(R.id.countRight);
         TextView countWrong = findViewById(R.id.countWrong);
         TextView count = findViewById(R.id.count);

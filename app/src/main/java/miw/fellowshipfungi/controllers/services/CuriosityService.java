@@ -4,7 +4,6 @@ import android.util.Log;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -13,20 +12,14 @@ import java.util.Map;
 
 import miw.fellowshipfungi.models.CuriosityEntity;
 
-public class CuriosityService {
+public class CuriosityService extends BaseService {
 
     final static String LOG_TAG = "Curiosity Service";
-    private static final String COLLECTION_NAME = "Daily Curiosity";
-    private static final String CURIOSITY_DOCUMENT = "Curiosities";
     private static CuriosityService instance;
-    private final String COLLECTION_PROFILE = "Profiles";
-    private final FirebaseFirestore db;
-    private String userId;
     private CuriosityEntity curiosityEntity;
 
     private CuriosityService() {
-        this.db = FirebaseFirestore.getInstance();
-        this.userId = AuthService.getInstance().getIdUserLogged();
+        super();
     }
 
     public static CuriosityService getInstance() {
@@ -37,7 +30,7 @@ public class CuriosityService {
     }
 
     public void loadCuriosity(String idCuriosity, CuriosityService.CuriosityServiceCallback callback) {
-        DocumentReference docRef = db.collection(COLLECTION_NAME).document(CURIOSITY_DOCUMENT);
+        DocumentReference docRef = db.collection(COLLECTION_CURIOSITY).document(CURIOSITY_DOCUMENT);
 
         docRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
@@ -59,12 +52,12 @@ public class CuriosityService {
 
     public void updateStreakCuriosities() {
 
-        if (this.userId == null) {
+        if (this.getUserId() == null) {
             Log.e(LOG_TAG, "User ID is null");
             return;
         }
 
-        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(userId);
+        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(getUserId());
 
         userRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
@@ -79,6 +72,8 @@ public class CuriosityService {
                     return;
                 } else if (this.isYesterday(streakLastDate)) {
                     currentStreakInt = currentStreak.intValue() + 1;
+                    streakLastDate = new Date();
+                } else {
                     streakLastDate = new Date();
                 }
 
@@ -97,8 +92,6 @@ public class CuriosityService {
     }
 
     private boolean isSameDay(Date date1, Date date2) {
-        Log.w(LOG_TAG, date1.toString());
-        Log.w(LOG_TAG, date2.toString());
         Calendar cal1 = Calendar.getInstance();
         cal1.setTime(date1);
         Calendar cal2 = Calendar.getInstance();
