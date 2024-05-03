@@ -5,12 +5,10 @@ import java.util.Map;
 public class CuriosityEntity {
 
     private final String URLBase = "https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/Curiosities%2F";
-    private String id;
     private String text;
     private String img;
 
     public CuriosityEntity(Map<String, Object> dataMap) {
-        this.id = (String) dataMap.get("id");
         this.text = (String) dataMap.get("text");
         this.img = (String) dataMap.get("img");
     }
@@ -24,13 +22,5 @@ public class CuriosityEntity {
     }
 
 
-    @Override
-    public String toString() {
-        return "CuriosityEntity{" +
-                "id='" + id + '\'' +
-                ", text='" + text + '\'' +
-                ", img='" + img + '\'' +
-                ", URLBase='" + URLBase + '\'' +
-                '}';
-    }
+
 }
