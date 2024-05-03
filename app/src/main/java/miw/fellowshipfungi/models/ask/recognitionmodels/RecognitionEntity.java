@@ -50,12 +50,5 @@ public class RecognitionEntity {
         return this.musshroomEntity.getId();
     }
 
-    @Override
-    public String toString() {
-        return "RecognitionEntity{" +
-                "askEntity=" + askEntity +
-                ", answerEntities=" + answerEntities +
-                ", musshroomEntity=" + musshroomEntity +
-                '}';
-    }
+
 }
