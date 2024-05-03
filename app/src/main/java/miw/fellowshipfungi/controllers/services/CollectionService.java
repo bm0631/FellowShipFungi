@@ -36,26 +36,24 @@ public class CollectionService {
     }
 
     public void getCollection(final OnCollectionListener listener) {
-        Log.w("lll", "ENTRO");
         db.collection(COLLECTION_PROFILE)
                 .document(user)
                 .collection(COLLECTION_ENCONTERS)
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        Log.w("lll", "TENGO LOS ENCUENTROS");
+
                         List<EnconterCollectionEntity> collectionEntities = new ArrayList<>();
                         AtomicInteger loadedCount = new AtomicInteger(0);
                         int totalCount = task.getResult().size();
                         for (DocumentSnapshot document : task.getResult()) {
-                            Log.w("lll", "ECUENTRO: " + document.getData());
+                            String enconterID = document.getId();
                             Map<String, Object> enconterData = document.getData();
                             String specieId = (String) enconterData.get("speciedId");
                             new RecognitionService().loadSpecie(specieId, new RecognitionService.RecognitionServiceCallback() {
                                 @Override
                                 public void onSuccess(RecognitionEntity recognitionEntity) {
-                                    Log.w("lll", "SETA: " + recognitionEntity.getMusshroomName());
-                                    EnconterCollectionEntity entity = new EnconterCollectionEntity(enconterData, recognitionEntity);
+                                    EnconterCollectionEntity entity = new EnconterCollectionEntity(enconterID, enconterData, recognitionEntity);
                                     collectionEntities.add(entity);
                                     if (loadedCount.incrementAndGet() == totalCount) {
                                         // Notificar al listener una vez que se hayan cargado todas las entidades
@@ -77,9 +75,30 @@ public class CollectionService {
                 });
     }
 
+    public void deleteEnconter(String enconterId, OnDeleteEnconterListener listener) {
+        db.collection(COLLECTION_PROFILE)
+                .document(user)
+                .collection(COLLECTION_ENCONTERS)
+                .document(enconterId)
+                .delete()
+                .addOnSuccessListener(aVoid -> {
+                    Log.d("CollectionService", "Enconter successfully deleted!");
+                    listener.onEnconterDeleted();
+                })
+                .addOnFailureListener(e -> {
+                    Log.e("CollectionService", "Error deleting enconter", e);
+                    listener.onFailure("Error deleting enconter");
+                });
+    }
 
     public interface OnCollectionListener {
         void onCollectionLoaded(List<EnconterCollectionEntity> collection);
+
+        void onFailure(String errorMessage);
+    }
+
+    public interface OnDeleteEnconterListener {
+        void onEnconterDeleted();
 
         void onFailure(String errorMessage);
     }

@@ -17,13 +17,14 @@ import java.util.List;
 
 import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.adapters.EnconterAdapter;
+import miw.fellowshipfungi.controllers.dialogs.YesCancelDialog;
 import miw.fellowshipfungi.controllers.services.CollectionService;
 import miw.fellowshipfungi.models.profile.EnconterCollectionEntity;
 
 public class CollectionActivity extends AppCompatActivity {
 
     private List<EnconterCollectionEntity> enconterCollectionEntities;
-    private EnconterAdapter adapter;
+    private String enconterToDelete;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -82,8 +83,34 @@ public class CollectionActivity extends AppCompatActivity {
     }
 
     public void deleteEnconter(View view) {
-        //TODO
+
+        this.enconterToDelete = view.getTag().toString();
+
+        YesCancelDialog dialog = YesCancelDialog.newInstance("Borrar ", "¿Quieres borrar el Encuentro?");
+
+        dialog.setCallback(this::deleteEnconterConfirmed);
+        dialog.show(getSupportFragmentManager(), "yes_no_dialog");
     }
+
+    public void deleteEnconterConfirmed() {
+
+        String enconterIdToDelete = this.enconterToDelete;
+        this.enconterToDelete = null;
+
+        CollectionService.getInstance().deleteEnconter(enconterIdToDelete, new CollectionService.OnDeleteEnconterListener() {
+            @Override
+            public void onEnconterDeleted() {
+                finish();
+                startActivity(getIntent());
+            }
+
+            @Override
+            public void onFailure(String errorMessage) {
+                Log.e("CollectionActivity", "Error deleting enconter: " + errorMessage);
+            }
+        });
+    }
+
 
 }
 

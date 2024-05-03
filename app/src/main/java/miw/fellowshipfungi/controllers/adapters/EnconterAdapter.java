@@ -50,13 +50,7 @@ public class EnconterAdapter extends RecyclerView.Adapter<EnconterAdapter.Encont
         holder.location.setText(enconterCollectionEntity.getLocation());
         holder.weather.setText(enconterCollectionEntity.getWeather());
 
-
-        holder.deleteEnconter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        holder.deleteEnconter.setTag(enconterCollectionEntity.getEnconterID());
     }
 
     @Override
