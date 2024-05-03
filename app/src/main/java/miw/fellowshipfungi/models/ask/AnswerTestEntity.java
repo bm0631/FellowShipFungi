@@ -12,14 +12,6 @@ public class AnswerTestEntity {
     }
 
 
-    @Override
-    public String toString() {
-        return "AnswerTestEntity{" +
-                "text='" + text + '\'' +
-                ", istrue=" + isTrue +
-                '}';
-    }
-
     public String getText() {
         return text;
     }
