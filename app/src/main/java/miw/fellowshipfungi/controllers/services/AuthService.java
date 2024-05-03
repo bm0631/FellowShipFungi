@@ -32,6 +32,12 @@ public class AuthService {
     }
 
     public String getUserName() {
-        return mFirebaseAuth.getCurrentUser().getDisplayName();
+        FirebaseUser user = mFirebaseAuth.getCurrentUser();
+        if (user != null) {
+            return user.getDisplayName();
+        } else {
+            return null;
+        }
     }
-}
+
+    }
