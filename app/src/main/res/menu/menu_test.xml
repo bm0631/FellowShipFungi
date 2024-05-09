@@ -20,10 +20,6 @@
         android:id="@+id/countWrong"
         android:title="0"
         app:showAsAction="always" />
-    <item
-
-        android:title="@string/FailTest"
-        app:showAsAction="always" />
 
     <item
         android:id="@+id/countRight"
@@ -31,12 +27,7 @@
         app:showAsAction="always"
 
         />
-    <item
 
-        android:title="@string/CorrectTest"
-        app:showAsAction="always"
-
-        />
     <item
 
         android:id="@+id/count"

@@ -96,8 +96,6 @@
     <!-- TEST -->
     <string name="textStopTest">Anular Test</string>
     <string name="textTestTitle">TEST</string>
-    <string name="CorrectTest">C</string>
-    <string name="FailTest">F</string>
     <string name="Congratulations">¡Enhorabuena!</string>
     <string name="porcentaje_de_aciertos">Porcentaje de aciertos: %.2f %%</string>
     <string name="ReplayTextoButton">Volver a Jugar</string>

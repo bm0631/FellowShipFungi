@@ -85,7 +85,7 @@
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:onClick="onOpenCuriosityClick"
-            android:text="@string/TestTitle" />
+            android:text="@string/CuriosityTitle" />
 
         <Button
             android:id="@+id/testButton"
