@@ -1,6 +1,5 @@
 package miw.fellowshipfungi.controllers.services;
 
-import android.util.Log;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -50,7 +49,7 @@ public class RecognitionService extends BaseService {
                     callback.onFailure(new Exception(documentName + " data not found"));
                 }
             } else {
-                Log.w(LOG_TAG, "Error getting documents.", task.getException());
+                this.handleFirestoreError(LOG_TAG, "Error getting documents.", task.getException());
                 callback.onFailure(task.getException());
             }
         });
@@ -73,7 +72,7 @@ public class RecognitionService extends BaseService {
                         callback.onSuccess(recognitionEntity);
                     }
                 } else {
-                    Log.w(LOG_TAG, "Error getting documents.", task.getException());
+                    this.handleFirestoreError(LOG_TAG, "Error getting documents.", task.getException());
                     callback.onFailure(task.getException());
                 }
             });

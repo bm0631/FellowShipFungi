@@ -1,6 +1,5 @@
 package miw.fellowshipfungi.controllers.services;
 
-import android.util.Log;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -31,7 +30,6 @@ public class TestService extends BaseService {
 
     public void loadCuriosity(String idQuestion, TestService.TestServiceCallback callback) {
         DocumentReference docRef = db.collection(COLLECTION_TEST).document(TEST_DOCUMENT);
-        Log.w(LOG_TAG, "Questions Request: " + idQuestion);
         docRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 DocumentSnapshot result = task.getResult();
@@ -44,7 +42,7 @@ public class TestService extends BaseService {
                     callback.onFailure(new Exception(TEST_DOCUMENT + " data not found"));
                 }
             } else {
-                Log.w(LOG_TAG, "Error getting documents.", task.getException());
+                this.handleFirestoreError(LOG_TAG, "Error getting documents.", task.getException());
                 callback.onFailure(task.getException());
             }
         });
@@ -53,7 +51,7 @@ public class TestService extends BaseService {
     public void updateBestResult(Double newResult) {
 
         if (this.getUserId() == null) {
-            Log.e(LOG_TAG, "User ID is null");
+            this.handleFirestoreError(LOG_TAG, "User ID is null",null);
             return;
         }
 
@@ -71,7 +69,7 @@ public class TestService extends BaseService {
                 }
 
             } else {
-                Log.e(LOG_TAG, "Error getting streak document", task.getException());
+                this.handleFirestoreError(LOG_TAG, "Error getting streak document", task.getException());
             }
         });
     }

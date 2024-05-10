@@ -1,6 +1,5 @@
 package miw.fellowshipfungi.controllers.services;
 
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -15,7 +14,7 @@ import com.google.firebase.firestore.Source;
 import miw.fellowshipfungi.models.profile.ProfileData;
 
 public class ProfileService extends BaseService {
-
+    private static String LOG_TAG="ProfileService";
     private static ProfileService instance;
 
 
@@ -68,7 +67,7 @@ public class ProfileService extends BaseService {
                     listener.onGetCurrentStreak(0);
                 }
             } else {
-                Log.e("ProfileService", "Error getting streak document", task.getException());
+                this.handleFirestoreError(LOG_TAG, "Error getting streak document", task.getException());
                 listener.onGetCurrentStreak(0);
             }
         });
@@ -87,7 +86,6 @@ public class ProfileService extends BaseService {
                     int count = snapshot.size();
                     listener.onLengthRetrieved(count);
                 } else {
-                    Log.d("FAIL getLengthCollection", "Query failed: ", task.getException());
                     listener.onLengthRetrieved(0);
                 }
             }
@@ -106,7 +104,7 @@ public class ProfileService extends BaseService {
                     listener.onGetBestResult(0);
                 }
             } else {
-                Log.e("ProfileService", "Error getting best result document", task.getException());
+                this.handleFirestoreError(LOG_TAG,"Error getting best result document", task.getException());
                 listener.onGetBestResult(0);
             }
         });

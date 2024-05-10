@@ -1,6 +1,5 @@
 package miw.fellowshipfungi.controllers.services;
 
-import android.util.Log;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -44,8 +43,7 @@ public class CuriosityService extends BaseService {
                     callback.onFailure(new Exception(CURIOSITY_DOCUMENT + " data not found"));
                 }
             } else {
-                Log.w(LOG_TAG, "Error getting documents.", task.getException());
-                callback.onFailure(task.getException());
+                this.handleFirestoreError(LOG_TAG, "Error getting document Curiosity "+idCuriosity, task.getException());
             }
         });
     }
@@ -53,7 +51,7 @@ public class CuriosityService extends BaseService {
     public void updateStreakCuriosities() {
 
         if (this.getUserId() == null) {
-            Log.e(LOG_TAG, "User ID is null");
+            this.handleFirestoreError(LOG_TAG, "User ID is null",null);
             return;
         }
 
@@ -85,7 +83,7 @@ public class CuriosityService extends BaseService {
 
 
             } else {
-                Log.e(LOG_TAG, "Error getting streak document", task.getException());
+                this.handleFirestoreError(LOG_TAG,"Error getting streak document", task.getException());
             }
         });
 

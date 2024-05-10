@@ -1,7 +1,6 @@
 package miw.fellowshipfungi.controllers.services;
 
 
-import android.util.Log;
 
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.storage.FirebaseStorage;
@@ -16,7 +15,7 @@ import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
 import miw.fellowshipfungi.models.profile.EnconterCollectionEntity;
 
 public class CollectionService extends BaseService {
-
+    private static String LOG_TAG="CollectionService";
     private static CollectionService instance;
 
     public CollectionService() {
@@ -59,13 +58,12 @@ public class CollectionService extends BaseService {
 
                                 @Override
                                 public void onFailure(Exception e) {
-                                    Log.e("CollectionService", "Error loading species data", e);
                                     listener.onFailure("Error loading species data");
                                 }
                             });
                         }
                     } else {
-                        Log.e("CollectionService", "Error getting collection documents", task.getException());
+                        this.handleFirestoreError(LOG_TAG, "Error getting collection documents", task.getException());
                         listener.onFailure("Error getting collection documents");
                     }
                 });
@@ -89,16 +87,15 @@ public class CollectionService extends BaseService {
                             .document(enconterId)
                             .delete()
                             .addOnSuccessListener(aVoid -> {
-                                Log.d("CollectionService", "Enconter successfully deleted!");
                                 listener.onEnconterDeleted();
                             })
                             .addOnFailureListener(e -> {
-                                Log.e("CollectionService", "Error deleting enconter", e);
+                                this.handleFirestoreError(LOG_TAG, "Error deleting enconter", e);
                                 listener.onFailure("Error deleting enconter");
                             });
                 })
                 .addOnFailureListener(e -> {
-                    Log.e("CollectionService", "Error retrieving enconter data", e);
+                    this.handleFirestoreError(LOG_TAG, "Error retrieving enconter data", e);
                     listener.onFailure("Error retrieving enconter data");
                 });
     }
@@ -107,9 +104,7 @@ public class CollectionService extends BaseService {
     private void deleteImage(String nameImg) {
         if (nameImg != null && !nameImg.isEmpty()) {
             StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("EncontersImg/" + nameImg);
-            storageRef.delete()
-                    .addOnSuccessListener(aVoid -> Log.d("CollectionService", "Image successfully deleted: " + nameImg))
-                    .addOnFailureListener(e -> Log.e("CollectionService", "Error deleting image: " + nameImg, e));
+            storageRef.delete();
         }
     }
 
