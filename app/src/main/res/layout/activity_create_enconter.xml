@@ -11,7 +11,6 @@
         android:padding="16dp">
 
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -90,11 +89,11 @@
                 android:id="@+id/imageView"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@drawable/border_background"
                 android:clickable="true"
-                android:layout_marginLeft="16dp"
                 android:scaleType="centerCrop"
                 app:srcCompat="@android:drawable/ic_menu_camera" />
         </LinearLayout>

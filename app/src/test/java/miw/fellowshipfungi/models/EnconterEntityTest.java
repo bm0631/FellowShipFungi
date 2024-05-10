@@ -38,6 +38,7 @@ public class EnconterEntityTest {
         enconterEntity.setWeather(weather);
         assertEquals(weather, enconterEntity.getWeather());
     }
+
     @Test
     public void testGetSetNameImg() {
         String specieId = "Species_004";
@@ -55,7 +56,7 @@ public class EnconterEntityTest {
         String date = "27-04-2024";
         String location = "Forest";
         String weather = "Sunny";
-        String nameImg="fungi.jpg";
+        String nameImg = "fungi.jpg";
 
         EnconterEntity enconterEntity = new EnconterEntity(specieId);
         enconterEntity.setDate(date);

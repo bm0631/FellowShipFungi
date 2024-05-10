@@ -1,10 +1,7 @@
 package miw.fellowshipfungi.controllers.services;
 
 import android.net.Uri;
-import android.widget.Toast;
 
-import miw.fellowshipfungi.controllers.CreateEnconterActivity;
-import miw.fellowshipfungi.models.EnconterEntity;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -12,6 +9,8 @@ import com.google.firebase.storage.UploadTask;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import miw.fellowshipfungi.models.EnconterEntity;
 
 public class EnconterService extends BaseService {
 
@@ -31,8 +30,8 @@ public class EnconterService extends BaseService {
 
     public void saveEnconter(EnconterEntity enconterEntity, Uri imageUri) {
         if (imageUri != null) {
-            String nameImg=generateNameImg();
-            StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("EncontersImg/"+nameImg);
+            String nameImg = generateNameImg();
+            StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("EncontersImg/" + nameImg);
             UploadTask uploadTask = storageRef.putFile(imageUri);
 
             uploadTask.addOnSuccessListener(taskSnapshot -> {
@@ -53,7 +52,8 @@ public class EnconterService extends BaseService {
                 .collection(COLLECTION_ENCONTERS)
                 .add(enconterEntity.getMap());
     }
-    private String  generateNameImg() {
+
+    private String generateNameImg() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault());
         String formattedDate = dateFormat.format(new Date());
         return "enconter_" + getUserId() + "_" + formattedDate + ".jpg";

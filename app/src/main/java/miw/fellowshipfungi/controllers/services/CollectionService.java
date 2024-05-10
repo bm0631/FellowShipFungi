@@ -4,6 +4,8 @@ package miw.fellowshipfungi.controllers.services;
 import android.util.Log;
 
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
 import miw.fellowshipfungi.models.profile.EnconterCollectionEntity;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
+
 public class CollectionService extends BaseService {
 
     private static CollectionService instance;

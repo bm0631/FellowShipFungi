@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,6 +31,7 @@ public class CreateEnconterActivity extends AppCompatActivity {
     private EnconterEntity enconterEntity;
 
     private Uri imageUri;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +95,7 @@ public class CreateEnconterActivity extends AppCompatActivity {
         this.enconterEntity.setLocation(location);
         this.enconterEntity.setWeather(weather);
 
-        EnconterService.getInstance().saveEnconter(this.enconterEntity,this.imageUri);
+        EnconterService.getInstance().saveEnconter(this.enconterEntity, this.imageUri);
         Toast.makeText(this, R.string.writtenEnconter, Toast.LENGTH_SHORT).show();
 
         this.returnMainMenu();
@@ -112,14 +112,15 @@ public class CreateEnconterActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(intent, 100);
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK && requestCode == 100 && data != null) {
-              this.imageUri = data.getData();
+            this.imageUri = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
-                ((ImageView)findViewById(R.id.imageView)).setImageBitmap(bitmap);
+                ((ImageView) findViewById(R.id.imageView)).setImageBitmap(bitmap);
             } catch (IOException e) {
                 e.printStackTrace();
             }

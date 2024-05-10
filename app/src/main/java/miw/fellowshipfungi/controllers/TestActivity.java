@@ -117,8 +117,8 @@ public class TestActivity extends AppCompatActivity {
             public void onSuccess(TestEntity testEntity) {
                 TestActivity.this.testEntities.add(testEntity);
                 if (testEntities.size() == TestActivity.this.NUMBERQUESTIONS) {
-                    ((TextView)findViewById(R.id.countWrong)).setTextColor(Color.RED);
-                    ((TextView)findViewById(R.id.countRight)).setTextColor(Color.GREEN);
+                    ((TextView) findViewById(R.id.countWrong)).setTextColor(Color.RED);
+                    ((TextView) findViewById(R.id.countRight)).setTextColor(Color.GREEN);
                     TestActivity.this.printCurrentQuestion();
                 }
 

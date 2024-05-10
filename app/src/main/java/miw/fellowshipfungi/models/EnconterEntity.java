@@ -42,6 +42,7 @@ public class EnconterEntity {
     public void setWeather(String weather) {
         this.weather = weather;
     }
+
     public String getNameImg() {
         return nameImg;
     }
