@@ -114,6 +114,7 @@
     <string name="EnconterCollectionWeather">Tiempo</string>
     <string name="EnconterCollectionDeleteButton">Borrar</string>
     <string name="textCollectiontitle">COLECCIÓN</string>
+    <string name="upload_photo">Subir Foto</string>
 
 
 </resources>

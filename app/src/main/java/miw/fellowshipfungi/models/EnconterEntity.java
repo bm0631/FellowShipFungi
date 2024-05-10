@@ -9,6 +9,7 @@ public class EnconterEntity {
     private String location;
     private String weather;
 
+    private String nameImg;
 
     public EnconterEntity(String specieId) {
         this.specieId = specieId;
@@ -41,6 +42,13 @@ public class EnconterEntity {
     public void setWeather(String weather) {
         this.weather = weather;
     }
+    public String getNameImg() {
+        return nameImg;
+    }
+
+    public void setNameImg(String nameImg) {
+        this.nameImg = nameImg;
+    }
 
     public Map<String, Object> getMap() {
         Map<String, Object> map = new HashMap<>();
@@ -49,6 +57,10 @@ public class EnconterEntity {
         map.put("date", this.getDate());
         map.put("location", this.getLocation());
         map.put("weather", this.getWeather());
+        map.put("nameImg", this.getNameImg());
+
         return map;
     }
+
+
 }

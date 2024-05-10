@@ -53,4 +53,8 @@ dependencies {
 
     implementation "com.google.firebase:firebase-auth"
     implementation "com.firebaseui:firebase-ui-auth:$firebaseUIAuthVersion"
+
+    implementation "com.google.firebase:firebase-storage"
+
+
 }
