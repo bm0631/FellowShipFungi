@@ -11,6 +11,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class EnconterService extends BaseService {
 
@@ -30,8 +31,7 @@ public class EnconterService extends BaseService {
 
     public void saveEnconter(EnconterEntity enconterEntity, Uri imageUri) {
         if (imageUri != null) {
-            String nameImg="enconter_" + getUserId() +"_"+ new Date()+".jpg";
-
+            String nameImg=generateNameImg();
             StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("EncontersImg/"+nameImg);
             UploadTask uploadTask = storageRef.putFile(imageUri);
 
@@ -52,5 +52,10 @@ public class EnconterService extends BaseService {
                 .document(getUserId())
                 .collection(COLLECTION_ENCONTERS)
                 .add(enconterEntity.getMap());
+    }
+    private String  generateNameImg() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault());
+        String formattedDate = dateFormat.format(new Date());
+        return "enconter_" + getUserId() + "_" + formattedDate + ".jpg";
     }
 }
