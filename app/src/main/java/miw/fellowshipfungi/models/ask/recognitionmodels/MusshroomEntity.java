@@ -5,10 +5,10 @@ import java.util.Map;
 import miw.fellowshipfungi.models.ImgStorageEntity;
 
 public class MusshroomEntity extends ImgStorageEntity {
+    private static final String folder = "Setas%2F";
     private final String id;
     private final String name;
     private final String img;
-    private static final String folder = "Setas%2F";
 
     public MusshroomEntity(Map<String, Object> dataMap) {
         this.id = (String) dataMap.get("idNode");
@@ -30,6 +30,6 @@ public class MusshroomEntity extends ImgStorageEntity {
 
     @Override
     public String getFolderAndImg() {
-        return folder+this.getImg();
+        return folder + this.getImg();
     }
 }

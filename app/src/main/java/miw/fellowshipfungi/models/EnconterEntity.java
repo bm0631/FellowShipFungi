@@ -3,12 +3,12 @@ package miw.fellowshipfungi.models;
 import java.util.HashMap;
 import java.util.Map;
 
-public class EnconterEntity extends ImgStorageEntity{
+public class EnconterEntity extends ImgStorageEntity {
+    private static final String folder = "EncontersImg%2F";
     private String specieId;
     private String date;
     private String location;
     private String weather;
-    private static final String folder = "EncontersImg%2F";
     private String nameImg;
 
     public EnconterEntity(String specieId) {
@@ -66,11 +66,11 @@ public class EnconterEntity extends ImgStorageEntity{
 
     @Override
     public String getFolderAndImg() {
-        return this.folder+this.getNameImg();
+        return this.folder + this.getNameImg();
     }
 
 
     protected boolean hasImg() {
-        return this.getNameImg()!=null;
+        return this.getNameImg() != null;
     }
 }

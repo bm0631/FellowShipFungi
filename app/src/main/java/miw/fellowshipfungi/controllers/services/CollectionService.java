@@ -1,7 +1,6 @@
 package miw.fellowshipfungi.controllers.services;
 
 
-
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -15,7 +14,7 @@ import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
 import miw.fellowshipfungi.models.profile.EnconterCollectionEntity;
 
 public class CollectionService extends BaseService {
-    private static String LOG_TAG="CollectionService";
+    private static String LOG_TAG = "CollectionService";
     private static CollectionService instance;
 
     public CollectionService() {

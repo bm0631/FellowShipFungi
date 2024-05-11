@@ -31,7 +31,7 @@ public class EnconterCollectionEntity extends EnconterEntity {
         if (!this.hasImg()) {
             return musshroomEntity.getImgUrl();
         } else {
-            android.util.Log.w("ddd___",super.getImgUrl());
+            android.util.Log.w("ddd___", super.getImgUrl());
             return super.getImgUrl();
         }
 

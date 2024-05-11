@@ -14,7 +14,7 @@ import com.google.firebase.firestore.Source;
 import miw.fellowshipfungi.models.profile.ProfileData;
 
 public class ProfileService extends BaseService {
-    private static String LOG_TAG="ProfileService";
+    private static String LOG_TAG = "ProfileService";
     private static ProfileService instance;
 
 
@@ -104,7 +104,7 @@ public class ProfileService extends BaseService {
                     listener.onGetBestResult(0);
                 }
             } else {
-                this.handleFirestoreError(LOG_TAG,"Error getting best result document", task.getException());
+                this.handleFirestoreError(LOG_TAG, "Error getting best result document", task.getException());
                 listener.onGetBestResult(0);
             }
         });

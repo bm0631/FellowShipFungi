@@ -1,8 +1,6 @@
 package miw.fellowshipfungi.controllers.services;
 
-import android.content.Context;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -36,7 +34,7 @@ public abstract class BaseService {
         return this.nameUser;
     }
 
-    protected void handleFirestoreError( String tag, String message, Exception exception) {
+    protected void handleFirestoreError(String tag, String message, Exception exception) {
         Log.e(tag, message, exception);
     }
 

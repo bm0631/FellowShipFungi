@@ -51,7 +51,7 @@ public class TestService extends BaseService {
     public void updateBestResult(Double newResult) {
 
         if (this.getUserId() == null) {
-            this.handleFirestoreError(LOG_TAG, "User ID is null",null);
+            this.handleFirestoreError(LOG_TAG, "User ID is null", null);
             return;
         }
 

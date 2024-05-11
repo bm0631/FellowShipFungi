@@ -3,7 +3,7 @@ package miw.fellowshipfungi.models;
 import java.util.Map;
 
 public class CuriosityStorageEntity extends ImgStorageEntity {
-    private static final String folder="Curiosities%2F";
+    private static final String folder = "Curiosities%2F";
     private String text;
     private String img;
 
@@ -19,7 +19,7 @@ public class CuriosityStorageEntity extends ImgStorageEntity {
 
     @Override
     public String getFolderAndImg() {
-        return this.folder+this.img;
+        return this.folder + this.img;
     }
 
 
