@@ -2,12 +2,12 @@ package miw.fellowshipfungi.models;
 
 import java.util.Map;
 
-public class CuriosityStorageEntity extends ImgStorageEntity {
+public class CuriosityEntity extends ImgStorageEntity {
     private static final String folder = "Curiosities%2F";
     private String text;
     private String img;
 
-    public CuriosityStorageEntity(Map<String, Object> dataMap) {
+    public CuriosityEntity(Map<String, Object> dataMap) {
         super();
         this.text = (String) dataMap.get("text");
         this.img = (String) dataMap.get("img");

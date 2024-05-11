@@ -9,13 +9,13 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import miw.fellowshipfungi.models.CuriosityStorageEntity;
+import miw.fellowshipfungi.models.CuriosityEntity;
 
 public class CuriosityService extends BaseService {
 
     final static String LOG_TAG = "Curiosity Service";
     private static CuriosityService instance;
-    private CuriosityStorageEntity curiosityEntity;
+    private CuriosityEntity curiosityEntity;
 
     private CuriosityService() {
         super();
@@ -36,7 +36,7 @@ public class CuriosityService extends BaseService {
                 DocumentSnapshot result = task.getResult();
                 Map<String, Object> currentNodeData = (Map<String, Object>) result.get(idCuriosity);
                 if (currentNodeData != null) {
-                    this.curiosityEntity = new CuriosityStorageEntity(currentNodeData);
+                    this.curiosityEntity = new CuriosityEntity(currentNodeData);
                     callback.onSuccess(this.curiosityEntity);
 
                 } else {
@@ -108,7 +108,7 @@ public class CuriosityService extends BaseService {
     }
 
     public interface CuriosityServiceCallback {
-        void onSuccess(CuriosityStorageEntity curiosityEntity);
+        void onSuccess(CuriosityEntity curiosityEntity);
 
         void onFailure(Exception e);
     }

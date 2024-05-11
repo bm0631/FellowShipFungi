@@ -28,7 +28,7 @@ public class CuriosityEntityTest {
         dataMap.put("text", TEXT);
         dataMap.put("img", IMG);
         String expectImgURL = "https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/Curiosities%2FCuriosityIMG.jpg?alt=media";
-        CuriosityStorageEntity curiosityEntity = new CuriosityStorageEntity(dataMap);
+        CuriosityEntity curiosityEntity = new CuriosityEntity(dataMap);
 
         assertNotNull(curiosityEntity);
         assertEquals(TEXT, curiosityEntity.getText());
@@ -37,7 +37,7 @@ public class CuriosityEntityTest {
 
     @Test(expected = NullPointerException.class)
     public void testConstructorWithNullDataMap() {
-        new CuriosityStorageEntity(null); // Expecting NullPointerException
+        new CuriosityEntity(null); // Expecting NullPointerException
     }
 
     @Test(expected = ClassCastException.class)
@@ -48,6 +48,6 @@ public class CuriosityEntityTest {
         invalidDataMap.put("text", 1234); // Invalid data type for textNode
         invalidDataMap.put("img", IMG);
 
-        new CuriosityStorageEntity(invalidDataMap); // Expecting ClassCastException
+        new CuriosityEntity(invalidDataMap); // Expecting ClassCastException
     }
 }
