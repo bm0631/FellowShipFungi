@@ -9,7 +9,6 @@ public class EnconterEntity extends ImgStorageEntity {
     private String date;
     private String location;
     private String weather;
-    private String nameImg;
 
     public EnconterEntity(String specieId) {
         this.specieId = specieId;
@@ -43,13 +42,7 @@ public class EnconterEntity extends ImgStorageEntity {
         this.weather = weather;
     }
 
-    protected String getNameImg() {
-        return nameImg;
-    }
 
-    public void setNameImg(String nameImg) {
-        this.nameImg = nameImg;
-    }
 
     public Map<String, Object> getMap() {
         Map<String, Object> map = new HashMap<>();
@@ -58,19 +51,19 @@ public class EnconterEntity extends ImgStorageEntity {
         map.put("date", this.getDate());
         map.put("location", this.getLocation());
         map.put("weather", this.getWeather());
-        map.put("nameImg", this.getNameImg());
+        map.put("nameImg", this.getImg());
 
         return map;
     }
 
 
     @Override
-    public String getFolderAndImg() {
-        return this.folder + this.getNameImg();
+    public String getFolder() {
+        return this.folder ;
     }
 
 
     protected boolean hasImg() {
-        return this.getNameImg() != null;
+        return this.getImg() != null;
     }
 }

@@ -17,7 +17,7 @@ public class EnconterCollectionEntity extends EnconterEntity {
         this.setDate((String) dataMapEnconter.get("date"));
         this.setLocation((String) dataMapEnconter.get("location"));
         this.setWeather((String) dataMapEnconter.get("weather"));
-        this.setNameImg((String) dataMapEnconter.get("nameImg"));
+        this.setImg((String) dataMapEnconter.get("nameImg"));
 
         this.enconterID = enconterID;
         this.musshroomEntity = recognitionEntity.getMusshroomEntity();

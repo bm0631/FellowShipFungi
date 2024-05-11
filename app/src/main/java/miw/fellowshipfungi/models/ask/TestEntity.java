@@ -11,7 +11,6 @@ import miw.fellowshipfungi.models.ImgStorageEntity;
 public class TestEntity extends ImgStorageEntity {
     private static final String folder = "Questions%2F";
     private String question;
-    private String img;
     private List<AnswerTestEntity> answers;
 
     public TestEntity(Map<String, Object> dataMap) {
@@ -40,8 +39,8 @@ public class TestEntity extends ImgStorageEntity {
     }
 
     @Override
-    public String getFolderAndImg() {
-        return folder + this.img;
+    public String getFolder() {
+        return folder;
     }
 
 

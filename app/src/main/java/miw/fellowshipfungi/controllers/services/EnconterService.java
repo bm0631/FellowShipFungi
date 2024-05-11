@@ -37,7 +37,7 @@ public class EnconterService extends BaseService {
             uploadTask.addOnSuccessListener(taskSnapshot -> {
 
                 storageRef.getDownloadUrl().addOnSuccessListener(uri -> {
-                    enconterEntity.setNameImg(nameImg);
+                    enconterEntity.setImg(nameImg);
                     saveEnconter(enconterEntity);
                 });
             });

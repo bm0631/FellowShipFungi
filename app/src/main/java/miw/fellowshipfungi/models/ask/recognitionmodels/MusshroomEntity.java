@@ -8,7 +8,7 @@ public class MusshroomEntity extends ImgStorageEntity {
     private static final String folder = "Setas%2F";
     private final String id;
     private final String name;
-    private final String img;
+
 
     public MusshroomEntity(Map<String, Object> dataMap) {
         this.id = (String) dataMap.get("idNode");
@@ -24,12 +24,9 @@ public class MusshroomEntity extends ImgStorageEntity {
         return this.name;
     }
 
-    private String getImg() {
-        return this.img.replace(" ", "%20");
-    }
 
     @Override
-    public String getFolderAndImg() {
-        return folder + this.getImg();
+    public String getFolder() {
+        return folder;
     }
 }

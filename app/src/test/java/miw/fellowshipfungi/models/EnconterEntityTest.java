@@ -45,8 +45,8 @@ public class EnconterEntityTest {
         String nameImg = "Fungi.jpg";
         EnconterEntity enconterEntity = new EnconterEntity(specieId);
 
-        enconterEntity.setNameImg(nameImg);
-        assertEquals(nameImg, enconterEntity.getNameImg());
+        enconterEntity.setImg(nameImg);
+        assertEquals(nameImg, enconterEntity.getImg());
     }
 
 
@@ -62,7 +62,7 @@ public class EnconterEntityTest {
         enconterEntity.setDate(date);
         enconterEntity.setLocation(location);
         enconterEntity.setWeather(weather);
-        enconterEntity.setNameImg(nameImg);
+        enconterEntity.setImg(nameImg);
 
         Map<String, Object> map = enconterEntity.getMap();
 
