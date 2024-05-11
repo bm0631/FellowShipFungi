@@ -16,7 +16,7 @@ import miw.fellowshipfungi.models.profile.ProfileData;
 public class ProfileService extends BaseService {
     private static String LOG_TAG = "ProfileService";
     private static ProfileService instance;
-
+    private  DocumentReference userRef = super.getProfileDocument();
 
     private ProfileService() {
         super();
@@ -55,8 +55,7 @@ public class ProfileService extends BaseService {
     }
 
     public void getCurrentStreak(final OnGetCurrentStreakListener listener) {
-        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(this.getUserId());
-        userRef.get().addOnCompleteListener(task -> {
+        this.userRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 DocumentSnapshot document = task.getResult();
                 Long streak = document.getLong("streak");
@@ -74,27 +73,23 @@ public class ProfileService extends BaseService {
     }
 
     public void getLengthCollection(final OnLengthCollectionListener listener) {
-        Query query = db.collection(COLLECTION_PROFILE)
-                .document(this.getUserId())
+        Query query = this.userRef
                 .collection(COLLECTION_ENCONTERS);
 
-        query.get(Source.SERVER).addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    QuerySnapshot snapshot = task.getResult();
-                    int count = snapshot.size();
-                    listener.onLengthRetrieved(count);
-                } else {
-                    listener.onLengthRetrieved(0);
-                }
+        query.get(Source.SERVER).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                QuerySnapshot snapshot = task.getResult();
+                int count = snapshot.size();
+                listener.onLengthRetrieved(count);
+            } else {
+                listener.onLengthRetrieved(0);
             }
         });
     }
 
     public void getBestResult(final OnGetBestResultListener listener) {
-        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(getUserId());
-        userRef.get().addOnCompleteListener(task -> {
+
+        this.userRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 DocumentSnapshot document = task.getResult();
                 Double bestResult = document.getDouble("bestResult");
