@@ -1,0 +1,520 @@
+@startuml
+class miw.fellowshipfungi.controllers.ProfileActivity {
+# void onCreate(Bundle)
+- void loadLayout()
+- void displayProfileData(ProfileData)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
++ void openCollection(View)
+}
+
+enum miw.fellowshipfungi.models.ask.recognitionmodels.NodeTypes {
++  Ask
++  Answer
++  Specie
++ {static} NodeTypes typeNode(String)
+}
+
+
+class miw.fellowshipfungi.models.profile.ProfileData {
+- long lengthCollection
+- int streak
+- double bestResult
+- String username
++ long getLengthCollection()
++ void setLengthCollection(long)
++ int getStreak()
++ void setStreak(int)
++ double getBestResult()
++ void setBestResult(double)
++ String getUsername()
++ void setUsername(String)
+}
+
+
+class miw.fellowshipfungi.models.ask.AnswerTestEntity {
+- String text
+- boolean isTrue
++ <<Create>> AnswerTestEntity(Map<String,Object>)
++ String getText()
++ boolean isTrue()
+}
+
+
+class miw.fellowshipfungi.models.ask.TestEntity {
+- {static} String folder
+- String question
+- List<AnswerTestEntity> answers
++ <<Create>> TestEntity(Map<String,Object>)
++ String getTextQuestion()
++ String getTextAnwser(int)
++ boolean getIsTrueAnwser(int)
++ String getFolder()
+}
+
+
+class miw.fellowshipfungi.models.EnconterEntity {
+- {static} String folder
+- String specieId
+- String date
+- String location
+- String weather
++ <<Create>> EnconterEntity(String)
++ String getSpecieId()
++ String getDate()
++ void setDate(String)
++ String getLocation()
++ void setLocation(String)
++ String getWeather()
++ void setWeather(String)
++ Map<String,Object> getMap()
++ String getFolder()
+# boolean hasImg()
+}
+
+
+class miw.fellowshipfungi.controllers.TestActivity {
+~ {static} String LOG_TAG
+- int NUMBERQUESTIONS
+- TestService testService
+- List<TestEntity> testEntities
+- int currentQuestionIndex
+- ImageView viewImg
+- TextView viewText
+- List<Button> buttonViews
+# void onCreate(Bundle)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
+- void loadViewElements()
+- void generateRandomQuestions()
+- void loadQuestions(Set<String>)
+- void loadQuestion(String)
+- void printCurrentQuestion()
++ void answerQuestion(View)
+# void onProgresionBar()
+- void offProgresionBar()
+- void printResults()
++ void rePlay(View)
+- void backMainMenu()
++ void backMainMenu(View)
+}
+
+
+class miw.fellowshipfungi.controllers.CollectionActivity {
+- List<EnconterCollectionEntity> enconterCollectionEntities
+- String enconterToDelete
++ void onCreate(Bundle)
+- void loadCollectionData()
+- void setAdapter()
+- void setListEntities(List<EnconterCollectionEntity>)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
++ void deleteEnconter(View)
++ void deleteEnconterConfirmed()
+}
+
+
+class miw.fellowshipfungi.controllers.MainMenuActivity {
+- {static} String LOG_TAG
+- {static} String ROOT_IMG_URL
+- {static} int RC_SIGN_IN
+- FirebaseAuth mFirebaseAuth
+- FirebaseAuth.AuthStateListener mAuthStateListener
+# void onCreate(Bundle)
+- void loadTittleImg()
++ void onRecognitionClick(View)
++ void onOpenCuriosityClick(View)
++ void onOpenTestClick(View)
++ void onOpenProfileClick(View)
++ void onLoginClick(View)
++ void onLogoutClick(View)
+# void onPause()
+# void onResume()
+- void setVisibilyAuth()
+}
+
+
+class miw.fellowshipfungi.controllers.services.ProfileService {
+- {static} String LOG_TAG
+- {static} ProfileService instance
+- DocumentReference userRef
+- <<Create>> ProfileService()
++ {static} ProfileService getInstance()
++ void getProfileData(OnProfileDataListener)
++ void getCurrentStreak(OnGetCurrentStreakListener)
++ void getLengthCollection(OnLengthCollectionListener)
++ void getBestResult(OnGetBestResultListener)
+}
+
+
+interface miw.fellowshipfungi.controllers.services.ProfileService$OnProfileDataListener {
+~ void onProfileDataLoaded(ProfileData)
+}
+
+interface miw.fellowshipfungi.controllers.services.ProfileService$OnGetCurrentStreakListener {
+~ void onGetCurrentStreak(int)
+}
+
+interface miw.fellowshipfungi.controllers.services.ProfileService$OnLengthCollectionListener {
+~ void onLengthRetrieved(long)
+}
+
+interface miw.fellowshipfungi.controllers.services.ProfileService$OnGetBestResultListener {
+~ void onGetBestResult(double)
+}
+
+class miw.fellowshipfungi.controllers.RecognitionActivity {
+~ {static} String LOG_TAG
+- RecognitionEntity recognitionEntity
+- String currentNode
+- String previusNode
+- int countAsks
+- RecognitionService recognitionService
+- View progressBar
++ void onCreate(Bundle)
+- void createViewMusshroom()
+- void createViewAsk()
+- void loadAskAndAnswers()
+- void printAsk()
++ void loadSpecie()
+- void printSpecie()
++ void repliedAsk(View)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
+- void navigateToNode(String)
+- void printStepCount()
+# void setupProgresionBar()
+- void offProgresionBar()
+- void showYesNoDialog_Anular()
++ void openMainMenu(View)
+- YesCancelDialog.YesNoDialogCallback openMainMenu()
++ void openCreateEnconter(View)
++ void visibilityCreateEnconterAsk()
+}
+
+
+class miw.fellowshipfungi.models.ask.recognitionmodels.AnswerEntity {
+- String nextNode
+- String text
++ <<Create>> AnswerEntity(Map<String,Object>)
++ String getNextNode()
++ String getText()
+}
+
+
+abstract class miw.fellowshipfungi.controllers.services.BaseService {
+# {static} String COLLECTION_PROFILE
+# {static} String COLLECTION_ENCONTERS
+# {static} String COLLECTION_CURIOSITY
+# {static} String CURIOSITY_DOCUMENT
+# {static} String COLLECTION_TEST
+# {static} String TEST_DOCUMENT
+# {static} String COLLECTION_RECOGNITION
+# {static} String ASK_DOCUMENT
+# {static} String ANSWER_DOCUMENT
+# {static} String SPECIES_DOCUMENT
+# FirebaseFirestore db
+- String userId
+- String nameUser
++ <<Create>> BaseService()
+# String getUserId()
+# String getName()
+# void handleFirestoreError(String,String,Exception)
+# DocumentReference getProfileDocument()
+}
+
+
+class miw.fellowshipfungi.controllers.CreateEnconterActivity {
+- {static} int REQUEST_IMAGE_PICK
+- EnconterEntity enconterEntity
+- Uri imageUri
+# void onCreate(Bundle)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
+- void showDatePickerDialog(View)
++ void saveEnconter(View)
+- boolean validateImage()
+- void returnMainMenu()
+- void selectImage(View)
+# void onActivityResult(int,int,Intent)
+- Uri saveImageToGallery(Bitmap)
+}
+
+
+class miw.fellowshipfungi.controllers.adapters.AnswerAdapter {
+- List<AnswerEntity> answers
++ <<Create>> AnswerAdapter(List<AnswerEntity>)
++ ViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(ViewHolder,int)
++ int getItemCount()
+}
+
+
+class miw.fellowshipfungi.controllers.adapters.AnswerAdapter$ViewHolder {
++ Button answerButton
++ <<Create>> ViewHolder(View)
+}
+
+
+class miw.fellowshipfungi.controllers.adapters.EnconterAdapter {
+- List<EnconterCollectionEntity> enconterCollectionEntities
++ <<Create>> EnconterAdapter(List<EnconterCollectionEntity>)
++ EnconterViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(EnconterViewHolder,int)
++ int getItemCount()
+}
+
+
+class miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder {
+~ ImageView mushroomImage
+~ TextView nameMusshroom
+~ Button deleteEnconter
++ <<Create>> EnconterViewHolder(View)
+}
+
+
+class miw.fellowshipfungi.models.ask.recognitionmodels.MusshroomEntity {
+- {static} String folder
+- String id
+- String name
++ <<Create>> MusshroomEntity(Map<String,Object>)
++ String getId()
++ String getName()
++ String getFolder()
+}
+
+
+class miw.fellowshipfungi.controllers.services.EnconterService {
+- {static} EnconterService instance
+- {static} String folder
+- <<Create>> EnconterService()
++ {static} EnconterService getInstance()
++ void saveEnconter(EnconterEntity,Uri)
+- void saveEnconter(EnconterEntity)
+- String generateNameImg()
+}
+
+
+class miw.fellowshipfungi.controllers.dialogs.YesCancelDialog {
+- YesNoDialogCallback callback
+- String titleResId
+- String messageResId
++ <<Create>> YesCancelDialog()
++ {static} YesCancelDialog newInstance(String,String)
+- void setTitleResId(String)
+- void setMessageResId(String)
++ void setCallback(YesNoDialogCallback)
++ AppCompatDialog onCreateDialog(Bundle)
+}
+
+
+interface miw.fellowshipfungi.controllers.dialogs.YesCancelDialog$YesNoDialogCallback {
+~ void onPositiveClick()
+~ void onNegativeClick()
+}
+
+class miw.fellowshipfungi.controllers.services.CollectionService {
+- {static} String LOG_TAG
+- {static} CollectionService instance
++ <<Create>> CollectionService()
++ {static} CollectionService getInstance()
++ void getCollection(OnCollectionListener)
++ void deleteEnconter(String,OnDeleteEnconterListener)
+- void deleteImage(String)
+}
+
+
+interface miw.fellowshipfungi.controllers.services.CollectionService$OnCollectionListener {
+~ void onCollectionLoaded(List<EnconterCollectionEntity>)
+~ void onFailure(String)
+}
+
+interface miw.fellowshipfungi.controllers.services.CollectionService$OnDeleteEnconterListener {
+~ void onEnconterDeleted()
+~ void onFailure(String)
+}
+
+abstract class miw.fellowshipfungi.models.ImgStorageEntity {
+- String URLBase
+# String img
++ String getImgUrl()
+# String getImg()
++ void setImg(String)
++ String getFolderAndImg()
++ {abstract}String getFolder()
+}
+
+
+class miw.fellowshipfungi.controllers.dialogs.DatePickerFragment {
++ Dialog onCreateDialog(Bundle)
++ void onDateSet(DatePicker,int,int,int)
+- String formatDate(int,int,int)
+}
+
+class miw.fellowshipfungi.controllers.services.AuthService {
+- {static} AuthService instance
+- FirebaseAuth mFirebaseAuth
+- <<Create>> AuthService()
++ {static} AuthService getInstance()
++ boolean isLogged()
++ String getIdUserLogged()
++ String getUserName()
+}
+
+
+class miw.fellowshipfungi.controllers.CuriosityActivity {
+~ {static} String LOG_TAG
+- String baseIdCuriosity
+- CuriosityService curiosityService
+- String idCuriosity
+- CuriosityEntity curiosityEntity
+- ProgressBar progressBar
++ void onCreate(Bundle)
+- String getDayIdCuriosity()
+- void printCuriosity()
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
+- void backMainMenu()
+- void updateStreakCuriosities()
+}
+
+
+class miw.fellowshipfungi.models.profile.EnconterCollectionEntity {
+- String enconterID
+- MusshroomEntity musshroomEntity
++ <<Create>> EnconterCollectionEntity(String,Map<String,Object>,RecognitionEntity)
++ String getNameMussroom()
++ String getImgUrl()
++ String getEnconterID()
+}
+
+
+class miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity {
+- AskEntity askEntity
+- List<AnswerEntity> answerEntities
+- MusshroomEntity musshroomEntity
++ <<Create>> RecognitionEntity()
++ void addAnswer(Map<String,Object>)
++ String getAskText()
++ void setAskEntity(Map<String,Object>)
++ List<AnswerEntity> getAnswerEntities()
++ MusshroomEntity getMusshroomEntity()
++ void setMusshroomEntity(Map<String,Object>)
++ String getMusshroomName()
++ String getMusshroomImgUrl()
++ String getMusshroomId()
+}
+
+
+class miw.fellowshipfungi.controllers.services.CuriosityService {
+~ {static} String LOG_TAG
+- {static} CuriosityService instance
+- CuriosityEntity curiosityEntity
+- <<Create>> CuriosityService()
++ {static} CuriosityService getInstance()
++ void loadCuriosity(String,CuriosityService.CuriosityServiceCallback)
++ void updateStreakCuriosities()
+- boolean isSameDay(Date,Date)
+- boolean isYesterday(Date)
+}
+
+
+interface miw.fellowshipfungi.controllers.services.CuriosityService$CuriosityServiceCallback {
+~ void onSuccess(CuriosityEntity)
+~ void onFailure(Exception)
+}
+
+class miw.fellowshipfungi.MainActivity {
+# void onCreate(Bundle)
+}
+
+class miw.fellowshipfungi.controllers.services.RecognitionService {
+- {static} String LOG_TAG
+- RecognitionEntity recognitionEntity
++ <<Create>> RecognitionService()
++ void loadSpecie(String,RecognitionServiceCallback)
++ void loadAskAndAnswers(String,RecognitionServiceCallback)
+- void loadDocument(String,String,RecognitionServiceCallback)
+- void loadAnswers(List<String>,RecognitionServiceCallback)
+- void loadAnswer(String,AtomicInteger,int,RecognitionServiceCallback)
+}
+
+
+interface miw.fellowshipfungi.controllers.services.RecognitionService$RecognitionServiceCallback {
+~ void onSuccess(RecognitionEntity)
+~ void onFailure(Exception)
+}
+
+class miw.fellowshipfungi.controllers.services.TestService {
+~ {static} String LOG_TAG
+- {static} TestService instance
+- TestEntity testEntity
+- <<Create>> TestService()
++ {static} TestService getInstance()
++ void loadCuriosity(String,TestService.TestServiceCallback)
++ void updateBestResult(Double)
+}
+
+
+interface miw.fellowshipfungi.controllers.services.TestService$TestServiceCallback {
+~ void onSuccess(TestEntity)
+~ void onFailure(Exception)
+}
+
+class miw.fellowshipfungi.models.CuriosityEntity {
+- {static} String folder
+- String text
++ <<Create>> CuriosityEntity(Map<String,Object>)
++ String getText()
++ String getFolder()
+}
+
+
+class miw.fellowshipfungi.models.ask.recognitionmodels.AskEntity {
+- String text
++ <<Create>> AskEntity(Map<String,Object>)
++ String getText()
+}
+
+
+
+
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.ProfileActivity
+miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.ask.TestEntity
+miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.EnconterEntity
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.TestActivity
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.CollectionActivity
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.MainMenuActivity
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.ProfileService
+miw.fellowshipfungi.controllers.services.ProfileService +.. miw.fellowshipfungi.controllers.services.ProfileService$OnProfileDataListener
+miw.fellowshipfungi.controllers.services.ProfileService +.. miw.fellowshipfungi.controllers.services.ProfileService$OnGetCurrentStreakListener
+miw.fellowshipfungi.controllers.services.ProfileService +.. miw.fellowshipfungi.controllers.services.ProfileService$OnLengthCollectionListener
+miw.fellowshipfungi.controllers.services.ProfileService +.. miw.fellowshipfungi.controllers.services.ProfileService$OnGetBestResultListener
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.RecognitionActivity
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.CreateEnconterActivity
+miw.fellowshipfungi.controllers.adapters.Adapter <|-- miw.fellowshipfungi.controllers.adapters.AnswerAdapter
+miw.fellowshipfungi.controllers.adapters.AnswerAdapter +.. miw.fellowshipfungi.controllers.adapters.AnswerAdapter$ViewHolder
+miw.fellowshipfungi.controllers.adapters.ViewHolder <|-- miw.fellowshipfungi.controllers.adapters.AnswerAdapter$ViewHolder
+miw.fellowshipfungi.controllers.adapters.Adapter <|-- miw.fellowshipfungi.controllers.adapters.EnconterAdapter
+miw.fellowshipfungi.controllers.adapters.EnconterAdapter +.. miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder
+miw.fellowshipfungi.controllers.adapters.ViewHolder <|-- miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder
+miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.ask.recognitionmodels.MusshroomEntity
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.EnconterService
+androidx.fragment.app.DialogFragment <|-- miw.fellowshipfungi.controllers.dialogs.YesCancelDialog
+miw.fellowshipfungi.controllers.dialogs.YesCancelDialog +.. miw.fellowshipfungi.controllers.dialogs.YesCancelDialog$YesNoDialogCallback
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.CollectionService
+miw.fellowshipfungi.controllers.services.CollectionService +.. miw.fellowshipfungi.controllers.services.CollectionService$OnCollectionListener
+miw.fellowshipfungi.controllers.services.CollectionService +.. miw.fellowshipfungi.controllers.services.CollectionService$OnDeleteEnconterListener
+miw.fellowshipfungi.controllers.dialogs.OnDateSetListener <|.. miw.fellowshipfungi.controllers.dialogs.DatePickerFragment
+androidx.fragment.app.DialogFragment <|-- miw.fellowshipfungi.controllers.dialogs.DatePickerFragment
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.CuriosityActivity
+miw.fellowshipfungi.models.EnconterEntity <|-- miw.fellowshipfungi.models.profile.EnconterCollectionEntity
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.CuriosityService
+miw.fellowshipfungi.controllers.services.CuriosityService +.. miw.fellowshipfungi.controllers.services.CuriosityService$CuriosityServiceCallback
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.MainActivity
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.RecognitionService
+miw.fellowshipfungi.controllers.services.RecognitionService +.. miw.fellowshipfungi.controllers.services.RecognitionService$RecognitionServiceCallback
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.TestService
+miw.fellowshipfungi.controllers.services.TestService +.. miw.fellowshipfungi.controllers.services.TestService$TestServiceCallback
+miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.CuriosityEntity
+@enduml

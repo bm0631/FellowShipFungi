@@ -1,6 +1,6 @@
 package miw.fellowshipfungi.models.profile;
 
-public class ProfileData {
+public class ProfileEntity {
     private long lengthCollection;
     private int streak;
     private double bestResult;

@@ -7,7 +7,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.Source;
 
-import miw.fellowshipfungi.models.profile.ProfileData;
+import miw.fellowshipfungi.models.profile.ProfileEntity;
 
 public class ProfileService extends BaseService {
     private static String LOG_TAG = "ProfileService";
@@ -27,25 +27,25 @@ public class ProfileService extends BaseService {
     }
 
     public void getProfileData(final OnProfileDataListener listener) {
-        ProfileData profileData = new ProfileData();
+        ProfileEntity profileEntity = new ProfileEntity();
 
 
-        profileData.setUsername(this.getName());
+        profileEntity.setUsername(this.getName());
 
 
         getLengthCollection(length -> {
-            profileData.setLengthCollection(length);
+            profileEntity.setLengthCollection(length);
 
             // Obtener racha actual
             getCurrentStreak(streak -> {
-                profileData.setStreak(streak);
+                profileEntity.setStreak(streak);
 
                 // Obtener mejor resultado
                 getBestResult(bestResult -> {
-                    profileData.setBestResult(bestResult);
+                    profileEntity.setBestResult(bestResult);
 
                     // Llamar al listener con los datos completos
-                    listener.onProfileDataLoaded(profileData);
+                    listener.onProfileDataLoaded(profileEntity);
                 });
             });
         });
@@ -103,7 +103,7 @@ public class ProfileService extends BaseService {
     }
 
     public interface OnProfileDataListener {
-        void onProfileDataLoaded(ProfileData profileData);
+        void onProfileDataLoaded(ProfileEntity profileEntity);
     }
 
     public interface OnGetCurrentStreakListener {

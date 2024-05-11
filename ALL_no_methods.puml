@@ -1,0 +1,134 @@
+@startuml
+class miw.fellowshipfungi.controllers.ProfileActivity {
+}
+enum miw.fellowshipfungi.models.ask.recognitionmodels.NodeTypes {
++  Ask
++  Answer
++  Specie
+}
+
+class miw.fellowshipfungi.models.profile.ProfileData {
+}
+class miw.fellowshipfungi.models.ask.AnswerTestEntity {
+}
+class miw.fellowshipfungi.models.ask.TestEntity {
+}
+class miw.fellowshipfungi.models.EnconterEntity {
+}
+class miw.fellowshipfungi.controllers.TestActivity {
+}
+class miw.fellowshipfungi.controllers.CollectionActivity {
+}
+class miw.fellowshipfungi.controllers.MainMenuActivity {
+}
+class miw.fellowshipfungi.controllers.services.ProfileService {
+}
+interface miw.fellowshipfungi.controllers.services.ProfileService$OnProfileDataListener {
+}
+interface miw.fellowshipfungi.controllers.services.ProfileService$OnGetCurrentStreakListener {
+}
+interface miw.fellowshipfungi.controllers.services.ProfileService$OnLengthCollectionListener {
+}
+interface miw.fellowshipfungi.controllers.services.ProfileService$OnGetBestResultListener {
+}
+class miw.fellowshipfungi.controllers.RecognitionActivity {
+}
+class miw.fellowshipfungi.models.ask.recognitionmodels.AnswerEntity {
+}
+abstract class miw.fellowshipfungi.controllers.services.BaseService {
+}
+class miw.fellowshipfungi.controllers.CreateEnconterActivity {
+}
+class miw.fellowshipfungi.controllers.adapters.AnswerAdapter {
+}
+class miw.fellowshipfungi.controllers.adapters.AnswerAdapter$ViewHolder {
+}
+class miw.fellowshipfungi.controllers.adapters.EnconterAdapter {
+}
+class miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder {
+}
+class miw.fellowshipfungi.models.ask.recognitionmodels.MusshroomEntity {
+}
+class miw.fellowshipfungi.controllers.services.EnconterService {
+}
+class miw.fellowshipfungi.controllers.dialogs.YesCancelDialog {
+}
+interface miw.fellowshipfungi.controllers.dialogs.YesCancelDialog$YesNoDialogCallback {
+}
+class miw.fellowshipfungi.controllers.services.CollectionService {
+}
+interface miw.fellowshipfungi.controllers.services.CollectionService$OnCollectionListener {
+}
+interface miw.fellowshipfungi.controllers.services.CollectionService$OnDeleteEnconterListener {
+}
+abstract class miw.fellowshipfungi.models.ImgStorageEntity {
+}
+class miw.fellowshipfungi.controllers.dialogs.DatePickerFragment {
+}
+class miw.fellowshipfungi.controllers.services.AuthService {
+}
+class miw.fellowshipfungi.controllers.CuriosityActivity {
+}
+class miw.fellowshipfungi.models.profile.EnconterCollectionEntity {
+}
+class miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity {
+}
+class miw.fellowshipfungi.controllers.services.CuriosityService {
+}
+interface miw.fellowshipfungi.controllers.services.CuriosityService$CuriosityServiceCallback {
+}
+class miw.fellowshipfungi.MainActivity {
+}
+class miw.fellowshipfungi.controllers.services.RecognitionService {
+}
+interface miw.fellowshipfungi.controllers.services.RecognitionService$RecognitionServiceCallback {
+}
+class miw.fellowshipfungi.controllers.services.TestService {
+}
+interface miw.fellowshipfungi.controllers.services.TestService$TestServiceCallback {
+}
+class miw.fellowshipfungi.models.CuriosityEntity {
+}
+class miw.fellowshipfungi.models.ask.recognitionmodels.AskEntity {
+}
+
+
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.ProfileActivity
+miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.ask.TestEntity
+miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.EnconterEntity
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.TestActivity
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.CollectionActivity
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.MainMenuActivity
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.ProfileService
+miw.fellowshipfungi.controllers.services.ProfileService +.. miw.fellowshipfungi.controllers.services.ProfileService$OnProfileDataListener
+miw.fellowshipfungi.controllers.services.ProfileService +.. miw.fellowshipfungi.controllers.services.ProfileService$OnGetCurrentStreakListener
+miw.fellowshipfungi.controllers.services.ProfileService +.. miw.fellowshipfungi.controllers.services.ProfileService$OnLengthCollectionListener
+miw.fellowshipfungi.controllers.services.ProfileService +.. miw.fellowshipfungi.controllers.services.ProfileService$OnGetBestResultListener
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.RecognitionActivity
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.CreateEnconterActivity
+miw.fellowshipfungi.controllers.adapters.Adapter <|-- miw.fellowshipfungi.controllers.adapters.AnswerAdapter
+miw.fellowshipfungi.controllers.adapters.AnswerAdapter +.. miw.fellowshipfungi.controllers.adapters.AnswerAdapter$ViewHolder
+miw.fellowshipfungi.controllers.adapters.ViewHolder <|-- miw.fellowshipfungi.controllers.adapters.AnswerAdapter$ViewHolder
+miw.fellowshipfungi.controllers.adapters.Adapter <|-- miw.fellowshipfungi.controllers.adapters.EnconterAdapter
+miw.fellowshipfungi.controllers.adapters.EnconterAdapter +.. miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder
+miw.fellowshipfungi.controllers.adapters.ViewHolder <|-- miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder
+miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.ask.recognitionmodels.MusshroomEntity
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.EnconterService
+androidx.fragment.app.DialogFragment <|-- miw.fellowshipfungi.controllers.dialogs.YesCancelDialog
+miw.fellowshipfungi.controllers.dialogs.YesCancelDialog +.. miw.fellowshipfungi.controllers.dialogs.YesCancelDialog$YesNoDialogCallback
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.CollectionService
+miw.fellowshipfungi.controllers.services.CollectionService +.. miw.fellowshipfungi.controllers.services.CollectionService$OnCollectionListener
+miw.fellowshipfungi.controllers.services.CollectionService +.. miw.fellowshipfungi.controllers.services.CollectionService$OnDeleteEnconterListener
+miw.fellowshipfungi.controllers.dialogs.OnDateSetListener <|.. miw.fellowshipfungi.controllers.dialogs.DatePickerFragment
+androidx.fragment.app.DialogFragment <|-- miw.fellowshipfungi.controllers.dialogs.DatePickerFragment
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.controllers.CuriosityActivity
+miw.fellowshipfungi.models.EnconterEntity <|-- miw.fellowshipfungi.models.profile.EnconterCollectionEntity
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.CuriosityService
+miw.fellowshipfungi.controllers.services.CuriosityService +.. miw.fellowshipfungi.controllers.services.CuriosityService$CuriosityServiceCallback
+androidx.appcompat.app.AppCompatActivity <|-- miw.fellowshipfungi.MainActivity
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.RecognitionService
+miw.fellowshipfungi.controllers.services.RecognitionService +.. miw.fellowshipfungi.controllers.services.RecognitionService$RecognitionServiceCallback
+miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.TestService
+miw.fellowshipfungi.controllers.services.TestService +.. miw.fellowshipfungi.controllers.services.TestService$TestServiceCallback
+miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.CuriosityEntity
+@enduml
