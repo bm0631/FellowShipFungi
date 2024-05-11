@@ -25,8 +25,8 @@ import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.services.AuthService;
 
 public class MainMenuActivity extends AppCompatActivity {
-    final static String LOG_TAG = "Fellowship Main Menu";
-    final static String ROOT_IMG_URL = "https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/Tittle%2Ftitle_";
+    private final static String LOG_TAG = "Fellowship Main Menu";
+    private final static String ROOT_IMG_URL = "https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/Tittle%2Ftitle_";
     private static final int RC_SIGN_IN = 2019;
     private FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;

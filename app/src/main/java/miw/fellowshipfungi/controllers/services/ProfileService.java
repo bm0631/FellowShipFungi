@@ -1,10 +1,6 @@
 package miw.fellowshipfungi.controllers.services;
 
 
-import androidx.annotation.NonNull;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.Query;
@@ -16,10 +12,11 @@ import miw.fellowshipfungi.models.profile.ProfileData;
 public class ProfileService extends BaseService {
     private static String LOG_TAG = "ProfileService";
     private static ProfileService instance;
-    private  DocumentReference userRef = super.getProfileDocument();
+    private  DocumentReference userRef ;
 
     private ProfileService() {
         super();
+        this.userRef= super.getProfileDocument();
     }
 
     public static ProfileService getInstance() {

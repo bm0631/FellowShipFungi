@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.services.ProfileService;
+import miw.fellowshipfungi.models.profile.ProfileData;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -28,23 +29,25 @@ public class ProfileActivity extends AppCompatActivity {
 
         // Cargar los datos del perfil
         profileService.getProfileData(profileData -> {
-            TextView lengthTextView = findViewById(R.id.lenghtCollectionTextView);
-            TextView streakTextView = findViewById(R.id.streakCuriositiesTextView);
-            TextView bestResultTextView = findViewById(R.id.bestResultTextView);
-            TextView userName = findViewById(R.id.userName);
-            // Mostrar la longitud de la colección
-            lengthTextView.setText(getString(R.string.length_registered_mushrooms, (int) profileData.getLengthCollection()));
-
-            // Mostrar la racha actual
-            streakTextView.setText(getString(R.string.consecutive_days_of_curiosities, profileData.getStreak()));
-
-            // Mostrar el mejor resultado
-            bestResultTextView.setText(getString(R.string.best_result_profile, profileData.getBestResult() * 100));
-            // Mostar nombre del usuario
-            userName.setText(profileData.getUsername());
+            displayProfileData(profileData);
         });
     }
+    private void displayProfileData(ProfileData profileData) {
+        TextView lengthTextView = findViewById(R.id.lenghtCollectionTextView);
+        TextView streakTextView = findViewById(R.id.streakCuriositiesTextView);
+        TextView bestResultTextView = findViewById(R.id.bestResultTextView);
+        TextView userName = findViewById(R.id.userName);
+        // Mostrar la longitud de la colección
+        lengthTextView.setText(getString(R.string.length_registered_mushrooms, (int) profileData.getLengthCollection()));
 
+        // Mostrar la racha actual
+        streakTextView.setText(getString(R.string.consecutive_days_of_curiosities, profileData.getStreak()));
+
+        // Mostrar el mejor resultado
+        bestResultTextView.setText(getString(R.string.best_result_profile, profileData.getBestResult() * 100));
+        // Mostar nombre del usuario
+        userName.setText(profileData.getUsername());
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);

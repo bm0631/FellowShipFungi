@@ -28,14 +28,15 @@ import miw.fellowshipfungi.models.EnconterEntity;
 
 public class CreateEnconterActivity extends AppCompatActivity {
 
-    private EnconterEntity enconterEntity;
+    private static final int REQUEST_IMAGE_PICK = 100;
 
+    private EnconterEntity enconterEntity;
     private Uri imageUri;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.activity_create_enconter);
+        setContentView(R.layout.activity_create_enconter);
 
         String specieId = getIntent().getStringExtra("specieId");
         this.enconterEntity = new EnconterEntity(specieId);
@@ -43,15 +44,14 @@ public class CreateEnconterActivity extends AppCompatActivity {
         String specieName = getIntent().getStringExtra("specieName");
         ((TextView) findViewById(R.id.nameMusshroom)).setText(specieName);
 
-
-        EditText etPlannedDate = (EditText) findViewById(R.id.etDate);
+        EditText etPlannedDate = findViewById(R.id.etDate);
         etPlannedDate.setOnClickListener(this::showDatePickerDialog);
+
         findViewById(R.id.imageView).setOnClickListener(this::selectImage);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_recognition, menu);
         MenuItem stopButton = menu.findItem(R.id.opcStop);
         stopButton.setEnabled(false);
@@ -68,8 +68,9 @@ public class CreateEnconterActivity extends AppCompatActivity {
             intent.putExtra("countAsks", getIntent().getStringExtra("countAsks"));
             startActivity(intent);
             finishAffinity();
+            return true;
         }
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 
     private void showDatePickerDialog(View view) {
@@ -81,6 +82,7 @@ public class CreateEnconterActivity extends AppCompatActivity {
         String date = ((TextView) findViewById(R.id.etDate)).getText().toString();
         String location = ((TextView) findViewById(R.id.location)).getText().toString();
         String weather = ((Spinner) findViewById(R.id.weather)).getSelectedItem().toString();
+
         if (TextUtils.isEmpty(date)) {
             date = null;
         }
@@ -91,12 +93,8 @@ public class CreateEnconterActivity extends AppCompatActivity {
             weather = null;
         }
 
-        if (imageUri != null) {
-            String fileType = getContentResolver().getType(imageUri);
-            if (fileType != null && !fileType.equals("image/jpeg")) {
-                Toast.makeText(this, "Por favor, seleccione una imagen en formato JPG (.jpg)", Toast.LENGTH_SHORT).show();
-                return;
-            }
+        if (!validateImage()) {
+            return;
         }
 
         this.enconterEntity.setDate(date);
@@ -106,8 +104,21 @@ public class CreateEnconterActivity extends AppCompatActivity {
         EnconterService.getInstance().saveEnconter(this.enconterEntity, this.imageUri);
         Toast.makeText(this, R.string.writtenEnconter, Toast.LENGTH_SHORT).show();
 
-        this.returnMainMenu();
+        returnMainMenu();
+    }
 
+    private boolean validateImage() {
+        if (imageUri != null) {
+            String fileType = getContentResolver().getType(imageUri);
+            if (fileType != null && !fileType.equals("image/jpeg")) {
+                Toast.makeText(this, "Por favor, seleccione una imagen en formato JPG (.jpg)", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        } else {
+            Toast.makeText(this, "Por favor, seleccione una imagen", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 
     private void returnMainMenu() {
@@ -118,13 +129,13 @@ public class CreateEnconterActivity extends AppCompatActivity {
 
     private void selectImage(View view) {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(intent, 100);
+        startActivityForResult(intent, REQUEST_IMAGE_PICK);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK && requestCode == 100 && data != null) {
+        if (requestCode == REQUEST_IMAGE_PICK && resultCode == RESULT_OK && data != null) {
             this.imageUri = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
