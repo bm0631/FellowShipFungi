@@ -91,6 +91,14 @@ public class CreateEnconterActivity extends AppCompatActivity {
             weather = null;
         }
 
+        if (imageUri != null) {
+            String fileType = getContentResolver().getType(imageUri);
+            if (fileType != null && !fileType.equals("image/jpeg")) {
+                Toast.makeText(this, "Por favor, seleccione una imagen en formato JPG (.jpg)", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        }
+
         this.enconterEntity.setDate(date);
         this.enconterEntity.setLocation(location);
         this.enconterEntity.setWeather(weather);

@@ -15,7 +15,7 @@ import miw.fellowshipfungi.models.EnconterEntity;
 public class EnconterService extends BaseService {
 
     private static EnconterService instance;
-
+    private final static String folder="EncontersImg/";
 
     private EnconterService() {
         super();
@@ -31,7 +31,7 @@ public class EnconterService extends BaseService {
     public void saveEnconter(EnconterEntity enconterEntity, Uri imageUri) {
         if (imageUri != null) {
             String nameImg = generateNameImg();
-            StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("EncontersImg/" + nameImg);
+            StorageReference storageRef = FirebaseStorage.getInstance().getReference().child(this.folder + nameImg);
             UploadTask uploadTask = storageRef.putFile(imageUri);
 
             uploadTask.addOnSuccessListener(taskSnapshot -> {
