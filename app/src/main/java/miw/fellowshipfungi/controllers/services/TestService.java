@@ -55,7 +55,7 @@ public class TestService extends BaseService {
             return;
         }
 
-        DocumentReference userRef = db.collection(COLLECTION_PROFILE).document(getUserId());
+        DocumentReference userRef =  this.getProfileDocument();
 
         userRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {

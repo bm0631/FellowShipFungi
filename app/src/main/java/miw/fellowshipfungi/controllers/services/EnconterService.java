@@ -47,8 +47,7 @@ public class EnconterService extends BaseService {
     }
 
     private void saveEnconter(EnconterEntity enconterEntity) {
-        db.collection(COLLECTION_PROFILE)
-                .document(getUserId())
+      this.getProfileDocument()
                 .collection(COLLECTION_ENCONTERS)
                 .add(enconterEntity.getMap());
     }

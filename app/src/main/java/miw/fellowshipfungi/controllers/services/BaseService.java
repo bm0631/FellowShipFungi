@@ -2,6 +2,7 @@ package miw.fellowshipfungi.controllers.services;
 
 import android.util.Log;
 
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public abstract class BaseService {
@@ -36,6 +37,9 @@ public abstract class BaseService {
 
     protected void handleFirestoreError(String tag, String message, Exception exception) {
         Log.e(tag, message, exception);
+    }
+    protected DocumentReference getProfileDocument(){
+        return db.collection(COLLECTION_PROFILE).document(this.getUserId());
     }
 
 }
