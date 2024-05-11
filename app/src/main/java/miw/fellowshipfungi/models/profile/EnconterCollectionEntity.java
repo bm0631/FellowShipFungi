@@ -7,7 +7,7 @@ import miw.fellowshipfungi.models.ask.recognitionmodels.MusshroomEntity;
 import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
 
 public class EnconterCollectionEntity extends EnconterEntity {
-    private final String URLBase = "https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/EncontersImg%2F";
+
     private String enconterID;
     private MusshroomEntity musshroomEntity;
 
@@ -28,11 +28,11 @@ public class EnconterCollectionEntity extends EnconterEntity {
     }
 
     public String getImgUrl() {
-        if (this.getNameImg() == null) {
+        if (!this.hasImg()) {
             return musshroomEntity.getImgUrl();
         } else {
-            return URLBase + this.getNameImg() + "?alt=media";
-
+            android.util.Log.w("ddd___",super.getImgUrl());
+            return super.getImgUrl();
         }
 
     }

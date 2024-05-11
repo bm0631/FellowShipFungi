@@ -2,11 +2,13 @@ package miw.fellowshipfungi.models.ask.recognitionmodels;
 
 import java.util.Map;
 
-public class MusshroomEntity {
+import miw.fellowshipfungi.models.ImgStorageEntity;
+
+public class MusshroomEntity extends ImgStorageEntity {
     private final String id;
     private final String name;
     private final String img;
-    private final String URLBase = "https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/Setas%2F";
+    private static final String folder = "Setas%2F";
 
     public MusshroomEntity(Map<String, Object> dataMap) {
         this.id = (String) dataMap.get("idNode");
@@ -22,7 +24,12 @@ public class MusshroomEntity {
         return this.name;
     }
 
-    public String getImgUrl() {
-        return URLBase + this.img.replace(" ", "%20") + ".jpg?alt=media";
+    private String getImg() {
+        return this.img.replace(" ", "%20");
+    }
+
+    @Override
+    public String getFolderAndImg() {
+        return folder+this.getImg();
     }
 }

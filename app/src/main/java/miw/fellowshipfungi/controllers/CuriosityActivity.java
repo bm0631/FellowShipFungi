@@ -22,7 +22,7 @@ import java.util.Date;
 
 import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.services.CuriosityService;
-import miw.fellowshipfungi.models.CuriosityEntity;
+import miw.fellowshipfungi.models.CuriosityStorageEntity;
 
 
 public class CuriosityActivity extends AppCompatActivity {
@@ -30,7 +30,7 @@ public class CuriosityActivity extends AppCompatActivity {
     private final String baseIdCuriosity = "Curiosity_0";
     private CuriosityService curiosityService;
     private String idCuriosity;
-    private CuriosityEntity curiosityEntity;
+    private CuriosityStorageEntity curiosityEntity;
     private ProgressBar progressBar;
 
     @Override
@@ -49,7 +49,7 @@ public class CuriosityActivity extends AppCompatActivity {
         Log.w(LOG_TAG, "Se Solicita la curiosidad: " + this.idCuriosity);
         this.curiosityService.loadCuriosity(this.idCuriosity, new CuriosityService.CuriosityServiceCallback() {
             @Override
-            public void onSuccess(CuriosityEntity curiosityEntity) {
+            public void onSuccess(CuriosityStorageEntity curiosityEntity) {
                 CuriosityActivity.this.curiosityEntity = curiosityEntity;
                 CuriosityActivity.this.printCuriosity();
             }
