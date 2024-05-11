@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import miw.fellowshipfungi.models.ImgStorageEntity;
 
-public class TestEntity {
-    private final String URLBase = "https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/Questions%2F";
+
+public class TestEntity extends ImgStorageEntity {
+    private static  final String folder = "Questions%2F";
     private String question;
     private String img;
     private List<AnswerTestEntity> answers;
@@ -37,8 +39,9 @@ public class TestEntity {
         return answers.get(index).isTrue();
     }
 
-    public String getImgUrl() {
-        return URLBase + this.img + ".jpg?alt=media";
+    @Override
+    public String getFolderAndImg() {
+        return folder+ this.img;
     }
 
 
