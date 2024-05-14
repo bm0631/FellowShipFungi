@@ -52,13 +52,13 @@ public class RecognitionActivity extends AppCompatActivity {
 
 
         if (NodeTypes.typeNode(this.currentNode) == NodeTypes.Specie) {
-            this.createViewMusshroom();
+            this.createViewMushroom();
         } else {
             this.createViewAsk();
         }
     }
 
-    private void createViewMusshroom() {
+    private void createViewMushroom() {
         Log.w(LOG_TAG, "It's Musshrom " + this.currentNode);
         this.setContentView(R.layout.activity_mushroom);
         this.setupProgresionBar();
@@ -126,11 +126,11 @@ public class RecognitionActivity extends AppCompatActivity {
 
     private void printSpecie() {
         TextView nameSpecie = findViewById(R.id.mushroomName);
-        nameSpecie.setText(this.recognitionEntity.getMusshroomName());
+        nameSpecie.setText(this.recognitionEntity.getMushroomName());
         nameSpecie.setVisibility(View.VISIBLE);
 
         ImageView mushroomImage = findViewById(R.id.mushroomImage);
-        String imageUrl = this.recognitionEntity.getMusshroomImgUrl();
+        String imageUrl = this.recognitionEntity.getMushroomImgUrl();
         Picasso.get().load(imageUrl).into(mushroomImage);
         mushroomImage.setVisibility(View.VISIBLE);
 
@@ -233,8 +233,8 @@ public class RecognitionActivity extends AppCompatActivity {
 
     public void openCreateEncounter(View view) {
         Intent intent = new Intent(this, CreateEncounterActivity.class);
-        intent.putExtra("specieId", this.recognitionEntity.getMusshroomId());
-        intent.putExtra("specieName", this.recognitionEntity.getMusshroomName());
+        intent.putExtra("specieId", this.recognitionEntity.getMushroomId());
+        intent.putExtra("specieName", this.recognitionEntity.getMushroomName());
         intent.putExtra("Previus", this.previusNode);
         intent.putExtra("countAsks", this.countAsks);
         startActivity(intent);

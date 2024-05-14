@@ -41,7 +41,7 @@ public class EncounterAdapter extends RecyclerView.Adapter<EncounterAdapter.Enco
 
 
         Picasso.get().load(encounterCollectionEntity.getImgUrl()).into(holder.mushroomImage);
-        holder.nameMusshroom.setText(encounterCollectionEntity.getNameMussroom());
+        holder.nameMushroom.setText(encounterCollectionEntity.getNameMussroom());
         holder.etDate.setText(encounterCollectionEntity.getDate());
         holder.location.setText(encounterCollectionEntity.getLocation());
         holder.weather.setText(encounterCollectionEntity.getWeather());
@@ -56,13 +56,13 @@ public class EncounterAdapter extends RecyclerView.Adapter<EncounterAdapter.Enco
 
     public static class EncounterViewHolder extends RecyclerView.ViewHolder {
         ImageView mushroomImage;
-        TextView nameMusshroom, etDate, location, weather;
+        TextView nameMushroom, etDate, location, weather;
         Button deleteEncounter;
 
         public EncounterViewHolder(@NonNull View itemView) {
             super(itemView);
             mushroomImage = itemView.findViewById(R.id.mushroomImage);
-            nameMusshroom = itemView.findViewById(R.id.nameMusshroom);
+            nameMushroom = itemView.findViewById(R.id.nameMushroom);
             etDate = itemView.findViewById(R.id.etDate);
             location = itemView.findViewById(R.id.location);
             weather = itemView.findViewById(R.id.weather);

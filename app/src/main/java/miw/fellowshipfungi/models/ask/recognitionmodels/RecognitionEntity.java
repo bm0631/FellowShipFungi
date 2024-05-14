@@ -8,7 +8,7 @@ public class RecognitionEntity {
     private AskEntity askEntity;
     private List<AnswerEntity> answerEntities;
 
-    private MusshroomEntity musshroomEntity;
+    private MushroomEntity mushroomEntity;
 
     public RecognitionEntity() {
         this.answerEntities = new ArrayList<AnswerEntity>();
@@ -30,24 +30,24 @@ public class RecognitionEntity {
         return answerEntities;
     }
 
-    public MusshroomEntity getMusshroomEntity() {
-        return musshroomEntity;
+    public MushroomEntity getMushroomEntity() {
+        return mushroomEntity;
     }
 
-    public void setMusshroomEntity(Map<String, Object> dataMap) {
-        this.musshroomEntity = new MusshroomEntity(dataMap);
+    public void setMushroomEntity(Map<String, Object> dataMap) {
+        this.mushroomEntity = new MushroomEntity(dataMap);
     }
 
-    public String getMusshroomName() {
-        return this.musshroomEntity.getName();
+    public String getMushroomName() {
+        return this.mushroomEntity.getName();
     }
 
-    public String getMusshroomImgUrl() {
-        return this.musshroomEntity.getImgUrl();
+    public String getMushroomImgUrl() {
+        return this.mushroomEntity.getImgUrl();
     }
 
-    public String getMusshroomId() {
-        return this.musshroomEntity.getId();
+    public String getMushroomId() {
+        return this.mushroomEntity.getId();
     }
 
 

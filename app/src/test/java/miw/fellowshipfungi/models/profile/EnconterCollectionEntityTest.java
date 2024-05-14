@@ -17,8 +17,8 @@ public class EnconterCollectionEntityTest {
     private final String date = "2024-04-27";
     private final String location = "Forest";
     private final String weather = "Sunny";
-    private final String musshroomId = "456";
-    private final String musshroomName = "Agaricus bisporus";
+    private final String mushroomId = "456";
+    private final String mushroomName = "Agaricus bisporus";
     private final String imgUrl = "Agaricus bisporus";
     private EncounterCollectionEntity enconterCollectionEntity;
 
@@ -32,14 +32,14 @@ public class EnconterCollectionEntityTest {
         dataMapEnconter.put("weather", weather);
 
 
-        Map<String, Object> dataMapMusshroom = new HashMap<>();
-        dataMapMusshroom.put("idNode", musshroomId);
-        dataMapMusshroom.put("textNode", musshroomName);
-        dataMapMusshroom.put("img", imgUrl);
+        Map<String, Object> dataMapMushroom = new HashMap<>();
+        dataMapMushroom.put("idNode", mushroomId);
+        dataMapMushroom.put("textNode", mushroomName);
+        dataMapMushroom.put("img", imgUrl);
 
 
         RecognitionEntity recognitionEntity = new RecognitionEntity();
-        recognitionEntity.setMusshroomEntity(dataMapMusshroom);
+        recognitionEntity.setMushroomEntity(dataMapMushroom);
 
 
         enconterCollectionEntity = new EncounterCollectionEntity(enconterID, dataMapEnconter, recognitionEntity);
@@ -72,7 +72,7 @@ public class EnconterCollectionEntityTest {
 
     @Test
     public void testGetNameMussroom() {
-        assertEquals(musshroomName, enconterCollectionEntity.getNameMussroom());
+        assertEquals(mushroomName, enconterCollectionEntity.getNameMussroom());
     }
 
     @Test

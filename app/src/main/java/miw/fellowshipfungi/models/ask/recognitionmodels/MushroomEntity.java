@@ -4,13 +4,13 @@ import java.util.Map;
 
 import miw.fellowshipfungi.models.ImgStorageEntity;
 
-public class MusshroomEntity extends ImgStorageEntity {
+public class MushroomEntity extends ImgStorageEntity {
     private static final String folder = "Setas%2F";
     private final String id;
     private final String name;
 
 
-    public MusshroomEntity(Map<String, Object> dataMap) {
+    public MushroomEntity(Map<String, Object> dataMap) {
         this.id = (String) dataMap.get("idNode");
         this.name = (String) dataMap.get("textNode");
         this.img = (String) dataMap.get("img");

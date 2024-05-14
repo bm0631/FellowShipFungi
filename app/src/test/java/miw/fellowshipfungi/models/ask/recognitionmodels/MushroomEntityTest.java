@@ -9,7 +9,7 @@ import org.mockito.Mock;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MusshroomEntityTest {
+public class MushroomEntityTest {
 
     private static final String ID = "mushroomId";
     private static final String NAME = "mushroomName";
@@ -27,17 +27,17 @@ public class MusshroomEntityTest {
         dataMap.put("textNode", NAME);
         dataMap.put("img", IMG);
         String expectImgURL = "https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/Setas%2FmushroomImg.jpg?alt=media";
-        MusshroomEntity musshroomEntity = new MusshroomEntity(dataMap);
+        MushroomEntity mushroomEntity = new MushroomEntity(dataMap);
 
-        assertNotNull(musshroomEntity);
-        assertEquals(ID, musshroomEntity.getId());
-        assertEquals(NAME, musshroomEntity.getName());
-        assertEquals(expectImgURL, musshroomEntity.getImgUrl());
+        assertNotNull(mushroomEntity);
+        assertEquals(ID, mushroomEntity.getId());
+        assertEquals(NAME, mushroomEntity.getName());
+        assertEquals(expectImgURL, mushroomEntity.getImgUrl());
     }
 
     @Test(expected = NullPointerException.class)
     public void testConstructorWithNullDataMap() {
-        new MusshroomEntity(null); // Expecting NullPointerException
+        new MushroomEntity(null); // Expecting NullPointerException
     }
 
     @Test(expected = ClassCastException.class)
@@ -48,6 +48,6 @@ public class MusshroomEntityTest {
         invalidDataMap.put("textNode", 1234); // Invalid data type for textNode
         invalidDataMap.put("img", IMG);
 
-        new MusshroomEntity(invalidDataMap); // Expecting ClassCastException
+        new MushroomEntity(invalidDataMap); // Expecting ClassCastException
     }
 }

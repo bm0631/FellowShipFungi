@@ -172,7 +172,7 @@ class miw.fellowshipfungi.controllers.RecognitionActivity {
 - RecognitionService recognitionService
 - View progressBar
 + void onCreate(Bundle)
-- void createViewMusshroom()
+- void createViewMushroom()
 - void createViewAsk()
 - void loadAskAndAnswers()
 - void printAsk()
@@ -267,17 +267,17 @@ class miw.fellowshipfungi.controllers.adapters.EnconterAdapter {
 
 class miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder {
 ~ ImageView mushroomImage
-~ TextView nameMusshroom
+~ TextView nameMushroom
 ~ Button deleteEnconter
 + <<Create>> EnconterViewHolder(View)
 }
 
 
-class miw.fellowshipfungi.models.ask.recognitionmodels.MusshroomEntity {
+class miw.fellowshipfungi.models.ask.recognitionmodels.MushroomEntity {
 - {static} String folder
 - String id
 - String name
-+ <<Create>> MusshroomEntity(Map<String,Object>)
++ <<Create>> MushroomEntity(Map<String,Object>)
 + String getId()
 + String getName()
 + String getFolder()
@@ -381,7 +381,7 @@ class miw.fellowshipfungi.controllers.CuriosityActivity {
 
 class miw.fellowshipfungi.models.profile.EnconterCollectionEntity {
 - String enconterID
-- MusshroomEntity musshroomEntity
+- MushroomEntity MushroomEntity
 + <<Create>> EnconterCollectionEntity(String,Map<String,Object>,RecognitionEntity)
 + String getNameMussroom()
 + String getImgUrl()
@@ -392,17 +392,17 @@ class miw.fellowshipfungi.models.profile.EnconterCollectionEntity {
 class miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity {
 - AskEntity askEntity
 - List<AnswerEntity> answerEntities
-- MusshroomEntity musshroomEntity
+- MushroomEntity MushroomEntity
 + <<Create>> RecognitionEntity()
 + void addAnswer(Map<String,Object>)
 + String getAskText()
 + void setAskEntity(Map<String,Object>)
 + List<AnswerEntity> getAnswerEntities()
-+ MusshroomEntity getMusshroomEntity()
-+ void setMusshroomEntity(Map<String,Object>)
-+ String getMusshroomName()
-+ String getMusshroomImgUrl()
-+ String getMusshroomId()
++ MushroomEntity getMushroomEntity()
++ void setMushroomEntity(Map<String,Object>)
++ String getMushroomName()
++ String getMushroomImgUrl()
++ String getMushroomId()
 }
 
 
@@ -498,7 +498,7 @@ miw.fellowshipfungi.controllers.adapters.ViewHolder <|-- miw.fellowshipfungi.con
 miw.fellowshipfungi.controllers.adapters.Adapter <|-- miw.fellowshipfungi.controllers.adapters.EnconterAdapter
 miw.fellowshipfungi.controllers.adapters.EnconterAdapter +.. miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder
 miw.fellowshipfungi.controllers.adapters.ViewHolder <|-- miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder
-miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.ask.recognitionmodels.MusshroomEntity
+miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.ask.recognitionmodels.MushroomEntity
 miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.EnconterService
 androidx.fragment.app.DialogFragment <|-- miw.fellowshipfungi.controllers.dialogs.YesCancelDialog
 miw.fellowshipfungi.controllers.dialogs.YesCancelDialog +.. miw.fellowshipfungi.controllers.dialogs.YesCancelDialog$YesNoDialogCallback

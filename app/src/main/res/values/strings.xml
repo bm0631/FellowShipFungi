@@ -75,7 +75,7 @@
     <string name="textCreateEnconterTitle">Crear Encuentro</string>
     <string name="RequestDate"> Introduce Fecha</string>
     <string name="RequestLocation">Introduce Localidad</string>
-    <string name="nameMusshroomLabel">Nombre de la Seta</string>
+    <string name="nameMushroomLabel">Nombre de la Seta</string>
     <string name="RequestDateLabel">Fecha Del Encuentro</string>
     <string name="RequestLocationLabel">Localidad del Encuentro</string>
     <string name="WeatherLabel">¿Qué tiempo hacia?</string>

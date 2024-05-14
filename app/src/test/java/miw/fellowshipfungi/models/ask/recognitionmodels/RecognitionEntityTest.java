@@ -51,16 +51,16 @@ public class RecognitionEntityTest {
     }
 
     @Test
-    public void testSetMusshroomEntity() {
+    public void testSetMushroomEntity() {
         Map<String, Object> mushroomData = new HashMap<>();
         mushroomData.put("idNode", MUSHROOM_ID);
         mushroomData.put("textNode", MUSHROOM_NAME);
         mushroomData.put("img", MUSHROOM_IMG);
 
         String expectImgURL = "https://firebasestorage.googleapis.com/v0/b/fellowship-fungi.appspot.com/o/Setas%2F" + MUSHROOM_IMG.replace(" ", "%20") + ".jpg?alt=media";
-        recognitionEntity.setMusshroomEntity(mushroomData);
+        recognitionEntity.setMushroomEntity(mushroomData);
 
-        assertEquals(MUSHROOM_NAME, recognitionEntity.getMusshroomName());
-        assertEquals(expectImgURL, recognitionEntity.getMusshroomImgUrl());
+        assertEquals(MUSHROOM_NAME, recognitionEntity.getMushroomName());
+        assertEquals(expectImgURL, recognitionEntity.getMushroomImgUrl());
     }
 }

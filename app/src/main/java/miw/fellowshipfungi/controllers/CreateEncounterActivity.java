@@ -47,7 +47,7 @@ public class CreateEncounterActivity extends AppCompatActivity {
         this.encounterEntity = new EncounterEntity(specieId);
 
         String specieName = getIntent().getStringExtra("specieName");
-        ((TextView) findViewById(R.id.nameMusshroom)).setText(specieName);
+        ((TextView) findViewById(R.id.nameMushroom)).setText(specieName);
 
         EditText etPlannedDate = findViewById(R.id.etDate);
         etPlannedDate.setOnClickListener(this::showDatePickerDialog);

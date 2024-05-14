@@ -47,7 +47,7 @@ class miw.fellowshipfungi.controllers.adapters.EnconterAdapter {
 }
 class miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder {
 }
-class miw.fellowshipfungi.models.ask.recognitionmodels.MusshroomEntity {
+class miw.fellowshipfungi.models.ask.recognitionmodels.MushroomEntity {
 }
 class miw.fellowshipfungi.controllers.services.EnconterService {
 }
@@ -112,7 +112,7 @@ miw.fellowshipfungi.controllers.adapters.ViewHolder <|-- miw.fellowshipfungi.con
 miw.fellowshipfungi.controllers.adapters.Adapter <|-- miw.fellowshipfungi.controllers.adapters.EnconterAdapter
 miw.fellowshipfungi.controllers.adapters.EnconterAdapter +.. miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder
 miw.fellowshipfungi.controllers.adapters.ViewHolder <|-- miw.fellowshipfungi.controllers.adapters.EnconterAdapter$EnconterViewHolder
-miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.ask.recognitionmodels.MusshroomEntity
+miw.fellowshipfungi.models.ImgStorageEntity <|-- miw.fellowshipfungi.models.ask.recognitionmodels.MushroomEntity
 miw.fellowshipfungi.controllers.services.BaseService <|-- miw.fellowshipfungi.controllers.services.EnconterService
 androidx.fragment.app.DialogFragment <|-- miw.fellowshipfungi.controllers.dialogs.YesCancelDialog
 miw.fellowshipfungi.controllers.dialogs.YesCancelDialog +.. miw.fellowshipfungi.controllers.dialogs.YesCancelDialog$YesNoDialogCallback

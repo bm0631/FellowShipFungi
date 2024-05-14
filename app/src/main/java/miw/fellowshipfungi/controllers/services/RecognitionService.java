@@ -38,7 +38,7 @@ public class RecognitionService extends BaseService {
                         recognitionEntity.setAskEntity(currentNodeData);
                         loadAnswers((List<String>) currentNodeData.get("nextNodes"), callback);
                     } else {
-                        recognitionEntity.setMusshroomEntity(currentNodeData);
+                        recognitionEntity.setMushroomEntity(currentNodeData);
                         callback.onSuccess(recognitionEntity);
                     }
                 } else {
