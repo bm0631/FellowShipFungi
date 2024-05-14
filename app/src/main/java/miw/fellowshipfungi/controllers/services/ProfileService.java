@@ -71,7 +71,7 @@ public class ProfileService extends BaseService {
 
     public void getLengthCollection(final OnLengthCollectionListener listener) {
         Query query = this.userRef
-                .collection(COLLECTION_ENCONTERS);
+                .collection(COLLECTION_ENCOUNTERS);
 
         query.get(Source.SERVER).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {

@@ -7,7 +7,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public abstract class BaseService {
     protected static final String COLLECTION_PROFILE = "Profiles";
-    protected static final String COLLECTION_ENCONTERS = "Enconters";
+    protected static final String COLLECTION_ENCOUNTERS = "Encounters";
     protected static final String COLLECTION_CURIOSITY = "Daily Curiosity";
     protected static final String CURIOSITY_DOCUMENT = "Curiosities";
     protected static final String COLLECTION_TEST = "Test";

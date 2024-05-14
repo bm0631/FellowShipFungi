@@ -3,14 +3,14 @@ package miw.fellowshipfungi.models;
 import java.util.HashMap;
 import java.util.Map;
 
-public class EnconterEntity extends ImgStorageEntity {
-    private static final String folder = "EncontersImg%2F";
+public class EncounterEntity extends ImgStorageEntity {
+    private static final String folder = "EncountersImg%2F";
     private String specieId;
     private String date;
     private String location;
     private String weather;
 
-    public EnconterEntity(String specieId) {
+    public EncounterEntity(String specieId) {
         this.specieId = specieId;
     }
 

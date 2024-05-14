@@ -29,22 +29,22 @@ import java.util.Locale;
 
 import miw.fellowshipfungi.R;
 import miw.fellowshipfungi.controllers.dialogs.DatePickerFragment;
-import miw.fellowshipfungi.controllers.services.EnconterService;
-import miw.fellowshipfungi.models.EnconterEntity;
+import miw.fellowshipfungi.controllers.services.EncounterService;
+import miw.fellowshipfungi.models.EncounterEntity;
 
-public class CreateEnconterActivity extends AppCompatActivity {
+public class CreateEncounterActivity extends AppCompatActivity {
 
     private static final int REQUEST_IMAGE_PICK = 100;
-    private EnconterEntity enconterEntity;
+    private EncounterEntity encounterEntity;
     private Uri imageUri;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_enconter);
+        setContentView(R.layout.activity_create_encounter);
 
         String specieId = getIntent().getStringExtra("specieId");
-        this.enconterEntity = new EnconterEntity(specieId);
+        this.encounterEntity = new EncounterEntity(specieId);
 
         String specieName = getIntent().getStringExtra("specieName");
         ((TextView) findViewById(R.id.nameMusshroom)).setText(specieName);
@@ -68,7 +68,7 @@ public class CreateEnconterActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.opcBack) {
             Intent intent = new Intent(this, RecognitionActivity.class);
-            intent.putExtra("Current", this.enconterEntity.getSpecieId());
+            intent.putExtra("Current", this.encounterEntity.getSpecieId());
             intent.putExtra("Previus", getIntent().getStringExtra("Previus"));
             intent.putExtra("countAsks", getIntent().getStringExtra("countAsks"));
             startActivity(intent);
@@ -83,7 +83,7 @@ public class CreateEnconterActivity extends AppCompatActivity {
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 
-    public void saveEnconter(View view) {
+    public void saveEncounter(View view) {
         String date = ((TextView) findViewById(R.id.etDate)).getText().toString();
         String location = ((TextView) findViewById(R.id.location)).getText().toString();
         String weather = ((Spinner) findViewById(R.id.weather)).getSelectedItem().toString();
@@ -102,12 +102,12 @@ public class CreateEnconterActivity extends AppCompatActivity {
             return;
         }
 
-        this.enconterEntity.setDate(date);
-        this.enconterEntity.setLocation(location);
-        this.enconterEntity.setWeather(weather);
+        this.encounterEntity.setDate(date);
+        this.encounterEntity.setLocation(location);
+        this.encounterEntity.setWeather(weather);
 
-        EnconterService.getInstance().saveEnconter(this.enconterEntity, this.imageUri);
-        Toast.makeText(this, R.string.writtenEnconter, Toast.LENGTH_SHORT).show();
+        EncounterService.getInstance().saveEncounter(this.encounterEntity, this.imageUri);
+        Toast.makeText(this, R.string.writtenEncounter, Toast.LENGTH_SHORT).show();
 
         returnMainMenu();
     }
@@ -119,9 +119,6 @@ public class CreateEnconterActivity extends AppCompatActivity {
                 Toast.makeText(this, "Por favor, seleccione una imagen en formato JPG (.jpg)", Toast.LENGTH_SHORT).show();
                 return false;
             }
-        } else {
-            Toast.makeText(this, "Por favor, seleccione una imagen", Toast.LENGTH_SHORT).show();
-            return false;
         }
         return true;
     }

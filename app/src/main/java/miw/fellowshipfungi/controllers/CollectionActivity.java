@@ -16,15 +16,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import miw.fellowshipfungi.R;
-import miw.fellowshipfungi.controllers.adapters.EnconterAdapter;
+import miw.fellowshipfungi.controllers.adapters.EncounterAdapter;
 import miw.fellowshipfungi.controllers.dialogs.YesCancelDialog;
 import miw.fellowshipfungi.controllers.services.CollectionService;
-import miw.fellowshipfungi.models.profile.EnconterCollectionEntity;
+import miw.fellowshipfungi.models.profile.EncounterCollectionEntity;
 
 public class CollectionActivity extends AppCompatActivity {
 
-    private List<EnconterCollectionEntity> enconterCollectionEntities;
-    private String enconterToDelete;
+    private List<EncounterCollectionEntity> encounterCollectionEntities;
+    private String encounterToDelete;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class CollectionActivity extends AppCompatActivity {
     private void loadCollectionData() {
         CollectionService.getInstance().getCollection(new CollectionService.OnCollectionListener() {
             @Override
-            public void onCollectionLoaded(List<EnconterCollectionEntity> collection) {
+            public void onCollectionLoaded(List<EncounterCollectionEntity> collection) {
 
                 CollectionActivity.this.setListEntities(collection);
                 CollectionActivity.this.setAdapter();
@@ -54,17 +54,17 @@ public class CollectionActivity extends AppCompatActivity {
     }
 
     private void setAdapter() {
-        Log.d("CollectionActivitaaay", this.enconterCollectionEntities.toString());
-        RecyclerView recyclerView = findViewById(R.id.enconterRecyclerView);
-        EnconterAdapter enconterAdapter = new EnconterAdapter(this.enconterCollectionEntities);
-        recyclerView.setAdapter(enconterAdapter);
+        Log.d("CollectionActivitaaay", this.encounterCollectionEntities.toString());
+        RecyclerView recyclerView = findViewById(R.id.encounterRecyclerView);
+        EncounterAdapter encounterAdapter = new EncounterAdapter(this.encounterCollectionEntities);
+        recyclerView.setAdapter(encounterAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setVisibility(View.VISIBLE);
     }
 
-    private void setListEntities(List<EnconterCollectionEntity> collection) {
+    private void setListEntities(List<EncounterCollectionEntity> collection) {
         Log.d("CollectionActivity", collection.toString());
-        this.enconterCollectionEntities = collection;
+        this.encounterCollectionEntities = collection;
     }
 
     @Override
@@ -82,31 +82,31 @@ public class CollectionActivity extends AppCompatActivity {
         return true;
     }
 
-    public void deleteEnconter(View view) {
+    public void deleteEncounter(View view) {
 
-        this.enconterToDelete = view.getTag().toString();
+        this.encounterToDelete = view.getTag().toString();
 
         YesCancelDialog dialog = YesCancelDialog.newInstance("Borrar ", "¿Quieres borrar el Encuentro?");
 
-        dialog.setCallback(this::deleteEnconterConfirmed);
+        dialog.setCallback(this::deleteEncounterConfirmed);
         dialog.show(getSupportFragmentManager(), "yes_no_dialog");
     }
 
-    public void deleteEnconterConfirmed() {
+    public void deleteEncounterConfirmed() {
 
-        String enconterIdToDelete = this.enconterToDelete;
-        this.enconterToDelete = null;
+        String encounterIdToDelete = this.encounterToDelete;
+        this.encounterToDelete = null;
 
-        CollectionService.getInstance().deleteEnconter(enconterIdToDelete, new CollectionService.OnDeleteEnconterListener() {
+        CollectionService.getInstance().deleteEncounter(encounterIdToDelete, new CollectionService.OnDeleteEncounterListener() {
             @Override
-            public void onEnconterDeleted() {
+            public void onEncounterDeleted() {
                 finish();
                 startActivity(getIntent());
             }
 
             @Override
             public void onFailure(String errorMessage) {
-                Log.e("CollectionActivity", "Error deleting enconter: " + errorMessage);
+                Log.e("CollectionActivity", "Error deleting encounter: " + errorMessage);
             }
         });
     }

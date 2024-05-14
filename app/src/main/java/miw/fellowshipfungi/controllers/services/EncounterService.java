@@ -10,25 +10,25 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import miw.fellowshipfungi.models.EnconterEntity;
+import miw.fellowshipfungi.models.EncounterEntity;
 
-public class EnconterService extends BaseService {
+public class EncounterService extends BaseService {
 
-    private static EnconterService instance;
-    private final static String folder="EncontersImg/";
+    private static EncounterService instance;
+    private final static String folder="EncountersImg/";
 
-    private EnconterService() {
+    private EncounterService() {
         super();
     }
 
-    public static EnconterService getInstance() {
+    public static EncounterService getInstance() {
         if (instance == null) {
-            instance = new EnconterService();
+            instance = new EncounterService();
         }
         return instance;
     }
 
-    public void saveEnconter(EnconterEntity enconterEntity, Uri imageUri) {
+    public void saveEncounter(EncounterEntity encounterEntity, Uri imageUri) {
         if (imageUri != null) {
             String nameImg = generateNameImg();
             StorageReference storageRef = FirebaseStorage.getInstance().getReference().child(this.folder + nameImg);
@@ -37,24 +37,24 @@ public class EnconterService extends BaseService {
             uploadTask.addOnSuccessListener(taskSnapshot -> {
 
                 storageRef.getDownloadUrl().addOnSuccessListener(uri -> {
-                    enconterEntity.setImg(nameImg);
-                    saveEnconter(enconterEntity);
+                    encounterEntity.setImg(nameImg);
+                    saveEncounter(encounterEntity);
                 });
             });
         } else {
-            saveEnconter(enconterEntity);
+            saveEncounter(encounterEntity);
         }
     }
 
-    private void saveEnconter(EnconterEntity enconterEntity) {
+    private void saveEncounter(EncounterEntity encounterEntity) {
       this.getProfileDocument()
-                .collection(COLLECTION_ENCONTERS)
-                .add(enconterEntity.getMap());
+                .collection(COLLECTION_ENCOUNTERS)
+                .add(encounterEntity.getMap());
     }
 
     private String generateNameImg() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault());
         String formattedDate = dateFormat.format(new Date());
-        return "enconter_" + getUserId() + "_" + formattedDate + ".jpg";
+        return "encounter_" + getUserId() + "_" + formattedDate + ".jpg";
     }
 }

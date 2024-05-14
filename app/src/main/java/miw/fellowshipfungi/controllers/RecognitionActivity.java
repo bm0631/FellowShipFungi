@@ -140,7 +140,7 @@ public class RecognitionActivity extends AppCompatActivity {
 
         this.offProgresionBar();
 
-        this.visibilityCreateEnconterAsk();
+        this.visibilityCreateEncounterAsk();
 
     }
 
@@ -231,8 +231,8 @@ public class RecognitionActivity extends AppCompatActivity {
         return null;
     }
 
-    public void openCreateEnconter(View view) {
-        Intent intent = new Intent(this, CreateEnconterActivity.class);
+    public void openCreateEncounter(View view) {
+        Intent intent = new Intent(this, CreateEncounterActivity.class);
         intent.putExtra("specieId", this.recognitionEntity.getMusshroomId());
         intent.putExtra("specieName", this.recognitionEntity.getMusshroomName());
         intent.putExtra("Previus", this.previusNode);
@@ -241,12 +241,12 @@ public class RecognitionActivity extends AppCompatActivity {
         finishAffinity();
     }
 
-    public void visibilityCreateEnconterAsk() {
+    public void visibilityCreateEncounterAsk() {
         if (!AuthService.getInstance().isLogged()) {
-            Button yesEnconterButton = findViewById(R.id.yesButton);
-            yesEnconterButton.setEnabled(false);
-            yesEnconterButton.setText(R.string.mustLogged);
-            yesEnconterButton.setBackgroundResource(android.R.drawable.btn_default);
+            Button yesEncounterButton = findViewById(R.id.yesButton);
+            yesEncounterButton.setEnabled(false);
+            yesEncounterButton.setText(R.string.mustLogged);
+            yesEncounterButton.setBackgroundResource(android.R.drawable.btn_default);
         }
     }
 }

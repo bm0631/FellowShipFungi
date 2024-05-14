@@ -20,7 +20,7 @@ public class EnconterCollectionEntityTest {
     private final String musshroomId = "456";
     private final String musshroomName = "Agaricus bisporus";
     private final String imgUrl = "Agaricus bisporus";
-    private EnconterCollectionEntity enconterCollectionEntity;
+    private EncounterCollectionEntity enconterCollectionEntity;
 
     @Before
     public void setUp() {
@@ -42,12 +42,12 @@ public class EnconterCollectionEntityTest {
         recognitionEntity.setMusshroomEntity(dataMapMusshroom);
 
 
-        enconterCollectionEntity = new EnconterCollectionEntity(enconterID, dataMapEnconter, recognitionEntity);
+        enconterCollectionEntity = new EncounterCollectionEntity(enconterID, dataMapEnconter, recognitionEntity);
     }
 
     @Test
     public void testGetEnconterID() {
-        assertEquals(enconterID, enconterCollectionEntity.getEnconterID());
+        assertEquals(enconterID, enconterCollectionEntity.getEncounterID());
     }
 
     @Test

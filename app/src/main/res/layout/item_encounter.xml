@@ -107,12 +107,12 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/deleteEnconter"
+                android:id="@+id/deleteEncounter"
                 style="@style/Button.FellowshipFungi.No"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/EnconterCollectionDeleteButton"
-                android:onClick="deleteEnconter"
+                android:onClick="deleteEncounter"
                 android:textAlignment="center"
                 app:backgroundTint="@null"
                 app:icon="@android:drawable/ic_menu_delete"

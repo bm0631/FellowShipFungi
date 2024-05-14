@@ -128,7 +128,7 @@
                 style="@style/Button.FellowshipFungi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="saveEnconter"
+                android:onClick="saveEncounter"
                 android:text="@string/saveEnconter" />
 
         </TableRow>

@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import miw.fellowshipfungi.models.ask.recognitionmodels.RecognitionEntity;
-import miw.fellowshipfungi.models.profile.EnconterCollectionEntity;
+import miw.fellowshipfungi.models.profile.EncounterCollectionEntity;
 
 public class CollectionService extends BaseService {
     private static String LOG_TAG = "CollectionService";
@@ -32,22 +32,22 @@ public class CollectionService extends BaseService {
     public void getCollection(final OnCollectionListener listener) {
         db.collection(COLLECTION_PROFILE)
                 .document(this.getUserId())
-                .collection(COLLECTION_ENCONTERS)
+                .collection(COLLECTION_ENCOUNTERS)
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
 
-                        List<EnconterCollectionEntity> collectionEntities = new ArrayList<>();
+                        List<EncounterCollectionEntity> collectionEntities = new ArrayList<>();
                         AtomicInteger loadedCount = new AtomicInteger(0);
                         int totalCount = task.getResult().size();
                         for (DocumentSnapshot document : task.getResult()) {
-                            String enconterID = document.getId();
-                            Map<String, Object> enconterData = document.getData();
-                            String specieId = (String) enconterData.get("speciedId");
+                            String encounterID = document.getId();
+                            Map<String, Object> encounterData = document.getData();
+                            String specieId = (String) encounterData.get("speciedId");
                             new RecognitionService().loadSpecie(specieId, new RecognitionService.RecognitionServiceCallback() {
                                 @Override
                                 public void onSuccess(RecognitionEntity recognitionEntity) {
-                                    EnconterCollectionEntity entity = new EnconterCollectionEntity(enconterID, enconterData, recognitionEntity);
+                                    EncounterCollectionEntity entity = new EncounterCollectionEntity(encounterID, encounterData, recognitionEntity);
                                     collectionEntities.add(entity);
                                     if (loadedCount.incrementAndGet() == totalCount) {
                                         // Notificar al listener una vez que se hayan cargado todas las entidades
@@ -68,53 +68,53 @@ public class CollectionService extends BaseService {
                 });
     }
 
-    public void deleteEnconter(String enconterId, OnDeleteEnconterListener listener) {
+    public void deleteEncounter(String encounterId, OnDeleteEncounterListener listener) {
         db.collection(COLLECTION_PROFILE)
                 .document(this.getUserId())
-                .collection(COLLECTION_ENCONTERS)
-                .document(enconterId)
+                .collection(COLLECTION_ENCOUNTERS)
+                .document(encounterId)
                 .get()
                 .addOnSuccessListener(documentSnapshot -> {
                     if (documentSnapshot.exists()) {
-                        Map<String, Object> enconterData = documentSnapshot.getData();
-                        String nameImg = (String) enconterData.get("nameImg");
+                        Map<String, Object> encounterData = documentSnapshot.getData();
+                        String nameImg = (String) encounterData.get("nameImg");
                         deleteImage(nameImg);
                     }
                     db.collection(COLLECTION_PROFILE)
                             .document(this.getUserId())
-                            .collection(COLLECTION_ENCONTERS)
-                            .document(enconterId)
+                            .collection(COLLECTION_ENCOUNTERS)
+                            .document(encounterId)
                             .delete()
                             .addOnSuccessListener(aVoid -> {
-                                listener.onEnconterDeleted();
+                                listener.onEncounterDeleted();
                             })
                             .addOnFailureListener(e -> {
-                                this.handleFirestoreError(LOG_TAG, "Error deleting enconter", e);
-                                listener.onFailure("Error deleting enconter");
+                                this.handleFirestoreError(LOG_TAG, "Error deleting encounter", e);
+                                listener.onFailure("Error deleting encounter");
                             });
                 })
                 .addOnFailureListener(e -> {
-                    this.handleFirestoreError(LOG_TAG, "Error retrieving enconter data", e);
-                    listener.onFailure("Error retrieving enconter data");
+                    this.handleFirestoreError(LOG_TAG, "Error retrieving encounter data", e);
+                    listener.onFailure("Error retrieving encounter data");
                 });
     }
 
 
     private void deleteImage(String nameImg) {
         if (nameImg != null && !nameImg.isEmpty()) {
-            StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("EncontersImg/" + nameImg);
+            StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("EncountersImg/" + nameImg);
             storageRef.delete();
         }
     }
 
     public interface OnCollectionListener {
-        void onCollectionLoaded(List<EnconterCollectionEntity> collection);
+        void onCollectionLoaded(List<EncounterCollectionEntity> collection);
 
         void onFailure(String errorMessage);
     }
 
-    public interface OnDeleteEnconterListener {
-        void onEnconterDeleted();
+    public interface OnDeleteEncounterListener {
+        void onEncounterDeleted();
 
         void onFailure(String errorMessage);
     }
