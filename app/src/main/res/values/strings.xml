@@ -16,7 +16,7 @@
     <string name="RecognitionTitle">Reconocer Seta</string>
     <string name="CuriosityTitle">Curiosidad diaria</string>
     <string name="TestTitle">Test de conocimientos</string>
-
+    <string name="AboutTitle">Acerca De</string>
 
     <!-- LOGING -->
     <string name="fui_sign_in_anonymously" translation_description="Continuar como invitado boton">Continuar como invitado</string>

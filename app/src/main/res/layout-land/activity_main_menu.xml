@@ -46,7 +46,6 @@
             android:text="@string/LoginTitle" />
     </LinearLayout>
 
-
     <LinearLayout
         android:id="@+id/buttonsLayout"
         android:layout_width="match_parent"
@@ -55,7 +54,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:orientation="horizontal"
-        android:weightSum="4">
+        android:weightSum="5">
 
         <Button
             android:id="@+id/loginButton"
@@ -88,6 +87,16 @@
             android:text="@string/CuriosityTitle" />
 
         <Button
+            android:id="@+id/aboutButton"
+            style="@style/Button.FellowshipFungi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:onClick="onOpenAboutClick"
+            android:text="@string/AboutTitle" />
+
+        <Button
             android:id="@+id/testButton"
             style="@style/Button.FellowshipFungi"
             android:layout_width="0dp"
@@ -96,6 +105,8 @@
             android:onClick="onOpenTestClick"
             android:text="@string/TestTitle"
             android:textSize="10sp" />
+
+
     </LinearLayout>
 
 
