@@ -1,0 +1,3843 @@
+{
+    "__collections__": {
+        "RecognitonMushroom": {
+            "Asks": {
+                "Ask_001": {
+                    "idNode": "Ask_001",
+                    "typeNode": "Ask",
+                    "textNode": "¿Tiene pie y sombrero?",
+                    "nextNodes": [
+                        "Answer_001",
+                        "Answer_115"
+                    ]
+                },
+                "Ask_002": {
+                    "idNode": "Ask_002",
+                    "typeNode": "Ask",
+                    "textNode": "¿Himenio?",
+                    "nextNodes": [
+                        "Answer_002",
+                        "Answer_005",
+                        "Answer_009",
+                        "Answer_021"
+                    ]
+                },
+                "Ask_003": {
+                    "idNode": "Ask_003",
+                    "typeNode": "Ask",
+                    "textNode": "¿Pliegues marcados?",
+                    "nextNodes": [
+                        "Answer_003",
+                        "Answer_004"
+                    ]
+                },
+                "Ask_004": {
+                    "idNode": "Ask_004",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Pequeñas sobre piñas \n 2) Grandes,carne consitente gis o pardo \n 3) Carge frágil colores claros",
+                    "nextNodes": [
+                        "Answer_006",
+                        "Answer_007",
+                        "Answer_008"
+                    ]
+                },
+                "Ask_005": {
+                    "idNode": "Ask_005",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Tubos cortos dificiles de separar \n 2) Himenio esponja dificil de separar del sombrero",
+                    "nextNodes": [
+                        "Answer_010",
+                        "Answer_013"
+                    ]
+                },
+                "Ask_006": {
+                    "idNode": "Ask_006",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Poros diminutos Seta carnosa pie grueso Sobre tierra \n 2) Poros grandes. Poco carnosa con pie estrecho. Sobre madera",
+                    "nextNodes": [
+                        "Answer_011",
+                        "Answer_012"
+                    ]
+                },
+                "Ask_007": {
+                    "idNode": "Ask_007",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Sombrero viscoso, Himenio amarilolo. En Pinares \n 2) Sombreo seco \n 3) Seta pequeña, himenio pardo.",
+                    "nextNodes": [
+                        "Answer_014",
+                        "Answer_015",
+                        "Answer_016"
+                    ]
+                },
+                "Ask_008": {
+                    "idNode": "Ask_008",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Sombrero aterciopelado Pie cilindrico a veces atenuado en la base. Himenio amarillo. Asociado a Quercus.\n 2) Pie engrosado en la base \n 3) Sombreo semiesferico,luego convexo y fin aplanado. Pie grande engrosa en la base. Himenio blanco, amaraillo o rojo. Al cortarse la carne se puede poner azul\n 4) Pie cilindrico y cavernoso. Himenio blanco, Asociado a Quercus.",
+                    "nextNodes": [
+                        "Answer_017",
+                        "Answer_018",
+                        "Answer_019",
+                        "Answer_020"
+                    ]
+                },
+                "Ask_009": {
+                    "idNode": "Ask_009",
+                    "typeNode": "Ask",
+                    "textNode": "Al partir el pie \n 1) Pie fibroso \n 2) Como Tiza",
+                    "nextNodes": [
+                        "Answer_022",
+                        "Answer_112"
+                    ]
+                },
+                "Ask_010": {
+                    "idNode": "Ask_010",
+                    "typeNode": "Ask",
+                    "textNode": "El pie se separa facilmente del sombrero",
+                    "nextNodes": [
+                        "Answer_023",
+                        "Answer_040"
+                    ]
+                },
+                "Ask_011": {
+                    "idNode": "Ask_011",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Laminas blancas \n 2) Laminas oscuras",
+                    "nextNodes": [
+                        "Answer_024",
+                        "Answer_036"
+                    ]
+                },
+                "Ask_012": {
+                    "idNode": "Ask_012",
+                    "typeNode": "Ask",
+                    "textNode": "¿Pie con Anillo?",
+                    "nextNodes": [
+                        "Answer_025",
+                        "Answer_032"
+                    ]
+                },
+                "Ask_013": {
+                    "idNode": "Ask_013",
+                    "typeNode": "Ask",
+                    "textNode": "¿Tiene volva? ",
+                    "nextNodes": [
+                        "Answer_026",
+                        "Answer_027"
+                    ]
+                },
+                "Ask_014": {
+                    "idNode": "Ask_014",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Sombrero visco como mamelón \n 2) Setas medianas <10 cm \n 3) Setas pequeñás 2-8cm \n 4) Sombrero escamoso de gran tamaño 10-25cm",
+                    "nextNodes": [
+                        "Answer_028",
+                        "Answer_029",
+                        "Answer_030",
+                        "Answer_031"
+                    ]
+                },
+                "Ask_015": {
+                    "idNode": "Ask_015",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Sombrero viscoso, seta peqiueña en pinares color blanco \n 2) Sombrero escamoso, setas pequeñas 2-8cm \n 3) Sombrero con margen estriado, volva en la base ",
+                    "nextNodes": [
+                        "Answer_033",
+                        "Answer_034",
+                        "Answer_035"
+                    ]
+                },
+                "Ask_016": {
+                    "idNode": "Ask_016",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Al madurar se licúa, en tinta\n 2) Setas pco carnosas terrenos abonados \n 3) Anillo en el pie",
+                    "nextNodes": [
+                        "Answer_037",
+                        "Answer_038",
+                        "Answer_039"
+                    ]
+                },
+                "Ask_017": {
+                    "idNode": "Ask_017",
+                    "typeNode": "Ask",
+                    "textNode": "Laminas \n 1) rosáceas \n 2) marones u oscuras \n 3) Blancas \n 4) Anaranjadas",
+                    "nextNodes": [
+                        "Answer_041",
+                        "Answer_048",
+                        "Answer_069",
+                        "Answer_109"
+                    ]
+                },
+                "Ask_018": {
+                    "idNode": "Ask_018",
+                    "typeNode": "Ask",
+                    "textNode": "¿Con volva?",
+                    "nextNodes": [
+                        "Answer_042",
+                        "Answer_043"
+                    ]
+                },
+                "Ask_019": {
+                    "idNode": "Ask_019",
+                    "typeNode": "Ask",
+                    "textNode": "Sobre \n 1) Tierra \n 2) Madera",
+                    "nextNodes": [
+                        "Answer_044",
+                        "Answer_047"
+                    ]
+                },
+                "Ask_020": {
+                    "idNode": "Ask_020",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Blancas de olor harinoso \n 2) Esporaada rosácea",
+                    "nextNodes": [
+                        "Answer_045",
+                        "Answer_046"
+                    ]
+                },
+                "Ask_021": {
+                    "idNode": "Ask_021",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Con anillo en el pie \n 2) Con anillo filamentoso del que quedan restos en el pie \n 3) Sin anillo, ni cortina",
+                    "nextNodes": [
+                        "Answer_049",
+                        "Answer_056",
+                        "Answer_061"
+                    ]
+                },
+                "Ask_022": {
+                    "idNode": "Ask_022",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) En Grupos \n 2) Aisladas",
+                    "nextNodes": [
+                        "Answer_050",
+                        "Answer_053"
+                    ]
+                },
+                "Ask_023": {
+                    "idNode": "Ask_023",
+                    "typeNode": "Ask",
+                    "textNode": "Sobre Madera \n 1) Cadufilios \n 2) Pinos",
+                    "nextNodes": [
+                        "Answer_051",
+                        "Answer_052"
+                    ]
+                },
+                "Ask_024": {
+                    "idNode": "Ask_024",
+                    "typeNode": "Ask",
+                    "textNode": "Sobre \n 1) Madera pino \n 2) Tierra o boñigas",
+                    "nextNodes": [
+                        "Answer_054",
+                        "Answer_055"
+                    ]
+                },
+                "Ask_025": {
+                    "idNode": "Ask_025",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) En grupos \n 2) Aisladas",
+                    "nextNodes": [
+                        "Answer_057",
+                        "Answer_060"
+                    ]
+                },
+                "Ask_026": {
+                    "idNode": "Ask_026",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Carnosas \n 2) Poco carnosas",
+                    "nextNodes": [
+                        "Answer_058",
+                        "Answer_059"
+                    ]
+                },
+                "Ask_027": {
+                    "idNode": "Ask_027",
+                    "typeNode": "Ask",
+                    "textNode": "Laminas \n 1) Decurrentes \n 2) Adbatas, libres o escotadas",
+                    "nextNodes": [
+                        "Answer_062",
+                        "Answer_065"
+                    ]
+                },
+                "Ask_028": {
+                    "idNode": "Ask_028",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Laminas se separan al tacto \n 2) Carne naranja",
+                    "nextNodes": [
+                        "Answer_063",
+                        "Answer_064"
+                    ]
+                },
+                "Ask_029": {
+                    "idNode": "Ask_029",
+                    "typeNode": "Ask",
+                    "textNode": "Laminas \n 1) Adnatas \n 2) Escotadas \n 3) Libres",
+                    "nextNodes": [
+                        "Answer_066",
+                        "Answer_067",
+                        "Answer_068"
+                    ]
+                },
+                "Ask_030": {
+                    "idNode": "Ask_030",
+                    "typeNode": "Ask",
+                    "textNode": "Laminas \n 1) Aserradas \n 2) Margen entero",
+                    "nextNodes": [
+                        "Answer_070",
+                        "Answer_071"
+                    ]
+                },
+                "Ask_031": {
+                    "idNode": "Ask_031",
+                    "typeNode": "Ask",
+                    "textNode": "Laminas \n 1) Decurrentes \n 2) Escotadas \n 3) Adnatas \n 4) Libres",
+                    "nextNodes": [
+                        "Answer_072",
+                        "Answer_085",
+                        "Answer_088",
+                        "Answer_103"
+                    ]
+                },
+                "Ask_032": {
+                    "idNode": "Ask_032",
+                    "typeNode": "Ask",
+                    "textNode": "Sobre \n 1) Madera \n 2) Tierra",
+                    "nextNodes": [
+                        "Answer_073",
+                        "Answer_076"
+                    ]
+                },
+                "Ask_033": {
+                    "idNode": "Ask_033",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Con Anillo \n 2) Sin Anillo",
+                    "nextNodes": [
+                        "Answer_074",
+                        "Answer_075"
+                    ]
+                },
+                "Ask_034": {
+                    "idNode": "Ask_034",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Sombrero Viscoso \n 2) Sombrero seco",
+                    "nextNodes": [
+                        "Answer_077",
+                        "Answer_078"
+                    ]
+                },
+                "Ask_035": {
+                    "idNode": "Ask_035",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Pie corto \n 2) Pie largo o igual *Respescto al diametro del sombrero",
+                    "nextNodes": [
+                        "Answer_079",
+                        "Answer_082"
+                    ]
+                },
+                "Ask_036": {
+                    "idNode": "Ask_036",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Pie central \n 2) Pie lateral",
+                    "nextNodes": [
+                        "Answer_080",
+                        "Answer_081"
+                    ]
+                },
+                "Ask_037": {
+                    "idNode": "Ask_037",
+                    "typeNode": "Ask",
+                    "textNode": "Sombrero \n 1) Blanco/Crema/Marrón \n 2) Gris oscuo/ Negro",
+                    "nextNodes": [
+                        "Answer_083",
+                        "Answer_084"
+                    ]
+                },
+                "Ask_038": {
+                    "idNode": "Ask_038",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Poco carnosa \n 2) Carnosa",
+                    "nextNodes": [
+                        "Answer_086",
+                        "Answer_087"
+                    ]
+                },
+                "Ask_039": {
+                    "idNode": "Ask_039",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) En grupos \n 2) Solitaras o pequeños grupos <10",
+                    "nextNodes": [
+                        "Answer_089",
+                        "Answer_090"
+                    ]
+                },
+                "Ask_040": {
+                    "idNode": "Ask_040",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Sombrero blanquecino\n 2) Carne blanca",
+                    "nextNodes": [
+                        "Answer_091",
+                        "Answer_092"
+                    ]
+                },
+                "Ask_041": {
+                    "idNode": "Ask_041",
+                    "typeNode": "Ask",
+                    "textNode": "Sombrero \n 1) Viscoso \n 2) Seco",
+                    "nextNodes": [
+                        "Answer_093",
+                        "Answer_094"
+                    ]
+                },
+                "Ask_042": {
+                    "idNode": "Ask_042",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Con anillo envolvente \n 2) Sin anillo",
+                    "nextNodes": [
+                        "Answer_095",
+                        "Answer_096"
+                    ]
+                },
+                "Ask_043": {
+                    "idNode": "Ask_043",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) 1-3cm sombrero cónico \n 2) >3cm sombrero plano",
+                    "nextNodes": [
+                        "Answer_097",
+                        "Answer_098"
+                    ]
+                },
+                "Ask_044": {
+                    "idNode": "Ask_044",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Laminas densas \n 2) Carne elastica \n 3) 3-4 cm \n 4) Pie alargado",
+                    "nextNodes": [
+                        "Answer_099",
+                        "Answer_100",
+                        "Answer_101",
+                        "Answer_102"
+                    ]
+                },
+                "Ask_045": {
+                    "idNode": "Ask_045",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Pequeña y Colores vivos \n 2) Sombrero cónico o convexo con margen estriado \n 3) Sombrero plano",
+                    "nextNodes": [
+                        "Answer_104",
+                        "Answer_105",
+                        "Answer_106"
+                    ]
+                },
+                "Ask_046": {
+                    "idNode": "Ask_046",
+                    "typeNode": "Ask",
+                    "textNode": "Himenio \n 1) Denso \n 2) Espaciado",
+                    "nextNodes": [
+                        "Answer_107",
+                        "Answer_108"
+                    ]
+                },
+                "Ask_047": {
+                    "idNode": "Ask_047",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Sobre madera de encina o olivo \n 2) En pinares de montaña",
+                    "nextNodes": [
+                        "Answer_110",
+                        "Answer_111"
+                    ]
+                },
+                "Ask_048": {
+                    "idNode": "Ask_048",
+                    "typeNode": "Ask",
+                    "textNode": "Al relizar un cote segrega latex al cortarse",
+                    "nextNodes": [
+                        "Answer_113",
+                        "Answer_114"
+                    ]
+                },
+                "Ask_049": {
+                    "idNode": "Ask_049",
+                    "typeNode": "Ask",
+                    "textNode": "Forma \n  1) Plato \n  2) Con pie y sombrero.Pie hueco y sombrero no de parguas \n  3) Globosa \n  4) Diminutas en forma de nido \n  5) Coral o flor \n  6) Gelatinosa \n  7) Porra \n  8) Sin pie y carne leñosa \n  9) Cotra en madera muerta",
+                    "nextNodes": [
+                        "Answer_116",
+                        "Answer_125",
+                        "Answer_132",
+                        "Answer_154",
+                        "Answer_155",
+                        "Answer_158",
+                        "Answer_165",
+                        "Answer_166",
+                        "Answer_182"
+                    ]
+                },
+                "Ask_050": {
+                    "idNode": "Ask_050",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Pie pequeño \n 2) Sin pie",
+                    "nextNodes": [
+                        "Answer_117",
+                        "Answer_118"
+                    ]
+                },
+                "Ask_051": {
+                    "idNode": "Ask_051",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Color crema \n 2) Naranja intenso \n 3) Pequeños cuecos escalata \n 4) Marro con venas radiales \n 5) Copas Deformes en grupos oscuros \n 6) Bolas hevcuas semienterradas interior violeta",
+                    "nextNodes": [
+                        "Answer_119",
+                        "Answer_120",
+                        "Answer_121",
+                        "Answer_122",
+                        "Answer_123",
+                        "Answer_124"
+                    ]
+                },
+                "Ask_052": {
+                    "idNode": "Ask_052",
+                    "typeNode": "Ask",
+                    "textNode": "Forma Sombrero \n 1) Copa \n 2) Silla de montar \n 3) Dedal \n 4) Cerebriforme \n 5) Cónico negruzco \n 6) Panal",
+                    "nextNodes": [
+                        "Answer_126",
+                        "Answer_127",
+                        "Answer_128",
+                        "Answer_129",
+                        "Answer_130",
+                        "Answer_131"
+                    ]
+                },
+                "Ask_053": {
+                    "idNode": "Ask_053",
+                    "typeNode": "Ask",
+                    "textNode": "Al madurar \n 1) Se convierte en una masa polvorienta \n 2) Brota una seta vistosa de mal olor \n 3) No se convierte en polvo",
+                    "nextNodes": [
+                        "Answer_133",
+                        "Answer_145",
+                        "Answer_148"
+                    ]
+                },
+                "Ask_054": {
+                    "idNode": "Ask_054",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Se abre un orificio en el apice \n 2) Se descompone la piel superior",
+                    "nextNodes": [
+                        "Answer_134",
+                        "Answer_141"
+                    ]
+                },
+                "Ask_055": {
+                    "idNode": "Ask_055",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) La base forma de estrella \n 2) Pequeño pie \n 3) Sin pie polvo grisace al madurar \n 4) Seta minuscula <1cm de pie largo",
+                    "nextNodes": [
+                        "Answer_135",
+                        "Answer_138",
+                        "Answer_139",
+                        "Answer_140"
+                    ]
+                },
+                "Ask_056": {
+                    "idNode": "Ask_056",
+                    "typeNode": "Ask",
+                    "textNode": "Exoperidio \n 1) Carnoso \n 2) Coriáceo",
+                    "nextNodes": [
+                        "Answer_136",
+                        "Answer_137"
+                    ]
+                },
+                "Ask_057": {
+                    "idNode": "Ask_057",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Piel Dura, Carne negra \n 2) Piel Blanda, Carne blanca \n 3) Setas grandes forma porra",
+                    "nextNodes": [
+                        "Answer_142",
+                        "Answer_143",
+                        "Answer_144"
+                    ]
+                },
+                "Ask_058": {
+                    "idNode": "Ask_058",
+                    "typeNode": "Ask",
+                    "textNode": "Seta en forma \n 1) Fomracelosía roja \n 2) Falo",
+                    "nextNodes": [
+                        "Answer_146",
+                        "Answer_147"
+                    ]
+                },
+                "Ask_059": {
+                    "idNode": "Ask_059",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Semienterradas \n 2) Enterradas \n 3) Enterradas pero se ve una grieta en la superficie",
+                    "nextNodes": [
+                        "Answer_149",
+                        "Answer_150",
+                        "Answer_151"
+                    ]
+                },
+                "Ask_060": {
+                    "idNode": "Ask_060",
+                    "typeNode": "Ask",
+                    "textNode": "Carne \n 1) Rosa \n 2) Blanca",
+                    "nextNodes": [
+                        "Answer_152",
+                        "Answer_153"
+                    ]
+                },
+                "Ask_061": {
+                    "idNode": "Ask_061",
+                    "typeNode": "Ask",
+                    "textNode": "Ramificaciones \n 1) Cilindricas \n 2) Planas como volantes",
+                    "nextNodes": [
+                        "Answer_156",
+                        "Answer_157"
+                    ]
+                },
+                "Ask_062": {
+                    "idNode": "Ask_062",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Pequeños cuencos aranajados \n 2) Rojiza forma cresta \n 3) Fomada por volantes. Sobre madera \n 4) Costas gelatinosas, lisas o levantadas \n 5) Forma de cuernos amarillos \n 6) En foma de oreja Himenio con venas",
+                    "nextNodes": [
+                        "Answer_159",
+                        "Answer_160",
+                        "Answer_161",
+                        "Answer_162",
+                        "Answer_163",
+                        "Answer_164"
+                    ]
+                },
+                "Ask_063": {
+                    "idNode": "Ask_063",
+                    "typeNode": "Ask",
+                    "textNode": "Himenio \n  1) Formado por agujas \n  2) No formado por agujas",
+                    "nextNodes": [
+                        "Answer_167",
+                        "Answer_168"
+                    ]
+                },
+                "Ask_064": {
+                    "idNode": "Ask_064",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Seta gruesa, leñosa. Forma de repisa o casco caballo \n 2) Seta en forma de abanico",
+                    "nextNodes": [
+                        "Answer_169",
+                        "Answer_178"
+                    ]
+                },
+                "Ask_065": {
+                    "idNode": "Ask_065",
+                    "typeNode": "Ask",
+                    "textNode": "Sobre \n 1) Suelo \n 2) Madera",
+                    "nextNodes": [
+                        "Answer_170",
+                        "Answer_171"
+                    ]
+                },
+                "Ask_066": {
+                    "idNode": "Ask_066",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Seta gris, forma casco y sobre caducifolio \n 2) Suerficie atercipelada \n 3) Superficie mimenio Blanco sobre pinos. \n 4) Seta carnosa en forma de repisa en grupos. Himenio amarillo \n 5) Seta carnosa en gruposHimenio blanco \n 6) LEñosa coles ocre y himenio formado por tubos",
+                    "nextNodes": [
+                        "Answer_172",
+                        "Answer_173",
+                        "Answer_174",
+                        "Answer_175",
+                        "Answer_176",
+                        "Answer_177"
+                    ]
+                },
+                "Ask_067": {
+                    "idNode": "Ask_067",
+                    "typeNode": "Ask",
+                    "textNode": "Superficie \n 1) Blanquecina y pelosa \n 2) Forma de bandas concéntricas \n 3) Peluda",
+                    "nextNodes": [
+                        "Answer_179",
+                        "Answer_180",
+                        "Answer_181"
+                    ]
+                },
+                "Ask_068": {
+                    "idNode": "Ask_068",
+                    "typeNode": "Ask",
+                    "textNode": "\n 1) Seta gris \n 2) Aterciopelada \n 3) Marron oscura Hinenio blanco \n 4) Seta carnosa en forma de repisa \n 5) Carnosa en gandes grupos \n 6) Seta leñosa colores ocres",
+                    "nextNodes": [
+                        "Answer_183",
+                        "Answer_184",
+                        "Answer_185",
+                        "Answer_186",
+                        "Answer_187",
+                        "Answer_188"
+                    ]
+                }
+            },
+            "Answers": {
+                "Answer_001": {
+                    "idNode": "Answer_001",
+                    "typeNode": "Answer",
+                    "textNode": "Si",
+                    "nextNodes": "Ask_002"
+                },
+                "Answer_002": {
+                    "idNode": "Answer_002",
+                    "typeNode": "Answer",
+                    "textNode": "Pliegues",
+                    "nextNodes": "Ask_003"
+                },
+                "Answer_003": {
+                    "idNode": "Answer_003",
+                    "typeNode": "Answer",
+                    "textNode": "Si",
+                    "nextNodes": "Species_001"
+                },
+                "Answer_004": {
+                    "idNode": "Answer_004",
+                    "typeNode": " Answer",
+                    "textNode": "No",
+                    "nextNodes": "Species_002"
+                },
+                "Answer_005": {
+                    "idNode": "Answer_005",
+                    "typeNode": "Answer",
+                    "textNode": "Agujas",
+                    "nextNodes": "Ask_004"
+                },
+                "Answer_006": {
+                    "idNode": "Answer_006",
+                    "typeNode": "Answer",
+                    "textNode": "Pequeñas sobre piñas",
+                    "nextNodes": "Species_003"
+                },
+                "Answer_007": {
+                    "idNode": "Answer_007",
+                    "typeNode": "Answer",
+                    "textNode": "Grandes,carne consitente gis o pardo",
+                    "nextNodes": "Species_004"
+                },
+                "Answer_008": {
+                    "idNode": "Answer_008",
+                    "typeNode": "Answer",
+                    "textNode": "Carge frágil colores claros",
+                    "nextNodes": "Species_005"
+                },
+                "Answer_009": {
+                    "idNode": "Answer_009",
+                    "typeNode": "Answer",
+                    "textNode": "Tubos acabados en poros",
+                    "nextNodes": "Ask_005"
+                },
+                "Answer_010": {
+                    "idNode": "Answer_010",
+                    "typeNode": "Answer",
+                    "textNode": "Tubos cortos dificiles de separar",
+                    "nextNodes": "Ask_006"
+                },
+                "Answer_011": {
+                    "idNode": "Answer_011",
+                    "typeNode": "Answer",
+                    "textNode": "Poros diminutos Seta carnosa pie grueso Sobre tierra",
+                    "nextNodes": "Species_006"
+                },
+                "Answer_012": {
+                    "idNode": "Answer_012",
+                    "typeNode": "Answer",
+                    "textNode": "Poros grandes. Poco carnosa con pie estrecho. Sobre madera",
+                    "nextNodes": "Species_007"
+                },
+                "Answer_013": {
+                    "idNode": "Answer_013",
+                    "typeNode": "Answer",
+                    "textNode": "Himenio esponja dificil de separar del sombrero",
+                    "nextNodes": "Ask_007"
+                },
+                "Answer_014": {
+                    "idNode": "Answer_014",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero viscoso, Himenio amarilolo. En Pinares",
+                    "nextNodes": "Species_008"
+                },
+                "Answer_015": {
+                    "idNode": "Answer_015",
+                    "typeNode": "Answer",
+                    "textNode": "Sombreo seco",
+                    "nextNodes": "Species_009"
+                },
+                "Answer_016": {
+                    "idNode": "Answer_016",
+                    "typeNode": "Answer",
+                    "textNode": "Seta pequeña, himenio pardo.",
+                    "nextNodes": "Ask_008"
+                },
+                "Answer_017": {
+                    "idNode": "Answer_017",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero aterciopelado Pie cilindrico a veces atenuado en la base. Himenio amarillo",
+                    "nextNodes": "Species_010"
+                },
+                "Answer_018": {
+                    "idNode": "Answer_018",
+                    "typeNode": "Answer",
+                    "textNode": "Pie engrosado en la base",
+                    "nextNodes": "Species_011"
+                },
+                "Answer_019": {
+                    "idNode": "Answer_019",
+                    "typeNode": "Answer",
+                    "textNode": "Sombreo semiesferico,luego convexo y fin aplanado. Pie grande engrosa en la base. Himenio blanco, amaraillo o rojo.",
+                    "nextNodes": "Species_012"
+                },
+                "Answer_020": {
+                    "idNode": "Answer_020",
+                    "typeNode": "Answer",
+                    "textNode": "Pie cilindrico y cavernoso. Himenio blanco,",
+                    "nextNodes": "Species_013"
+                },
+                "Answer_021": {
+                    "idNode": "Answer_021",
+                    "typeNode": "Answer",
+                    "textNode": "Laminas",
+                    "nextNodes": "Ask_009"
+                },
+                "Answer_022": {
+                    "idNode": "Answer_022",
+                    "typeNode": "Answer",
+                    "textNode": "Pie fibroso",
+                    "nextNodes": "Ask_010"
+                },
+                "Answer_023": {
+                    "idNode": "Answer_023",
+                    "typeNode": "Answer",
+                    "textNode": "Si",
+                    "nextNodes": "Ask_011"
+                },
+                "Answer_024": {
+                    "idNode": "Answer_024",
+                    "typeNode": "Answer",
+                    "textNode": "Laminas blancas",
+                    "nextNodes": "Ask_012"
+                },
+                "Answer_025": {
+                    "idNode": "Answer_025",
+                    "typeNode": "Answer",
+                    "textNode": "Si",
+                    "nextNodes": "Ask_013"
+                },
+                "Answer_026": {
+                    "idNode": "Answer_026",
+                    "typeNode": "Answer",
+                    "textNode": "Si",
+                    "nextNodes": "Species_014"
+                },
+                "Answer_027": {
+                    "idNode": "Answer_027",
+                    "typeNode": "Answer",
+                    "textNode": "No",
+                    "nextNodes": "Ask_014"
+                },
+                "Answer_028": {
+                    "idNode": "Answer_028",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero visco como mamelón",
+                    "nextNodes": "Species_015"
+                },
+                "Answer_029": {
+                    "idNode": "Answer_029",
+                    "typeNode": "Answer",
+                    "textNode": "Setas medianas <10 cm",
+                    "nextNodes": "Species_016"
+                },
+                "Answer_030": {
+                    "idNode": "Answer_030",
+                    "typeNode": "Answer",
+                    "textNode": "Setas pequeñás 2-8cm",
+                    "nextNodes": "Species_017"
+                },
+                "Answer_031": {
+                    "idNode": "Answer_031",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero escamoso de gran tamaño 10-25cm",
+                    "nextNodes": "Species_018"
+                },
+                "Answer_032": {
+                    "idNode": "Answer_032",
+                    "typeNode": "Answer",
+                    "textNode": "No",
+                    "nextNodes": "Ask_015"
+                },
+                "Answer_033": {
+                    "idNode": "Answer_033",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero viscoso, seta peqiueña en pinares color blanco",
+                    "nextNodes": "Species_019"
+                },
+                "Answer_034": {
+                    "idNode": "Answer_034",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero escamoso, setas pequeñas 2-8cm",
+                    "nextNodes": "Species_020"
+                },
+                "Answer_035": {
+                    "idNode": "Answer_035",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero con margen estriado, volva en la base",
+                    "nextNodes": "Species_021"
+                },
+                "Answer_036": {
+                    "idNode": "Answer_036",
+                    "typeNode": "Answer",
+                    "textNode": "Laminas oscuras",
+                    "nextNodes": "Ask_016"
+                },
+                "Answer_037": {
+                    "idNode": "Answer_037",
+                    "typeNode": "Answer",
+                    "textNode": "Al madurar se licúa, en tinta",
+                    "nextNodes": "Species_022"
+                },
+                "Answer_038": {
+                    "idNode": "Answer_038",
+                    "typeNode": "Answer",
+                    "textNode": "Setas pco carnosas terrenos abonados",
+                    "nextNodes": "Species_023"
+                },
+                "Answer_039": {
+                    "idNode": "Answer_039",
+                    "typeNode": "Answer",
+                    "textNode": "Anillo en el pie",
+                    "nextNodes": "Species_024"
+                },
+                "Answer_040": {
+                    "idNode": "Answer_040",
+                    "typeNode": "Answer",
+                    "textNode": "No",
+                    "nextNodes": "Ask_017"
+                },
+                "Answer_041": {
+                    "idNode": "Answer_041",
+                    "typeNode": "Answer",
+                    "textNode": "Rosáceas",
+                    "nextNodes": "Ask_018"
+                },
+                "Answer_042": {
+                    "idNode": "Answer_042",
+                    "typeNode": "Answer",
+                    "textNode": "Si",
+                    "nextNodes": "Species_025"
+                },
+                "Answer_043": {
+                    "idNode": "Answer_043",
+                    "typeNode": "Answer",
+                    "textNode": "No",
+                    "nextNodes": "Ask_019"
+                },
+                "Answer_044": {
+                    "idNode": "Answer_044",
+                    "typeNode": "Answer",
+                    "textNode": "Tierra",
+                    "nextNodes": "Ask_020"
+                },
+                "Answer_045": {
+                    "idNode": "Answer_045",
+                    "typeNode": "Answer",
+                    "textNode": "Blancas de olor harinoso",
+                    "nextNodes": "Species_026"
+                },
+                "Answer_046": {
+                    "idNode": "Answer_046",
+                    "typeNode": "Answer",
+                    "textNode": "Esporada rosácea",
+                    "nextNodes": "Species_027"
+                },
+                "Answer_047": {
+                    "idNode": "Answer_047",
+                    "typeNode": "Answer",
+                    "textNode": "Madera",
+                    "nextNodes": "Species_028"
+                },
+                "Answer_048": {
+                    "idNode": "Answer_048",
+                    "typeNode": "Answer",
+                    "textNode": "Marones u oscuras",
+                    "nextNodes": "Ask_021"
+                },
+                "Answer_049": {
+                    "idNode": "Answer_049",
+                    "typeNode": "Answer",
+                    "textNode": "Con anillo en el pie",
+                    "nextNodes": "Ask_022"
+                },
+                "Answer_050": {
+                    "idNode": "Answer_050",
+                    "typeNode": "Answer",
+                    "textNode": "En Grupos",
+                    "nextNodes": "Ask_023"
+                },
+                "Answer_051": {
+                    "idNode": "Answer_051",
+                    "typeNode": "Answer",
+                    "textNode": "Cadufilios",
+                    "nextNodes": "Species_029"
+                },
+                "Answer_052": {
+                    "idNode": "Answer_052",
+                    "typeNode": "Answer",
+                    "textNode": "Pinos",
+                    "nextNodes": "Species_030"
+                },
+                "Answer_053": {
+                    "idNode": "Answer_053",
+                    "typeNode": "Answer",
+                    "textNode": "Aisladas",
+                    "nextNodes": "Ask_024"
+                },
+                "Answer_054": {
+                    "idNode": "Answer_054",
+                    "typeNode": "Answer",
+                    "textNode": "Madera pino ",
+                    "nextNodes": "Species_031"
+                },
+                "Answer_055": {
+                    "idNode": "Answer_055",
+                    "typeNode": "Answer",
+                    "textNode": "Tierra o boñigas",
+                    "nextNodes": "Species_032"
+                },
+                "Answer_056": {
+                    "idNode": "Answer_056",
+                    "typeNode": "Answer",
+                    "textNode": "Con anillo filamentoso del que quedan restos en el pie",
+                    "nextNodes": "Ask_025"
+                },
+                "Answer_057": {
+                    "idNode": "Answer_057",
+                    "typeNode": "Answer",
+                    "textNode": "En grupos",
+                    "nextNodes": "Ask_026"
+                },
+                "Answer_058": {
+                    "idNode": "Answer_058",
+                    "typeNode": "Answer",
+                    "textNode": "Carnosas",
+                    "nextNodes": "Species_033"
+                },
+                "Answer_059": {
+                    "idNode": "Answer_059",
+                    "typeNode": "Answer",
+                    "textNode": "Poco carnosas",
+                    "nextNodes": "Species_034"
+                },
+                "Answer_060": {
+                    "idNode": "Answer_060",
+                    "typeNode": "Answer",
+                    "textNode": "Aisladas",
+                    "nextNodes": "Species_035"
+                },
+                "Answer_061": {
+                    "idNode": "Answer_061",
+                    "typeNode": "Answer",
+                    "textNode": "Sin anillo, ni cortina",
+                    "nextNodes": "Ask_027"
+                },
+                "Answer_062": {
+                    "idNode": "Answer_062",
+                    "typeNode": "Answer",
+                    "textNode": "Decurrentes",
+                    "nextNodes": "Ask_028"
+                },
+                "Answer_063": {
+                    "idNode": "Answer_063",
+                    "typeNode": "Answer",
+                    "textNode": "Laminas se separan al tacto",
+                    "nextNodes": "Species_036"
+                },
+                "Answer_064": {
+                    "idNode": "Answer_064",
+                    "typeNode": "Answer",
+                    "textNode": "Carne naranja",
+                    "nextNodes": "Species_037"
+                },
+                "Answer_065": {
+                    "idNode": "Answer_065",
+                    "typeNode": "Answer",
+                    "textNode": "Adbatas, libres o escotadas",
+                    "nextNodes": "Ask_029"
+                },
+                "Answer_066": {
+                    "idNode": "Answer_066",
+                    "typeNode": "Answer",
+                    "textNode": "Adnatas",
+                    "nextNodes": "Species_038"
+                },
+                "Answer_067": {
+                    "idNode": "Answer_067",
+                    "typeNode": "Answer",
+                    "textNode": "Escotadas",
+                    "nextNodes": "Species_039"
+                },
+                "Answer_068": {
+                    "idNode": "Answer_068",
+                    "typeNode": "Answer",
+                    "textNode": "Libres",
+                    "nextNodes": "Species_040"
+                },
+                "Answer_069": {
+                    "idNode": "Answer_069",
+                    "typeNode": "Answer",
+                    "textNode": "Blancas",
+                    "nextNodes": "Ask_030"
+                },
+                "Answer_070": {
+                    "idNode": "Answer_070",
+                    "typeNode": "Answer",
+                    "textNode": "Aserradas",
+                    "nextNodes": "Species_041"
+                },
+                "Answer_071": {
+                    "idNode": "Answer_071",
+                    "typeNode": "Answer",
+                    "textNode": "Margen entero",
+                    "nextNodes": "Ask_031"
+                },
+                "Answer_072": {
+                    "idNode": "Answer_072",
+                    "typeNode": "Answer",
+                    "textNode": "Decurrentes",
+                    "nextNodes": "Ask_032"
+                },
+                "Answer_073": {
+                    "idNode": "Answer_073",
+                    "typeNode": "Answer",
+                    "textNode": "Madera",
+                    "nextNodes": "Ask_033"
+                },
+                "Answer_074": {
+                    "idNode": "Answer_074",
+                    "typeNode": "Answer",
+                    "textNode": "Con Anillo",
+                    "nextNodes": "Species_042"
+                },
+                "Answer_075": {
+                    "idNode": "Answer_075",
+                    "typeNode": "Answer",
+                    "textNode": "Sin Anillo",
+                    "nextNodes": "Species_043"
+                },
+                "Answer_076": {
+                    "idNode": "Answer_076",
+                    "typeNode": "Answer",
+                    "textNode": "Tierra",
+                    "nextNodes": "Ask_034"
+                },
+                "Answer_077": {
+                    "idNode": "Answer_077",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero Viscoso",
+                    "nextNodes": "Species_044"
+                },
+                "Answer_078": {
+                    "idNode": "Answer_078",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero seco",
+                    "nextNodes": "Ask_035"
+                },
+                "Answer_079": {
+                    "idNode": "Answer_079",
+                    "typeNode": "Answer",
+                    "textNode": "Pie corto",
+                    "nextNodes": "Ask_036"
+                },
+                "Answer_080": {
+                    "idNode": "Answer_080",
+                    "typeNode": "Answer",
+                    "textNode": "Pie corto ",
+                    "nextNodes": "Species_045"
+                },
+                "Answer_081": {
+                    "idNode": "Answer_081",
+                    "typeNode": "Answer",
+                    "textNode": "Pie lateral",
+                    "nextNodes": "Species_046"
+                },
+                "Answer_082": {
+                    "idNode": "Answer_082",
+                    "typeNode": "Answer",
+                    "textNode": "Pie largo o igual",
+                    "nextNodes": "Ask_037"
+                },
+                "Answer_083": {
+                    "idNode": "Answer_083",
+                    "typeNode": "Answer",
+                    "textNode": "Blanco/Crema/Marrón",
+                    "nextNodes": "Species_047"
+                },
+                "Answer_084": {
+                    "idNode": "Answer_084",
+                    "typeNode": "Answer",
+                    "textNode": "Gris oscuo/ Negro",
+                    "nextNodes": "Species_048"
+                },
+                "Answer_085": {
+                    "idNode": "Answer_085",
+                    "typeNode": "Answer",
+                    "textNode": "Escotadas",
+                    "nextNodes": "Ask_038"
+                },
+                "Answer_086": {
+                    "idNode": "Answer_086",
+                    "typeNode": "Answer",
+                    "textNode": "Poco carnosa",
+                    "nextNodes": "Species_049"
+                },
+                "Answer_087": {
+                    "idNode": "Answer_087",
+                    "typeNode": "Answer",
+                    "textNode": "Carnosa",
+                    "nextNodes": "Species_050"
+                },
+                "Answer_088": {
+                    "idNode": "Answer_088",
+                    "typeNode": "Answer",
+                    "textNode": "Adnatas",
+                    "nextNodes": "Ask_039"
+                },
+                "Answer_089": {
+                    "idNode": "Answer_089",
+                    "typeNode": "Answer",
+                    "textNode": "En grupos",
+                    "nextNodes": "Species_051"
+                },
+                "Answer_090": {
+                    "idNode": "Answer_090",
+                    "typeNode": "Answer",
+                    "textNode": "Solitaras o pequeños grupos <10",
+                    "nextNodes": "Ask_040"
+                },
+                "Answer_091": {
+                    "idNode": "Answer_091",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero blanquecino",
+                    "nextNodes": "Species_052"
+                },
+                "Answer_092": {
+                    "idNode": "Answer_092",
+                    "typeNode": "Answer",
+                    "textNode": "Carne blanca",
+                    "nextNodes": "Ask_041"
+                },
+                "Answer_093": {
+                    "idNode": "Answer_093",
+                    "typeNode": "Answer",
+                    "textNode": "Viscoso",
+                    "nextNodes": "Species_053"
+                },
+                "Answer_094": {
+                    "idNode": "Answer_094",
+                    "typeNode": "Answer",
+                    "textNode": "Seco",
+                    "nextNodes": "Ask_042"
+                },
+                "Answer_095": {
+                    "idNode": "Answer_095",
+                    "typeNode": "Answer",
+                    "textNode": "Con anillo envolvente",
+                    "nextNodes": "Species_054"
+                },
+                "Answer_096": {
+                    "idNode": "Answer_096",
+                    "typeNode": "Answer",
+                    "textNode": "Sin anillo",
+                    "nextNodes": "Ask_043"
+                },
+                "Answer_097": {
+                    "idNode": "Answer_097",
+                    "typeNode": "Answer",
+                    "textNode": "1-3cm sombrero cónico",
+                    "nextNodes": "Species_055"
+                },
+                "Answer_098": {
+                    "idNode": "Answer_098",
+                    "typeNode": "Answer",
+                    "textNode": ">3cm sombrero plano",
+                    "nextNodes": "Ask_044"
+                },
+                "Answer_099": {
+                    "idNode": "Answer_099",
+                    "typeNode": "Answer",
+                    "textNode": "Laminas densas",
+                    "nextNodes": "Species_056"
+                },
+                "Answer_100": {
+                    "idNode": "Answer_100",
+                    "typeNode": "Answer",
+                    "textNode": "Carne elastica",
+                    "nextNodes": "Species_057"
+                },
+                "Answer_101": {
+                    "idNode": "Answer_101",
+                    "typeNode": "Answer",
+                    "textNode": " 3-4 cm",
+                    "nextNodes": "Species_058"
+                },
+                "Answer_102": {
+                    "idNode": "Answer_102",
+                    "typeNode": "Answer",
+                    "textNode": "Pie alargado",
+                    "nextNodes": "Species_059"
+                },
+                "Answer_103": {
+                    "idNode": "Answer_103",
+                    "typeNode": "Answer",
+                    "textNode": "Libres",
+                    "nextNodes": "Ask_045"
+                },
+                "Answer_104": {
+                    "idNode": "Answer_104",
+                    "typeNode": "Answer",
+                    "textNode": "Pequeña y Colores vivos",
+                    "nextNodes": "Species_060"
+                },
+                "Answer_105": {
+                    "idNode": "Answer_105",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero cónico o convexo con margen estriado",
+                    "nextNodes": "Species_061"
+                },
+                "Answer_106": {
+                    "idNode": "Answer_106",
+                    "typeNode": "Answer",
+                    "textNode": "Sombrero plano",
+                    "nextNodes": "Ask_046"
+                },
+                "Answer_107": {
+                    "idNode": "Answer_107",
+                    "typeNode": "Answer",
+                    "textNode": "Denso",
+                    "nextNodes": "Species_062"
+                },
+                "Answer_108": {
+                    "idNode": "Answer_108",
+                    "typeNode": "Answer",
+                    "textNode": "Espaciado",
+                    "nextNodes": "Species_063"
+                },
+                "Answer_109": {
+                    "idNode": "Answer_109",
+                    "typeNode": "Answer",
+                    "textNode": "Anaranjadas",
+                    "nextNodes": "Ask_047"
+                },
+                "Answer_110": {
+                    "idNode": "Answer_110",
+                    "typeNode": "Answer",
+                    "textNode": "Sobre madera de encina o olivo ",
+                    "nextNodes": "Species_064"
+                },
+                "Answer_111": {
+                    "idNode": "Answer_111",
+                    "typeNode": "Answer",
+                    "textNode": "En pinares de montaña",
+                    "nextNodes": "Species_065"
+                },
+                "Answer_112": {
+                    "idNode": "Answer_112",
+                    "typeNode": "Answer",
+                    "textNode": "Como Tiza",
+                    "nextNodes": "Ask_048"
+                },
+                "Answer_113": {
+                    "idNode": "Answer_113",
+                    "typeNode": "Answer",
+                    "textNode": "Si",
+                    "nextNodes": "Species_066"
+                },
+                "Answer_114": {
+                    "idNode": "Answer_114",
+                    "typeNode": "Answer",
+                    "textNode": "No",
+                    "nextNodes": "Species_067"
+                },
+                "Answer_115": {
+                    "idNodo": "Answer_115",
+                    "tipoNodo": "Answer",
+                    "textNode": "No",
+                    "nextNodes": "Ask_049"
+                },
+                "Answer_116": {
+                    "idNodo": "Answer_116",
+                    "tipoNodo": "Answer",
+                    "textNode": "Plato",
+                    "nextNodes": "Ask_050"
+                },
+                "Answer_117": {
+                    "idNodo": "Answer_117",
+                    "tipoNodo": "Answer",
+                    "textNode": "Pie pequeño",
+                    "nextNodes": "Species_068"
+                },
+                "Answer_118": {
+                    "idNodo": "Answer_118",
+                    "tipoNodo": "Answer",
+                    "textNode": "Sin pie",
+                    "nextNodes": "Ask_051"
+                },
+                "Answer_119": {
+                    "idNodo": "Answer_119",
+                    "tipoNodo": "Answer",
+                    "textNode": "Color crema",
+                    "nextNodes": "Species_069"
+                },
+                "Answer_120": {
+                    "idNodo": "Answer_120",
+                    "tipoNodo": "Answer",
+                    "textNode": "Naranja intenso",
+                    "nextNodes": "Species_070"
+                },
+                "Answer_121": {
+                    "idNodo": "Answer_121",
+                    "tipoNodo": "Answer",
+                    "textNode": "Pequeños cuecos escalata",
+                    "nextNodes": "Species_071"
+                },
+                "Answer_122": {
+                    "idNodo": "Answer_122",
+                    "tipoNodo": "Answer",
+                    "textNode": "Marro con venas radiales",
+                    "nextNodes": "Species_072"
+                },
+                "Answer_123": {
+                    "idNodo": "Answer_123",
+                    "tipoNodo": "Answer",
+                    "textNode": "Copas Deformes en grupos oscuros",
+                    "nextNodes": "Species_073"
+                },
+                "Answer_124": {
+                    "idNodo": "Answer_124",
+                    "tipoNodo": "Answer",
+                    "textNode": "Bolas hevcuas semienterradas interior violeta",
+                    "nextNodes": "Species_074"
+                },
+                "Answer_125": {
+                    "idNodo": "Answer_125",
+                    "tipoNodo": "Answer",
+                    "textNode": "Con pie y sombrero.Pie hueco y sombrero no de parguas",
+                    "nextNodes": "Ask_052"
+                },
+                "Answer_126": {
+                    "idNodo": "Answer_126",
+                    "tipoNodo": "Answer",
+                    "textNode": "Copa",
+                    "nextNodes": "Species_075"
+                },
+                "Answer_127": {
+                    "idNodo": "Answer_127",
+                    "tipoNodo": "Answer",
+                    "textNode": "Silla de montar",
+                    "nextNodes": "Species_076"
+                },
+                "Answer_128": {
+                    "idNodo": "Answer_128",
+                    "tipoNodo": "Answer",
+                    "textNode": "Dedal",
+                    "nextNodes": "Species_077"
+                },
+                "Answer_129": {
+                    "idNodo": "Answer_129",
+                    "tipoNodo": "Answer",
+                    "textNode": "Cerebriforme",
+                    "nextNodes": "Species_078"
+                },
+                "Answer_130": {
+                    "idNodo": "Answer_130",
+                    "tipoNodo": "Answer",
+                    "textNode": "Cónico negruzco",
+                    "nextNodes": "Species_079"
+                },
+                "Answer_131": {
+                    "idNodo": "Answer_131",
+                    "tipoNodo": "Answer",
+                    "textNode": "Panal",
+                    "nextNodes": "Species_080"
+                },
+                "Answer_132": {
+                    "idNodo": "Answer_132",
+                    "tipoNodo": "Answer",
+                    "textNode": "Globosa",
+                    "nextNodes": "Ask_053"
+                },
+                "Answer_133": {
+                    "idNodo": "Answer_133",
+                    "tipoNodo": "Answer",
+                    "textNode": "Se convierte en una masa polvorienta",
+                    "nextNodes": "Ask_054"
+                },
+                "Answer_134": {
+                    "idNodo": "Answer_134",
+                    "tipoNodo": "Answer",
+                    "textNode": "Se abre un orificio en el apice",
+                    "nextNodes": "Ask_055"
+                },
+                "Answer_135": {
+                    "idNodo": "Answer_135",
+                    "tipoNodo": "Answer",
+                    "textNode": "La base forma de estrella",
+                    "nextNodes": "Ask_056"
+                },
+                "Answer_136": {
+                    "idNodo": "Answer_136",
+                    "tipoNodo": "Answer",
+                    "textNode": "Carnoso",
+                    "nextNodes": "Species_081"
+                },
+                "Answer_137": {
+                    "idNodo": "Answer_137",
+                    "tipoNodo": "Answer",
+                    "textNode": "Coriáceo",
+                    "nextNodes": "Species_082"
+                },
+                "Answer_138": {
+                    "idNodo": "Answer_138",
+                    "tipoNodo": "Answer",
+                    "textNode": "Pequeño pie",
+                    "nextNodes": "Species_083"
+                },
+                "Answer_139": {
+                    "idNodo": "Answer_139",
+                    "tipoNodo": "Answer",
+                    "textNode": "Sin pie polvo grisace al madurar",
+                    "nextNodes": "Species_084"
+                },
+                "Answer_140": {
+                    "idNodo": "Answer_140",
+                    "tipoNodo": "Answer",
+                    "textNode": "Seta minuscula <1cm de pie largo",
+                    "nextNodes": "Species_085"
+                },
+                "Answer_141": {
+                    "idNodo": "Answer_141",
+                    "tipoNodo": "Answer",
+                    "textNode": "Se descompone la piel superior",
+                    "nextNodes": "Ask_057"
+                },
+                "Answer_142": {
+                    "idNodo": "Answer_142",
+                    "tipoNodo": "Answer",
+                    "textNode": "Piel Dura, Carne negra",
+                    "nextNodes": "Species_086"
+                },
+                "Answer_143": {
+                    "idNodo": "Answer_143",
+                    "tipoNodo": "Answer",
+                    "textNode": "Piel Blanda, Carne blanca",
+                    "nextNodes": "Species_087"
+                },
+                "Answer_144": {
+                    "idNodo": "Answer_144",
+                    "tipoNodo": "Answer",
+                    "textNode": "Setas grandes forma porra",
+                    "nextNodes": "Species_088"
+                },
+                "Answer_145": {
+                    "idNodo": "Answer_145",
+                    "tipoNodo": "Answer",
+                    "textNode": "Brota una seta vistosa de mal olor",
+                    "nextNodes": "Ask_058"
+                },
+                "Answer_146": {
+                    "idNodo": "Answer_146",
+                    "tipoNodo": "Answer",
+                    "textNode": "Fomracelosía roja",
+                    "nextNodes": "Species_089"
+                },
+                "Answer_147": {
+                    "idNodo": "Answer_147",
+                    "tipoNodo": "Answer",
+                    "textNode": "Falo",
+                    "nextNodes": "Species_090"
+                },
+                "Answer_148": {
+                    "idNodo": "Answer_148",
+                    "tipoNodo": "Answer",
+                    "textNode": "No se convierte en polvo",
+                    "nextNodes": "Ask_059"
+                },
+                "Answer_149": {
+                    "idNodo": "Answer_149",
+                    "tipoNodo": "Answer",
+                    "textNode": "Semienterradas",
+                    "nextNodes": "Species_091"
+                },
+                "Answer_150": {
+                    "idNodo": "Answer_150",
+                    "tipoNodo": "Answer",
+                    "textNode": "Enterradas",
+                    "nextNodes": "Species_092"
+                },
+                "Answer_151": {
+                    "idNodo": "Answer_151",
+                    "tipoNodo": "Answer",
+                    "textNode": "Enterradas pero se ve una grieta en la superficie",
+                    "nextNodes": "Ask_060"
+                },
+                "Answer_152": {
+                    "idNodo": "Answer_152",
+                    "tipoNodo": "Answer",
+                    "textNode": "Rosa",
+                    "nextNodes": "Species_093"
+                },
+                "Answer_153": {
+                    "idNodo": "Answer_153",
+                    "tipoNodo": "Answer",
+                    "textNode": "Blanca",
+                    "nextNodes": "Species_094"
+                },
+                "Answer_154": {
+                    "idNodo": "Answer_154",
+                    "tipoNodo": "Answer",
+                    "textNode": "Diminutas en forma de nido",
+                    "nextNodes": "Species_095"
+                },
+                "Answer_155": {
+                    "idNodo": "Answer_155",
+                    "tipoNodo": "Answer",
+                    "textNode": "Coral o flor",
+                    "nextNodes": "Ask_061"
+                },
+                "Answer_156": {
+                    "idNodo": "Answer_156",
+                    "tipoNodo": "Answer",
+                    "textNode": "Cilindricas",
+                    "nextNodes": "Species_096"
+                },
+                "Answer_157": {
+                    "idNodo": "Answer_157",
+                    "tipoNodo": "Answer",
+                    "textNode": "Planas como volantes",
+                    "nextNodes": "Species_097"
+                },
+                "Answer_158": {
+                    "idNodo": "Answer_158",
+                    "tipoNodo": "Answer",
+                    "textNode": "Gelatinosa",
+                    "nextNodes": "Ask_062"
+                },
+                "Answer_159": {
+                    "idNodo": "Answer_159",
+                    "tipoNodo": "Answer",
+                    "textNode": "Pequeños cuencos aranajados",
+                    "nextNodes": "Species_098"
+                },
+                "Answer_160": {
+                    "idNodo": "Answer_160",
+                    "tipoNodo": "Answer",
+                    "textNode": "Rojiza forma cresta",
+                    "nextNodes": "Species_099"
+                },
+                "Answer_161": {
+                    "idNodo": "Answer_161",
+                    "tipoNodo": "Answer",
+                    "textNode": "Fomada por volantes. Sobre madera",
+                    "nextNodes": "Species_100"
+                },
+                "Answer_162": {
+                    "idNodo": "Answer_162",
+                    "tipoNodo": "Answer",
+                    "textNode": "Costas gelatinosas, lisas o levantadas",
+                    "nextNodes": "Species_101"
+                },
+                "Answer_163": {
+                    "idNodo": "Answer_163",
+                    "tipoNodo": "Answer",
+                    "textNode": "Forma de cuernos amarillos",
+                    "nextNodes": "Species_102"
+                },
+                "Answer_164": {
+                    "idNodo": "Answer_164",
+                    "tipoNodo": "Answer",
+                    "textNode": "En foma de oreja Himenio con venas",
+                    "nextNodes": "Species_103"
+                },
+                "Answer_165": {
+                    "idNodo": "Answer_165",
+                    "tipoNodo": "Answer",
+                    "textNode": "Porra",
+                    "nextNodes": "Species_104"
+                },
+                "Answer_166": {
+                    "idNodo": "Answer_166",
+                    "tipoNodo": "Answer",
+                    "textNode": "Sin pie y carne leñosa",
+                    "nextNodes": "Ask_063"
+                },
+                "Answer_167": {
+                    "idNodo": "Answer_167",
+                    "tipoNodo": "Answer",
+                    "textNode": "Formado por agujas",
+                    "nextNodes": "Species_105"
+                },
+                "Answer_168": {
+                    "idNodo": "Answer_168",
+                    "tipoNodo": "Answer",
+                    "textNode": "No formado por agujas",
+                    "nextNodes": "Ask_064"
+                },
+                "Answer_169": {
+                    "idNodo": "Answer_169",
+                    "tipoNodo": "Answer",
+                    "textNode": "Seta gruesa, leñosa. Forma de repisa o casco caballo",
+                    "nextNodes": "Ask_065"
+                },
+                "Answer_170": {
+                    "idNodo": "Answer_170",
+                    "tipoNodo": "Answer",
+                    "textNode": "Suelo",
+                    "nextNodes": "Species_106"
+                },
+                "Answer_171": {
+                    "idNodo": "Answer_171",
+                    "tipoNodo": "Answer",
+                    "textNode": "Madera",
+                    "nextNodes": "Ask_066"
+                },
+                "Answer_172": {
+                    "idNodo": "Answer_172",
+                    "tipoNodo": "Answer",
+                    "textNode": "Seta gris, forma casco y sobre caducifolio",
+                    "nextNodes": "Species_107"
+                },
+                "Answer_173": {
+                    "idNodo": "Answer_173",
+                    "tipoNodo": "Answer",
+                    "textNode": "Suerficie atercipelada",
+                    "nextNodes": "Species_108"
+                },
+                "Answer_174": {
+                    "idNodo": "Answer_174",
+                    "tipoNodo": "Answer",
+                    "textNode": "Superficie mimenio Blanco sobre pinos.",
+                    "nextNodes": "Species_109"
+                },
+                "Answer_175": {
+                    "idNodo": "Answer_175",
+                    "tipoNodo": "Answer",
+                    "textNode": "Seta carnosa en forma de repisa en grupos. Himenio amarillo",
+                    "nextNodes": "Species_110"
+                },
+                "Answer_176": {
+                    "idNodo": "Answer_176",
+                    "tipoNodo": "Answer",
+                    "textNode": "Seta carnosa en gruposHimenio blanco",
+                    "nextNodes": "Species_111"
+                },
+                "Answer_177": {
+                    "idNodo": "Answer_177",
+                    "tipoNodo": "Answer",
+                    "textNode": "Leñosa coles ocre y himenio formado por tubos",
+                    "nextNodes": "Species_112"
+                },
+                "Answer_178": {
+                    "idNodo": "Answer_178",
+                    "tipoNodo": "Answer",
+                    "textNode": "Seta en forma de abanico",
+                    "nextNodes": "Ask_067"
+                },
+                "Answer_179": {
+                    "idNodo": "Answer_179",
+                    "tipoNodo": "Answer",
+                    "textNode": "Blanquecina y pelosa",
+                    "nextNodes": "Species_113"
+                },
+                "Answer_180": {
+                    "idNodo": "Answer_180",
+                    "tipoNodo": "Answer",
+                    "textNode": "Forma de bandas concéntricas",
+                    "nextNodes": "Species_114"
+                },
+                "Answer_181": {
+                    "idNodo": "Answer_181",
+                    "tipoNodo": "Answer",
+                    "textNode": "Peluda",
+                    "nextNodes": "Species_115"
+                },
+                "Answer_182": {
+                    "idNodo": "Answer_182",
+                    "tipoNodo": "Answer",
+                    "textNode": "Cotra en madera muerta",
+                    "nextNodes": "Ask_068"
+                },
+                "Answer_183": {
+                    "idNodo": "Answer_183",
+                    "tipoNodo": "Answer",
+                    "textNode": "Seta gris",
+                    "nextNodes": "Species_116"
+                },
+                "Answer_184": {
+                    "idNodo": "Answer_184",
+                    "tipoNodo": "Answer",
+                    "textNode": "Aterciopelada",
+                    "nextNodes": "Species_117"
+                },
+                "Answer_185": {
+                    "idNodo": "Answer_185",
+                    "tipoNodo": "Answer",
+                    "textNode": "Marron oscura Hinenio blanco",
+                    "nextNodes": "Species_118"
+                },
+                "Answer_186": {
+                    "idNodo": "Answer_186",
+                    "tipoNodo": "Answer",
+                    "textNode": "Seta carnosa en forma de repisa",
+                    "nextNodes": "Species_119"
+                },
+                "Answer_187": {
+                    "idNodo": "Answer_187",
+                    "tipoNodo": "Answer",
+                    "textNode": "Carnosa en gandes grupos",
+                    "nextNodes": "Species_120"
+                },
+                "Answer_188": {
+                    "idNodo": "Answer_188",
+                    "tipoNodo": "Answer",
+                    "textNode": "Seta leñosa colores ocres",
+                    "nextNodes": "Species_121"
+                }
+            },
+            "Species": {
+                "Species_001": {
+                    "idNode": "Species_001",
+                    "typeNode": "Species",
+                    "textNode": "G. Cantharellus",
+                    "img": "G. Cantharellus"
+                },
+                "Species_002": {
+                    "idNode": "Species_002",
+                    "typeNode": "Species",
+                    "textNode": "G. Craterellus",
+                    "img": "G. Craterellus"
+                },
+                "Species_003": {
+                    "idNode": "Species_003",
+                    "typeNode": "Species",
+                    "textNode": "G. Auriscalpium",
+                    "img": "G. Auriscalpium"
+                },
+                "Species_004": {
+                    "idNode": "Species_004",
+                    "typeNode": "Species",
+                    "textNode": "G. Hydnum",
+                    "img": "G. Hydnum"
+                },
+                "Species_005": {
+                    "idNode": "Species_005",
+                    "typeNode": "Species",
+                    "textNode": "G. Sarcado",
+                    "img": "G. Sarcado"
+                },
+                "Species_006": {
+                    "idNode": "Species_006",
+                    "typeNode": "Species",
+                    "textNode": "G. Boletopsis",
+                    "img": "G. Boletopsis"
+                },
+                "Species_007": {
+                    "idNode": "Species_007",
+                    "typeNode": "Species",
+                    "textNode": "G. Polyporus",
+                    "img": "G. Polyporus"
+                },
+                "Species_008": {
+                    "idNode": "Species_008",
+                    "typeNode": "Species",
+                    "textNode": "G. Suillus",
+                    "img": "G. Suillus"
+                },
+                "Species_009": {
+                    "idNode": "Species_009",
+                    "typeNode": "Species",
+                    "textNode": "G. Chalciporus",
+                    "img": "G. Chalciporus"
+                },
+                "Species_010": {
+                    "idNode": "Species_010",
+                    "typeNode": "Species",
+                    "textNode": "G. Xerocomus",
+                    "img": "G. Xerocomus"
+                },
+                "Species_011": {
+                    "idNode": "Species_011",
+                    "typeNode": "Species",
+                    "textNode": "G. Leccinum",
+                    "img": "G. Leccinum"
+                },
+                "Species_012": {
+                    "idNode": "Species_012",
+                    "typeNode": "Species",
+                    "textNode": "G. Boletus",
+                    "img": "G. Boletus"
+                },
+                "Species_013": {
+                    "idNode": "Species_013",
+                    "typeNode": "Species",
+                    "textNode": "G. Gyroporus",
+                    "img": "G. Gyroporus"
+                },
+                "Species_014": {
+                    "idNode": "Species_014",
+                    "typeNode": "Species",
+                    "textNode": "G. Amanita",
+                    "img": "G. Amanita"
+                },
+                "Species_015": {
+                    "idNode": "Species_015",
+                    "typeNode": "Species",
+                    "textNode": "G. Limacella",
+                    "img": "G. Limacella"
+                },
+                "Species_016": {
+                    "idNode": "Species_016",
+                    "typeNode": "Species",
+                    "textNode": "G. Leucoagaricus",
+                    "img": "G. Leucoagaricus"
+                },
+                "Species_017": {
+                    "idNode": "Species_017",
+                    "typeNode": "Species",
+                    "textNode": "G. Lepiota",
+                    "img": "G. Lepiota"
+                },
+                "Species_018": {
+                    "idNode": "Species_018",
+                    "typeNode": "Species",
+                    "textNode": "G. Macrolepiota",
+                    "img": "G. Macrolepiota"
+                },
+                "Species_019": {
+                    "idNode": "Species_019",
+                    "typeNode": "Species",
+                    "textNode": "G. Limacella illinita",
+                    "img": "G. Limacella illinita"
+                },
+                "Species_020": {
+                    "idNode": "Species_020",
+                    "typeNode": "Species",
+                    "textNode": "G. Lepiota",
+                    "img": "G. Lepiota"
+                },
+                "Species_021": {
+                    "idNode": "Species_021",
+                    "typeNode": "Species",
+                    "textNode": "G. Amanita SubG. Amanitopsis",
+                    "img": "G. Amanita SubG. Amanitopsis"
+                },
+                "Species_022": {
+                    "idNode": "Species_022",
+                    "typeNode": "Species",
+                    "textNode": "G. Coprinus",
+                    "img": "G. Coprinus"
+                },
+                "Species_023": {
+                    "idNode": "Species_023",
+                    "typeNode": "Species",
+                    "textNode": "G. Psathyrella",
+                    "img": "G. Psathyrella"
+                },
+                "Species_024": {
+                    "idNode": "Species_024",
+                    "typeNode": "Species",
+                    "textNode": "G. Agaricus",
+                    "img": "G. Agaricus"
+                },
+                "Species_025": {
+                    "idNode": "Species_025",
+                    "typeNode": "Species",
+                    "textNode": "G. Volvariela",
+                    "img": "G. Volvariela"
+                },
+                "Species_026": {
+                    "idNode": "Species_026",
+                    "typeNode": "Species",
+                    "textNode": "G. Clitopilus",
+                    "img": "G. Clitopilus"
+                },
+                "Species_027": {
+                    "idNode": "Species_027",
+                    "typeNode": "Species",
+                    "textNode": "G. Entoloma",
+                    "img": "G. Entoloma"
+                },
+                "Species_028": {
+                    "idNode": "Species_028",
+                    "typeNode": "Species",
+                    "textNode": "G. Pluteus",
+                    "img": "G. Pluteus"
+                },
+                "Species_029": {
+                    "idNode": "Species_029",
+                    "typeNode": "Species",
+                    "textNode": "G. Agrocybe",
+                    "img": "G. Agrocybe"
+                },
+                "Species_030": {
+                    "idNode": "Species_030",
+                    "typeNode": "Species",
+                    "textNode": "G. Gymnopilus",
+                    "img": "G. Gymnopilus"
+                },
+                "Species_031": {
+                    "idNode": "Species_031",
+                    "typeNode": "Species",
+                    "textNode": "G. Galerina",
+                    "img": "G. Galerina"
+                },
+                "Species_032": {
+                    "idNode": "Species_032",
+                    "typeNode": "Species",
+                    "textNode": "G. Stropharia",
+                    "img": "G. Stropharia"
+                },
+                "Species_033": {
+                    "idNode": "Species_033",
+                    "typeNode": "Species",
+                    "textNode": "G. Pholiota",
+                    "img": "G. Pholiota"
+                },
+                "Species_034": {
+                    "idNode": "Species_034",
+                    "typeNode": "Species",
+                    "textNode": "G. Hypholoma",
+                    "img": "G. Hypholoma"
+                },
+                "Species_035": {
+                    "idNode": "Species_035",
+                    "typeNode": "Species",
+                    "textNode": "G. Cortinarius",
+                    "img": "G. Cortinarius"
+                },
+                "Species_036": {
+                    "idNode": "Species_036",
+                    "typeNode": "Species",
+                    "textNode": "G. Paxilus",
+                    "img": "G. Paxilus"
+                },
+                "Species_037": {
+                    "idNode": "Species_037",
+                    "typeNode": "Species",
+                    "textNode": "G. Chroogomphus",
+                    "img": "G. Chroogomphus"
+                },
+                "Species_038": {
+                    "idNode": "Species_038",
+                    "typeNode": "Species",
+                    "textNode": "G. Inocybe",
+                    "img": "G. Inocybe"
+                },
+                "Species_039": {
+                    "idNode": "Species_039",
+                    "typeNode": "Species",
+                    "textNode": "G. Hebeloma",
+                    "img": "G. Hebeloma"
+                },
+                "Species_040": {
+                    "idNode": "Species_040",
+                    "typeNode": "Species",
+                    "textNode": "G. Panaeolus",
+                    "img": "G. Panaeolus"
+                },
+                "Species_041": {
+                    "idNode": "Species_041",
+                    "typeNode": "Species",
+                    "textNode": "G Lentinus y Lentinellus",
+                    "img": "G Lentinus y Lentinellus"
+                },
+                "Species_042": {
+                    "idNode": "Species_042",
+                    "typeNode": "Species",
+                    "textNode": "G. Armillaria",
+                    "img": "G. Armillaria"
+                },
+                "Species_043": {
+                    "idNode": "Species_043",
+                    "typeNode": "Species",
+                    "textNode": "G. Pleurotus",
+                    "img": "G. Pleurotus"
+                },
+                "Species_044": {
+                    "idNode": "Species_044",
+                    "typeNode": "Species",
+                    "textNode": "G. Hygrophorus",
+                    "img": "G. Hygrophorus"
+                },
+                "Species_045": {
+                    "idNode": "Species_045",
+                    "typeNode": "Species",
+                    "textNode": "G. Pleurotus",
+                    "img": "G. Pleurotus"
+                },
+                "Species_046": {
+                    "idNode": "Species_046",
+                    "typeNode": "Species",
+                    "textNode": "G. Hohenbuehelia",
+                    "img": "G. Hohenbuehelia"
+                },
+                "Species_047": {
+                    "idNode": "Species_047",
+                    "typeNode": "Species",
+                    "textNode": "G. Clitocybe",
+                    "img": "G. Clitocybe"
+                },
+                "Species_048": {
+                    "idNode": "Species_048",
+                    "typeNode": "Species",
+                    "textNode": "G. Pseudoclitocybe",
+                    "img": "G. Pseudoclitocybe"
+                },
+                "Species_049": {
+                    "idNode": "Species_049",
+                    "typeNode": "Species",
+                    "textNode": "G. Melonoleuca",
+                    "img": "G. Melonoleuca"
+                },
+                "Species_050": {
+                    "idNode": "Species_050",
+                    "typeNode": "Species",
+                    "textNode": "G. Tricholoma",
+                    "img": "G. Tricholoma"
+                },
+                "Species_051": {
+                    "idNode": "Species_051",
+                    "typeNode": "Species",
+                    "textNode": "G. Lyophyllum",
+                    "img": "G. Lyophyllum"
+                },
+                "Species_052": {
+                    "idNode": "Species_052",
+                    "typeNode": "Species",
+                    "textNode": "G. Leucopaxillus",
+                    "img": "G. Leucopaxillus"
+                },
+                "Species_053": {
+                    "idNode": "Species_053",
+                    "typeNode": "Species",
+                    "textNode": "G. Hygrophorus",
+                    "img": "G. Hygrophorus"
+                },
+                "Species_054": {
+                    "idNode": "Species_054",
+                    "typeNode": "Species",
+                    "textNode": "G. Cystoderma",
+                    "img": "G. Cystoderma"
+                },
+                "Species_055": {
+                    "idNode": "Species_055",
+                    "typeNode": "Species",
+                    "textNode": "G. Mycena",
+                    "img": "G. Mycena"
+                },
+                "Species_056": {
+                    "idNode": "Species_056",
+                    "typeNode": "Species",
+                    "textNode": "G. Lepista",
+                    "img": "G. Lepista"
+                },
+                "Species_057": {
+                    "idNode": "Species_057",
+                    "typeNode": "Species",
+                    "textNode": "G. Lyophyllum",
+                    "img": "G. Lyophyllum"
+                },
+                "Species_058": {
+                    "idNode": "Species_058",
+                    "typeNode": "Species",
+                    "textNode": "G. Laccaria",
+                    "img": "G. Laccaria"
+                },
+                "Species_059": {
+                    "idNode": "Species_059",
+                    "typeNode": "Species",
+                    "textNode": "G. Clitocybe",
+                    "img": "G. Clitocybe"
+                },
+                "Species_060": {
+                    "idNode": "Species_060",
+                    "typeNode": "Species",
+                    "textNode": "G. Hygrocybe",
+                    "img": "G. Hygrocybe"
+                },
+                "Species_061": {
+                    "idNode": "Species_061",
+                    "typeNode": "Species",
+                    "textNode": "G. Mycena",
+                    "img": "G. Mycena"
+                },
+                "Species_062": {
+                    "idNode": "Species_062",
+                    "typeNode": "Species",
+                    "textNode": "G. Collybia",
+                    "img": "G. Collybia"
+                },
+                "Species_063": {
+                    "idNode": "Species_063",
+                    "typeNode": "Species",
+                    "textNode": "G. Marasmius",
+                    "img": "G. Marasmius"
+                },
+                "Species_064": {
+                    "idNode": "Species_064",
+                    "typeNode": "Species",
+                    "textNode": "G. Omphalotus",
+                    "img": "G. Omphalotus"
+                },
+                "Species_065": {
+                    "idNode": "Species_065",
+                    "typeNode": "Species",
+                    "textNode": "G. Hygrophropsis",
+                    "img": "G. Hygrophropsis"
+                },
+                "Species_066": {
+                    "idNode": "Species_066",
+                    "typeNode": "Species",
+                    "textNode": "G. Lactarius",
+                    "img": "G. Lactarius"
+                },
+                "Species_067": {
+                    "idNode": "Species_067",
+                    "typeNode": "Species",
+                    "textNode": "G. Russula",
+                    "img": "G. Russula"
+                },
+                "Species_068": {
+                    "idNode": "Species_068",
+                    "typeNode": "Species",
+                    "textNode": "G. Craterellus",
+                    "img": "G. Craterellus"
+                },
+                "Species_069": {
+                    "idNode": "Species_069",
+                    "typeNode": "Species",
+                    "textNode": "G. Peziza",
+                    "img": "G. Peziza"
+                },
+                "Species_070": {
+                    "idNode": "Species_070",
+                    "typeNode": "Species",
+                    "textNode": "G. Aleuria",
+                    "img": "G. Aleuria"
+                },
+                "Species_071": {
+                    "idNode": "Species_071",
+                    "typeNode": "Species",
+                    "textNode": "G. Sarcoscypha",
+                    "img": "G. Sarcoscypha"
+                },
+                "Species_072": {
+                    "idNode": "Species_072",
+                    "typeNode": "Species",
+                    "textNode": "G. Dyscina",
+                    "img": "G. Dyscina"
+                },
+                "Species_073": {
+                    "idNode": "Species_073",
+                    "typeNode": "Species",
+                    "textNode": "G. Otidea",
+                    "img": "G. Otidea"
+                },
+                "Species_074": {
+                    "idNode": "Species_074",
+                    "typeNode": "Species",
+                    "textNode": "G. Sarcosphera",
+                    "img": "G. Sarcosphera"
+                },
+                "Species_075": {
+                    "idNode": "Species_075",
+                    "typeNode": "Species",
+                    "textNode": "G. Helvella",
+                    "img": "G. Helvella"
+                },
+                "Species_076": {
+                    "idNode": "Species_076",
+                    "typeNode": "Species",
+                    "textNode": "G. Helvella",
+                    "img": "G. Helvella"
+                },
+                "Species_077": {
+                    "idNode": "Species_077",
+                    "typeNode": "Species",
+                    "textNode": "G. Verpa",
+                    "img": "G. Verpa"
+                },
+                "Species_078": {
+                    "idNode": "Species_078",
+                    "typeNode": "Species",
+                    "textNode": "G. Gyromitra",
+                    "img": "G. Gyromitra"
+                },
+                "Species_079": {
+                    "idNode": "Species_079",
+                    "typeNode": "Species",
+                    "textNode": "G. Mitrophora",
+                    "img": "G. Mitrophora"
+                },
+                "Species_080": {
+                    "idNode": "Species_080",
+                    "typeNode": "Species",
+                    "textNode": "G. Morchella",
+                    "img": "G. Morchella"
+                },
+                "Species_081": {
+                    "idNode": "Species_081",
+                    "typeNode": "Species",
+                    "textNode": "G. Geastrum",
+                    "img": "G. Geastrum"
+                },
+                "Species_082": {
+                    "idNode": "Species_082",
+                    "typeNode": "Species",
+                    "textNode": "G. Astraeus",
+                    "img": "G. Astraeus"
+                },
+                "Species_083": {
+                    "idNode": "Species_083",
+                    "typeNode": "Species",
+                    "textNode": "G. Lycoperdo",
+                    "img": "G. Lycoperdo"
+                },
+                "Species_084": {
+                    "idNode": "Species_084",
+                    "typeNode": "Species",
+                    "textNode": "G. Bovista",
+                    "img": "G. Bovista"
+                },
+                "Species_085": {
+                    "idNode": "Species_085",
+                    "typeNode": "Species",
+                    "textNode": "G. Tulostoma",
+                    "img": "G. Tulostoma"
+                },
+                "Species_086": {
+                    "idNode": "Species_086",
+                    "typeNode": "Species",
+                    "textNode": "G. Scleroderma",
+                    "img": "G. Scleroderma"
+                },
+                "Species_087": {
+                    "idNode": "Species_087",
+                    "typeNode": "Species",
+                    "textNode": "G. Calvatia",
+                    "img": "G. Calvatia"
+                },
+                "Species_088": {
+                    "idNode": "Species_088",
+                    "typeNode": "Species",
+                    "textNode": "G. Pisolithus",
+                    "img": "G. Pisolithus"
+                },
+                "Species_089": {
+                    "idNode": "Species_089",
+                    "typeNode": "Species",
+                    "textNode": "G. Clathrus",
+                    "img": "G. Clathrus"
+                },
+                "Species_090": {
+                    "idNode": "Species_090",
+                    "typeNode": "Species",
+                    "textNode": "G. Phallus",
+                    "img": "G. Phallus"
+                },
+                "Species_091": {
+                    "idNode": "Species_091",
+                    "typeNode": "Species",
+                    "textNode": "G. Rhizopogon",
+                    "img": "G. Rhizopogon"
+                },
+                "Species_092": {
+                    "idNode": "Species_092",
+                    "typeNode": "Species",
+                    "textNode": "G. Tuber",
+                    "img": "G. Tuber"
+                },
+                "Species_093": {
+                    "idNode": "Species_093",
+                    "typeNode": "Species",
+                    "textNode": "G. Terfezia",
+                    "img": "G. Terfezia"
+                },
+                "Species_094": {
+                    "idNode": "Species_094",
+                    "typeNode": "Species",
+                    "textNode": "G. Picoa",
+                    "img": "G. Picoa"
+                },
+                "Species_095": {
+                    "idNode": "Species_095",
+                    "typeNode": "Species",
+                    "textNode": "G. Crucibulum",
+                    "img": "G. Crucibulum"
+                },
+                "Species_096": {
+                    "idNode": "Species_096",
+                    "typeNode": "Species",
+                    "textNode": "G. Ramaria",
+                    "img": "G. Ramaria"
+                },
+                "Species_097": {
+                    "idNode": "Species_097",
+                    "typeNode": "Species",
+                    "textNode": "G. Sparassis",
+                    "img": "G. Sparassis"
+                },
+                "Species_098": {
+                    "idNode": "Species_098",
+                    "typeNode": "Species",
+                    "textNode": "G. Gymnosporangium",
+                    "img": "G. Gymnosporangium"
+                },
+                "Species_099": {
+                    "idNode": "Species_099",
+                    "typeNode": "Species",
+                    "textNode": "G. Tremiscus",
+                    "img": "G. Tremiscus"
+                },
+                "Species_100": {
+                    "idNode": "Species_100",
+                    "typeNode": "Species",
+                    "textNode": "G. Tremella",
+                    "img": "G. Tremella"
+                },
+                "Species_101": {
+                    "idNode": "Species_101",
+                    "typeNode": "Species",
+                    "textNode": "G. Exidia",
+                    "img": "G. Exidia"
+                },
+                "Species_102": {
+                    "idNode": "Species_102",
+                    "typeNode": "Species",
+                    "textNode": "G. Calocera",
+                    "img": "G. Calocera"
+                },
+                "Species_103": {
+                    "idNode": "Species_103",
+                    "typeNode": "Species",
+                    "textNode": "G. Auricularia",
+                    "img": "G. Auricularia"
+                },
+                "Species_104": {
+                    "idNode": "Species_104",
+                    "typeNode": "Species",
+                    "textNode": "G. Clavariadelphus",
+                    "img": "G. Clavariadelphus"
+                },
+                "Species_105": {
+                    "idNode": "Species_105",
+                    "typeNode": "Species",
+                    "textNode": "G. Hydnellum",
+                    "img": "G. Hydnellum"
+                },
+                "Species_106": {
+                    "idNode": "Species_106",
+                    "typeNode": "Species",
+                    "textNode": "G. Phaeolus",
+                    "img": "G. Phaeolus"
+                },
+                "Species_107": {
+                    "idNode": "Species_107",
+                    "typeNode": "Species",
+                    "textNode": "G. Fomes",
+                    "img": "G. Fomes"
+                },
+                "Species_108": {
+                    "idNode": "Species_108",
+                    "typeNode": "Species",
+                    "textNode": "G. Ionotus",
+                    "img": "G. Ionotus"
+                },
+                "Species_109": {
+                    "idNode": "Species_109",
+                    "typeNode": "Species",
+                    "textNode": "G. Fomitopsis",
+                    "img": "G. Fomitopsis"
+                },
+                "Species_110": {
+                    "idNode": "Species_110",
+                    "typeNode": "Species",
+                    "textNode": "G. Laetiporus",
+                    "img": "G. Laetiporus"
+                },
+                "Species_111": {
+                    "idNode": "Species_111",
+                    "typeNode": "Species",
+                    "textNode": "G. Meripilus",
+                    "img": "G. Meripilus"
+                },
+                "Species_112": {
+                    "idNode": "Species_112",
+                    "typeNode": "Species",
+                    "textNode": "G. Phellinus",
+                    "img": "G. Phellinus"
+                },
+                "Species_113": {
+                    "idNode": "Species_113",
+                    "typeNode": "Species",
+                    "textNode": "G. Stereum",
+                    "img": "G. Stereum"
+                },
+                "Species_114": {
+                    "idNode": "Species_114",
+                    "typeNode": "Species",
+                    "textNode": "G. Coriolopsis",
+                    "img": "G. Coriolopsis"
+                },
+                "Species_115": {
+                    "idNode": "Species_115",
+                    "typeNode": "Species",
+                    "textNode": "G. Trametes",
+                    "img": "G. Trametes"
+                },
+                "Species_116": {
+                    "idNode": "Species_116",
+                    "typeNode": "Species",
+                    "textNode": "G. Fomes",
+                    "img": "G. Fomes"
+                },
+                "Species_117": {
+                    "idNode": "Species_117",
+                    "typeNode": "Species",
+                    "textNode": "G. Ionotus",
+                    "img": "G. Ionotus"
+                },
+                "Species_118": {
+                    "idNode": "Species_118",
+                    "typeNode": "Species",
+                    "textNode": "G. Fomitopsis",
+                    "img": "G. Fomitopsis"
+                },
+                "Species_119": {
+                    "idNode": "Species_119",
+                    "typeNode": "Species",
+                    "textNode": "G. Laetiporus",
+                    "img": "G. Laetiporus"
+                },
+                "Species_120": {
+                    "idNode": "Species_120",
+                    "typeNode": "Species",
+                    "textNode": "G. Meripilus",
+                    "img": "G. Meripilus"
+                },
+                "Species_121": {
+                    "idNode": "Species_121",
+                    "typeNode": "Species",
+                    "textNode": "G. Phellinus",
+                    "img": "G. Phellinus"
+                }
+            }
+        },
+        "Test": {
+            "Questions": {
+                "Question_001": {
+                    "id": "Question_001",
+                    "text": "¿Cuál de las siguientes estructuras es característica de los hongos?",
+                    "img": "himenio",
+                    "Answers": [
+                        {
+                            "textAnswer": "Raíces",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Pétalos",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Micelio",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Espinas",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_002": {
+                    "id": "Question_002",
+                    "text": "¿Cuál es la función principal de los cuerpos fructíferos de los hongos?",
+                    "img": "setasArbol",
+                    "Answers": [
+                        {
+                            "textAnswer": "Obtener agua",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Reproducción",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Realizar fotosíntesis",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Almacenar nutrientes",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_003": {
+                    "id": "Question_003",
+                    "text": "¿Cómo se reproducen los hongos mediante esporas?",
+                    "img": "esporas",
+                    "Answers": [
+                        {
+                            "textAnswer": "Sexualmente",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Asexualmente",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Por gemación",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Por fragmentación",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_004": {
+                    "id": "Question_004",
+                    "text": "¿Cuál de las siguientes opciones NO es un tipo de hongo?",
+                    "img": "alga",
+                    "Answers": [
+                        {
+                            "textAnswer": "Ascomycota",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Chlorophyta",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Basidiomycota",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Zygomycota",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_005": {
+                    "id": "Question_005",
+                    "text": "¿Qué tipo de hongo es conocido comúnmente como 'moho'?",
+                    "img": "moho",
+                    "Answers": [
+                        {
+                            "textAnswer": "Ascomycota",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Basidiomycota",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Deuteromycota",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Zygomycota",
+                            "isTrue": "true"
+                        }
+                    ]
+                },
+                "Question_006": {
+                    "id": "Question_006",
+                    "text": "¿Cuál es el principal papel de los hongos en los ecosistemas?",
+                    "img": "setasArbol",
+                    "Answers": [
+                        {
+                            "textAnswer": "Realizar fotosíntesis",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Descomponer materia orgánica",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Producir oxígeno",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Ser fuente de alimento para otros organismos",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_007": {
+                    "id": "Question_007",
+                    "text": "¿Qué tipo de hongo se utiliza en la producción de cerveza y pan?",
+                    "img": "levadura",
+                    "Answers": [
+                        {
+                            "textAnswer": "Levadura",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Moho",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Ascomiceto",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Basidiomiceto",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_008": {
+                    "id": "Question_008",
+                    "text": "¿Cuál es la estructura reproductiva de los hongos basidiomicetos?",
+                    "img": "amanita",
+                    "Answers": [
+                        {
+                            "textAnswer": "Conidios",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Ascocarpo",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Basidiocarpo",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Cleistotecio",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_009": {
+                    "id": "Question_009",
+                    "text": "¿Cuál es el principal componente de las paredes celulares de los hongos?",
+                    "img": "quitina",
+                    "Answers": [
+                        {
+                            "textAnswer": "Celulosa",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Quitina",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Almidón",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Proteína",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_010": {
+                    "id": "Question_010",
+                    "text": "¿Cuál es la importancia económica de los hongos?",
+                    "img": "tienda",
+                    "Answers": [
+                        {
+                            "textAnswer": "Control de plagas",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Producción de medicamentos",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Purificación del agua",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Todas las anteriores",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_011": {
+                    "id": "Question_011",
+                    "text": "¿Qué tipo de hongo es la trufa, conocida por su uso en la alta cocina?",
+                    "img": "trufa",
+                    "Answers": [
+                        {
+                            "textAnswer": "Basidiomiceto",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Ascomiceto",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Zygomycota",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Deuteromycota",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_012": {
+                    "id": "Question_012",
+                    "text": "¿Cuál es el principal órgano de reproducción sexual de los hongos?",
+                    "img": "micelio",
+                    "Answers": [
+                        {
+                            "textAnswer": "Micelio",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Espora",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Carpóforo",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Gameto",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_013": {
+                    "id": "Question_013",
+                    "text": "¿Qué es la micorriza?",
+                    "img": "niscalo",
+                    "Answers": [
+                        {
+                            "textAnswer": "Una enfermedad fúngica",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Una relación simbiótica entre hongos y plantas",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Una estructura de reproducción de los hongos",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Una toxina producida por los hongos",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_014": {
+                    "id": "Question_014",
+                    "text": "¿Qué tipo de hongo es el moho del pan?",
+                    "img": "levadura",
+                    "Answers": [
+                        {
+                            "textAnswer": "Ascomiceto",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Basidiomiceto",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Zygomycota",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Deuteromycota",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_015": {
+                    "id": "Question_015",
+                    "text": "¿Cuál es el principal modo de alimentación de los hongos?",
+                    "img": "setasArbol",
+                    "Answers": [
+                        {
+                            "textAnswer": "Autótrofo",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Heterótrofo",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Mixótrofo",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Parasítico",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_016": {
+                    "id": "Question_016",
+                    "text": "¿Cuál es el nombre común del hongo candida albicans?",
+                    "img": "levadura",
+                    "Answers": [
+                        {
+                            "textAnswer": "Levadura de cerveza",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Moho verde",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Levadura de panadero",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Candidiasis",
+                            "isTrue": "true"
+                        }
+                    ]
+                },
+                "Question_017": {
+                    "id": "Question_017",
+                    "text": "¿Qué tipo de hongo es la amanita muscaria, conocida por sus propiedades alucinógenas?",
+                    "img": "amanita",
+                    "Answers": [
+                        {
+                            "textAnswer": "Ascomiceto",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Basidiomiceto",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Deuteromycota",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Zygomycota",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_018": {
+                    "id": "Question_018",
+                    "text": "¿Qué tipo de relación establecen los líquenes?",
+                    "img": "liquen",
+                    "Answers": [
+                        {
+                            "textAnswer": "Mutualismo entre hongos y bacterias",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Parasitismo entre hongos y plantas",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Simbiosis entre hongos y algas o cianobacterias",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Competencia entre hongos",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_019": {
+                    "id": "Question_019",
+                    "text": "¿Qué función cumplen los basidiosporos en los hongos basidiomicetos?",
+                    "img": "esporas",
+                    "Answers": [
+                        {
+                            "textAnswer": "Almacenar nutrientes",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Reproducción sexual",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Realizar fotosíntesis",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Proporcionar estructura aérea",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_020": {
+                    "id": "Question_020",
+                    "text": "¿Cuál es el hongo causante de la enfermedad conocida como 'pie de atleta'?",
+                    "img": "trichophyton",
+                    "Answers": [
+                        {
+                            "textAnswer": "Trichophyton",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Aspergillus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Penicillium",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Candida",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_021": {
+                    "id": "Question_021",
+                    "text": "¿Cuál es el hongo utilizado tradicionalmente en la medicina china y que se ha estudiado por sus posibles propiedades medicinales, incluyendo efectos antioxidantes y antitumorales?",
+                    "img": "ganoderma",
+                    "Answers": [
+                        {
+                            "textAnswer": "Reishi (Ganoderma lucidum)",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Shiitake (Lentinula edodes)",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Maitake (Grifola frondosa)",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Cordyceps (Ophiocordyceps sinensis)",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_022": {
+                    "id": "Question_022",
+                    "text": "¿Cuál de los siguientes NO es un hongo unicelular?",
+                    "img": "penicilina",
+                    "Answers": [
+                        {
+                            "textAnswer": "Saccharomyces",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Penicillium",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Candida",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Aspergillus",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_023": {
+                    "id": "Question_023",
+                    "text": "¿Cuál es la función principal de los conidios en la reproducción de los hongos?",
+                    "img": "penicilina",
+                    "Answers": [
+                        {
+                            "textAnswer": "Producción de esporas sexuales",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Almacenamiento de nutrientes",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Reproducción asexual",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Protección contra depredadores",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_024": {
+                    "id": "Question_024",
+                    "text": "¿Qué tipo de hongo es el causante de la enfermedad conocida como 'candidiasis'?",
+                    "img": "levadura",
+                    "Answers": [
+                        {
+                            "textAnswer": "Levadura",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Moho",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Ascomiceto",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Basidiomiceto",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_025": {
+                    "id": "Question_025",
+                    "text": "¿Cómo se llama el proceso de germinación de las esporas de los hongos?",
+                    "img": "germinar",
+                    "Answers": [
+                        {
+                            "textAnswer": "Gemación",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Esporulación",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Germinación",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Mitosis",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_026": {
+                    "id": "Question_026",
+                    "text": "¿Qué estructura de los hongos se utiliza para la identificación taxonómica?",
+                    "img": "micelio",
+                    "Answers": [
+                        {
+                            "textAnswer": "Micelio",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Espora",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Carpóforo",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Conidio",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_027": {
+                    "id": "Question_027",
+                    "text": "¿Qué tipo de hongo es la levadura utilizada en la fermentación de la cerveza?",
+                    "img": "levadura",
+                    "Answers": [
+                        {
+                            "textAnswer": "Ascomiceto",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Basidiomiceto",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Zygomycota",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Deuteromycota",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_028": {
+                    "id": "Question_028",
+                    "text": "¿Cuál es el nombre común del hongo del género Penicillium, utilizado en la producción de antibióticos?",
+                    "img": "penicilina",
+                    "Answers": [
+                        {
+                            "textAnswer": "Levadura",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Hongos filamentosos",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Moho",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Basidiomiceto",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_029": {
+                    "id": "Question_029",
+                    "text": "¿Cuál es el proceso mediante el cual los hongos descomponen la materia orgánica?",
+                    "img": "setasArbol",
+                    "Answers": [
+                        {
+                            "textAnswer": "Fotosíntesis",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Fermentación",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Biodegradación",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Quimiosíntesis",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_030": {
+                    "id": "Question_030",
+                    "text": "¿Qué tipo de hongo es la levadura de cerveza, comúnmente utilizada en la panificación y fermentación?",
+                    "img": "levadura",
+                    "Answers": [
+                        {
+                            "textAnswer": "Basidiomiceto",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Ascomiceto",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Zygomycota",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Deuteromycota",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_031": {
+                    "id": "Question_031",
+                    "text": "¿Qué tipo de relación establecen los líquenes con las plantas?",
+                    "img": "liquen",
+                    "Answers": [
+                        {
+                            "textAnswer": "Parasitismo",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Mutualismo",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Comensalismo",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Competencia",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_032": {
+                    "id": "Question_032",
+                    "text": "¿Cuál es el nombre del hongo utilizado en la fermentación del cacao y la fabricación de chocolate?",
+                    "img": "levadura",
+                    "Answers": [
+                        {
+                            "textAnswer": "Penicillium",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Saccharomyces",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Candida",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Rhizopus",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_033": {
+                    "id": "Question_033",
+                    "text": "¿Qué tipo de hongo es el responsable de la enfermedad conocida como 'tiña'?",
+                    "img": "trichophyton",
+                    "Answers": [
+                        {
+                            "textAnswer": "Trichophyton",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Aspergillus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Penicillium",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Candida",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_034": {
+                    "id": "Question_034",
+                    "text": "¿Cuál es el principal pigmento que da color a los hongos?",
+                    "img": "amanita",
+                    "Answers": [
+                        {
+                            "textAnswer": "Clorofila",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Carotenoides",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Melanina",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Antocianinas",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_035": {
+                    "id": "Question_035",
+                    "text": "¿Cuál de los siguientes hongos es utilizado en la producción de queso Camembert?",
+                    "img": "trichophyton",
+                    "Answers": [
+                        {
+                            "textAnswer": "Aspergillus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Rhizopus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Penicillium camemberti",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Trichophyton",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_036": {
+                    "id": "Question_036",
+                    "text": "¿Cuál es el hongo que se encuentra en el centro del ciclo de vida del moho del pan?",
+                    "img": "levadura",
+                    "Answers": [
+                        {
+                            "textAnswer": "Aspergillus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Rhizopus stolonifer",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Penicillium",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Trichophyton",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_037": {
+                    "id": "Question_037",
+                    "text": "¿Qué estructura de los hongos se utiliza para el almacenamiento de nutrientes?",
+                    "img": "germinar",
+                    "Answers": [
+                        {
+                            "textAnswer": "Micelio",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Esclerocio",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Conidio",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Basidio",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_038": {
+                    "id": "Question_038",
+                    "text": "¿Cuál de los siguientes NO es un hongo comestible?",
+                    "img": "amanita",
+                    "Answers": [
+                        {
+                            "textAnswer": "Agaricus bisporus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Amanita phalloides",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Pleurotus ostreatus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Cantharellus cibarius",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_039": {
+                    "id": "Question_039",
+                    "text": "¿Qué tipo de hongo es el responsable de la enfermedad conocida como 'ergotismo'?",
+                    "img": "levadura",
+                    "Answers": [
+                        {
+                            "textAnswer": "Ascomiceto",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Basidiomiceto",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Zygomycota",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Deuteromycota",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_040": {
+                    "id": "Question_040",
+                    "text": "¿Qué tipo de hongo es el responsable de la enfermedad conocida como 'pie de clavo'?",
+                    "img": "trichophyton",
+                    "Answers": [
+                        {
+                            "textAnswer": "Trichophyton",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Aspergillus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Penicillium",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Candida",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_041": {
+                    "id": "Question_041",
+                    "text": "¿Cuál es el nombre común del hongo utilizado en la fabricación del antibiótico penicilina?",
+                    "img": "penicilina",
+                    "Answers": [
+                        {
+                            "textAnswer": "Aspergillus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Rhizopus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Penicillium",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Trichophyton",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_042": {
+                    "id": "Question_042",
+                    "text": "¿Cuál de las siguientes opciones es una enfermedad causada por hongos?",
+                    "img": "esporas",
+                    "Answers": [
+                        {
+                            "textAnswer": "Gripe",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Malaria",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Micosis",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Sarampión",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_043": {
+                    "id": "Question_043",
+                    "text": "¿Cuál de las siguientes civilizaciones antiguas utilizaba hongos alucinógenos en rituales religiosos?",
+                    "img": "amanita",
+                    "Answers": [
+                        {
+                            "textAnswer": "Egipcios",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Mayas",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Romanos",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Griegos",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_044": {
+                    "id": "Question_044",
+                    "text": "¿Qué hongo es conocido por su capacidad para bioluminiscencia, es decir, emitir luz?",
+                    "img": "stipticus",
+                    "Answers": [
+                        {
+                            "textAnswer": "Armillaria mellea",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Panellus stipticus",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Agaricus bisporus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Pleurotus ostreatus",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_045": {
+                    "id": "Question_045",
+                    "text": "¿Qué famoso científico se interesó por primera vez en los efectos psicoactivos de los hongos alucinógenos en el siglo XX?",
+                    "img": "amanita",
+                    "Answers": [
+                        {
+                            "textAnswer": "Albert Einstein",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Sigmund Freud",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Alexander Fleming",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Albert Hofmann",
+                            "isTrue": "true"
+                        }
+                    ]
+                },
+                "Question_046": {
+                    "id": "Question_046",
+                    "text": "¿Cuál de las siguientes setas es conocida por su apodo 'rey de los hongos'?",
+                    "img": "boletus",
+                    "Answers": [
+                        {
+                            "textAnswer": "Amanita muscaria",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Boletus edulis",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Psilocybe cubensis",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Tricholoma matsutake",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_047": {
+                    "id": "Question_047",
+                    "text": "¿Qué famoso cuadro del pintor renacentista Rafael representa a una Virgen rodeada de hongos?",
+                    "img": "tipos",
+                    "Answers": [
+                        {
+                            "textAnswer": "La Escuela de Atenas",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "La Virgen del Lirio",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "La Sagrada Familia",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "La Madonna Sixtina",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_048": {
+                    "id": "Question_048",
+                    "text": "¿Qué hongo es conocido por su asociación simbiótica con las hormigas, quienes lo cultivan en jardines subterráneos?",
+                    "img": "tienda",
+                    "Answers": [
+                        {
+                            "textAnswer": "Trichoderma",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Lycoperdon",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Leucocoprinus",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Leucoagaricus",
+                            "isTrue": "true"
+                        }
+                    ]
+                },
+                "Question_049": {
+                    "id": "Question_049",
+                    "text": "¿Cuál es el nombre del hongo considerado como el organismo individual más grande del mundo?",
+                    "img": "boletus",
+                    "Answers": [
+                        {
+                            "textAnswer": "Armillaria ostoyae",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Ganoderma applanatum",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Tuber magnatum",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Amanita muscaria",
+                            "isTrue": "false"
+                        }
+                    ]
+                },
+                "Question_050": {
+                    "id": "Question_050",
+                    "text": "¿Cuál es el nombre de la sustancia química producida por algunos hongos para inhibir el crecimiento de otros microorganismos?",
+                    "img": "penicilina",
+                    "Answers": [
+                        {
+                            "textAnswer": "Micotoxina",
+                            "isTrue": "true"
+                        },
+                        {
+                            "textAnswer": "Feromona",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Toxina",
+                            "isTrue": "false"
+                        },
+                        {
+                            "textAnswer": "Antibiótico",
+                            "isTrue": "false"
+                        }
+                    ]
+                }
+            }
+        },
+        "Daily Curiosity": {
+            "Curiosities": {
+                "Curiosity_001": {
+                    "id": "Curiosity_001",
+                    "text": "Sabías que el ser vivo más grande es una seta",
+                    "img": "G. Armillaria"
+                },
+                "Curiosity_002": {
+                    "id": "Curiosity_002",
+                    "text": "El hongo Armillaria ostoyae se extiende por más de 965 hectáreas en Oregón, EE.UU.",
+                    "img": "G. Armillaria"
+                },
+                "Curiosity_003": {
+                    "id": "Curiosity_003",
+                    "text": "El hongo Boletus edulis es muy apreciado en la gastronomía.",
+                    "img": "boletus"
+                },
+                "Curiosity_004": {
+                    "id": "Curiosity_004",
+                    "text": "La Amanita muscaria es conocida por su apariencia vistosa y su toxicidad.",
+                    "img": "G. Amanita"
+                },
+                "Curiosity_005": {
+                    "id": "Curiosity_005",
+                    "text": "Las trufas son hongos subterráneos muy apreciados en la alta cocina.",
+                    "img": "trufa"
+                },
+                "Curiosity_006": {
+                    "id": "Curiosity_006",
+                    "text": "El hongo Cordyceps es conocido por parasitar insectos y otros artrópodos.",
+                    "img": "cordyceps"
+                },
+                "Curiosity_007": {
+                    "id": "Curiosity_007",
+                    "text": "Los hongos más antiguos conocidos datan de hace unos 460 millones de años.",
+                    "img": "fosil"
+                },
+                "Curiosity_008": {
+                    "id": "Curiosity_008",
+                    "text": "La seta Shiitake es muy utilizada en la cocina asiática.",
+                    "img": "shiitake"
+                },
+                "Curiosity_009": {
+                    "id": "Curiosity_009",
+                    "text": "Los hongos desempeñan un papel crucial en la descomposición de materia orgánica.",
+                    "img": "setasArbol"
+                },
+                "Curiosity_010": {
+                    "id": "Curiosity_010",
+                    "text": "La penicilina, el primer antibiótico, fue descubierta a partir de un hongo.",
+                    "img": "penicilina"
+                },
+                "Curiosity_011": {
+                    "id": "Curiosity_011",
+                    "text": "El hongo Reishi es utilizado en la medicina tradicional china.",
+                    "img": "reishi"
+                },
+                "Curiosity_012": {
+                    "id": "Curiosity_012",
+                    "text": "La seta Ophiocordyceps unilateralis controla el comportamiento de las hormigas.",
+                    "img": "cordyceps"
+                },
+                "Curiosity_013": {
+                    "id": "Curiosity_013",
+                    "text": "Los hongos pueden crecer muy rápido; algunos pueden crecer varios centímetros en un día.",
+                    "img": "G. Armillaria"
+                },
+                "Curiosity_014": {
+                    "id": "Curiosity_014",
+                    "text": "El hongo Pleurotus ostreatus se conoce como la seta ostra debido a su forma.",
+                    "img": "G. Pleurotus"
+                },
+                "Curiosity_015": {
+                    "id": "Curiosity_015",
+                    "text": "Los hongos pueden ser fuente de proteínas y nutrientes importantes.",
+                    "img": "shiitake"
+                },
+                "Curiosity_016": {
+                    "id": "Curiosity_016",
+                    "text": "La seta Coprinopsis atramentaria se descompone rápidamente después de la recolección.",
+                    "img": "G. Coprinus"
+                },
+                "Curiosity_017": {
+                    "id": "Curiosity_017",
+                    "text": "Los hongos son utilizados en la producción de alimentos como el queso y el pan.",
+                    "img": "levadura"
+                },
+                "Curiosity_018": {
+                    "id": "Curiosity_018",
+                    "text": "El hongo Ganoderma lucidum es conocido como el reishi rojo y se utiliza en la medicina tradicional.",
+                    "img": "reishi"
+                },
+                "Curiosity_019": {
+                    "id": "Curiosity_019",
+                    "text": "Las setas contienen antioxidantes que pueden ayudar a combatir enfermedades.",
+                    "img": "penicilina"
+                },
+                "Curiosity_020": {
+                    "id": "Curiosity_020",
+                    "text": "El hongo Clathrus archeri tiene una apariencia única similar a una jaula o una estrella de mar.",
+                    "img": "G. Clathrus"
+                },
+                "Curiosity_021": {
+                    "id": "Curiosity_021",
+                    "text": "Los hongos pueden ser bioluminiscentes, emitiendo luz en la oscuridad.",
+                    "img": "stipticus"
+                },
+                "Curiosity_022": {
+                    "id": "Curiosity_022",
+                    "text": "La seta Morchella es conocida por su aspecto similar a una esponja o un panal.",
+                    "img": "G. Morchella"
+                },
+                "Curiosity_023": {
+                    "id": "Curiosity_023",
+                    "text": "Los hongos pueden ser utilizados en la biorremediación para descontaminar suelos.",
+                    "img": "setasArbol"
+                },
+                "Curiosity_024": {
+                    "id": "Curiosity_024",
+                    "text": "El hongo Lentinula edodes es conocido como shiitake y es ampliamente cultivado.",
+                    "img": "shiitake"
+                },
+                "Curiosity_025": {
+                    "id": "Curiosity_025",
+                    "text": "Los hongos pueden formar simbiosis con las raíces de las plantas, beneficiándose mutuamente.",
+                    "img": "setasArbol"
+                },
+                "Curiosity_026": {
+                    "id": "Curiosity_026",
+                    "text": "El hongo Psilocybe cubensis contiene psilocibina, un compuesto psicoactivo.",
+                    "img": "psilocybe"
+                },
+                "Curiosity_027": {
+                    "id": "Curiosity_027",
+                    "text": "Los hongos más grandes pueden tener el tamaño de una almohada.",
+                    "img": "fosil"
+                },
+                "Curiosity_028": {
+                    "id": "Curiosity_028",
+                    "text": "El hongo Candida albicans puede causar infecciones en humanos.",
+                    "img": "penicilina"
+                },
+                "Curiosity_029": {
+                    "id": "Curiosity_029",
+                    "text": "Los hongos pueden producir una amplia variedad de compuestos bioactivos.",
+                    "img": "levadura"
+                },
+                "Curiosity_030": {
+                    "id": "Curiosity_030",
+                    "text": "El hongo Penicillium es utilizado en la producción de queso azul.",
+                    "img": "levadura"
+                },
+                "Curiosity_031": {
+                    "id": "Curiosity_031",
+                    "text": "Los hongos pueden ser utilizados en la fabricación de productos biodegradables.",
+                    "img": "setasArbol"
+                }
+            }
+        }
+    }
+}
